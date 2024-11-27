@@ -392,11 +392,11 @@
         },
         {
             "name": "laminas-api-tools/api-tools-mvc-auth",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/datasage/api-tools-mvc-auth",
-                "reference": "db8f5bb6d304accd36f1348117b45b38d70f9900"
+                "reference": "95bdfa74da3d3f4fb55465a749f18e0dd5d5be1a"
             },
             "require": {
                 "laminas-api-tools/api-tools-oauth2": "^1.9",
@@ -408,7 +408,7 @@
                 "laminas/laminas-permissions-rbac": " ^3.0",
                 "laminas/laminas-servicemanager": "^3.11",
                 "laminas/laminas-stdlib": "^3.0.1",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || 8.4.0"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "replace": {
                 "zfcampus/zf-mvc-auth": "^1.5.1"
@@ -476,7 +476,7 @@
                 "chat": "https://laminas.dev/chat",
                 "forum": "https://discourse.laminas.dev"
             },
-            "time": "2024-11-27T14:29:39+00:00"
+            "time": "2024-11-27T15:47:12+00:00"
         },
         {
             "name": "laminas-api-tools/api-tools-oauth2",
