@@ -15,7 +15,6 @@ interface ResourceInterface extends EventManagerAwareInterface
     /**
      * Set the event parameters
      *
-     * @param array $params
      * @return self
      */
     public function setEventParams(array $params);

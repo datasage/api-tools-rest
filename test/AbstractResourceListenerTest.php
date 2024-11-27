@@ -47,7 +47,7 @@ class AbstractResourceListenerTest extends TestCase
      *     1: array<string, mixed>
      * }>
      */
-    public function events(): array
+    public static function events(): array
     {
         // Casting arrays to objects when the associated Resource method will
         // cast to object.
@@ -67,7 +67,6 @@ class AbstractResourceListenerTest extends TestCase
     /**
      * @dataProvider events
      * @param string $method
-     * @param array $eventArgs
      */
     public function testResourceMethodsAreInvokedWhenEventsAreTriggered($method, array $eventArgs)
     {

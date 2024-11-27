@@ -10,7 +10,6 @@ use Laminas\ApiTools\MvcAuth\Identity\IdentityInterface;
 use Laminas\EventManager\Event;
 use Laminas\EventManager\Exception\InvalidArgumentException as EventManagerInvalidArgumentException;
 use Laminas\InputFilter\InputFilterInterface;
-use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
 use Laminas\Stdlib\RequestInterface;
@@ -151,17 +150,16 @@ class ResourceEvent extends Event
     }
 
     /**
-     * @param RouteMatch|V2RouteMatch $matches
+     * @param RouteMatch $matches
      * @return self
      */
     public function setRouteMatch($matches = null)
     {
-        if (null !== $matches && ! ($matches instanceof RouteMatch || $matches instanceof V2RouteMatch)) {
+        if (null !== $matches && ! $matches instanceof RouteMatch) {
             throw new InvalidArgumentException(sprintf(
-                '%s expects a null or %s or %s instances; received %s',
+                '%s expects a null or %s instances; received %s',
                 __METHOD__,
                 RouteMatch::class,
-                V2RouteMatch::class,
                 is_object($matches) ? $matches::class : gettype($matches)
             ));
         }
@@ -170,7 +168,7 @@ class ResourceEvent extends Event
     }
 
     /**
-     * @return null|RouteMatch|V2RouteMatch
+     * @return null|RouteMatch
      */
     public function getRouteMatch()
     {

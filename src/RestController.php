@@ -148,8 +148,6 @@ class RestController extends AbstractRestfulController
 
     /**
      * Set the allowed HTTP methods for collections
-     *
-     * @param  array $methods
      */
     public function setCollectionHttpMethods(array $methods)
     {
@@ -276,8 +274,6 @@ class RestController extends AbstractRestfulController
 
     /**
      * Set the allowed HTTP OPTIONS for a resource
-     *
-     * @param  array $methods
      */
     public function setEntityHttpMethods(array $methods)
     {
@@ -780,7 +776,6 @@ class RestController extends AbstractRestfulController
     /**
      * Creates an ALLOW header with the provided HTTP methods
      *
-     * @param  array $methods
      * @return Allow
      */
     protected function createAllowHeaderWithAllowedMethods(array $methods)

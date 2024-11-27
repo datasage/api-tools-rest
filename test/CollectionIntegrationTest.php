@@ -24,8 +24,6 @@ use Laminas\Mvc\Controller\AbstractController;
 use Laminas\Mvc\Controller\ControllerManager;
 use Laminas\Mvc\Controller\PluginManager as ControllerPluginManager;
 use Laminas\Mvc\MvcEvent;
-use Laminas\Mvc\Router\Http\TreeRouteStack as V2TreeRouteStack;
-use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Mvc\Service\ControllerPluginManagerFactory;
 use Laminas\Paginator\Adapter\ArrayAdapter as ArrayPaginator;
 use Laminas\Paginator\Paginator;
@@ -60,7 +58,7 @@ class CollectionIntegrationTest extends TestCase
     /** @var null|HalJsonRenderer */
     private $renderer;
 
-    /** @var null|TreeRouteStack|V2TreeRouteStack */
+    /** @var null|TreeRouteStack */
     private $router;
 
     /** @var null|Request */
@@ -69,7 +67,7 @@ class CollectionIntegrationTest extends TestCase
     /** @var null|Response */
     private $response;
 
-    /** @var RouteMatch|V2RouteMatch */
+    /** @var RouteMatch */
     private $matches;
 
     /** @var null|TestAsset\CollectionIntegrationListener */
@@ -148,7 +146,7 @@ class CollectionIntegrationTest extends TestCase
         $router->addRoutes($routes);
 
         $matches = $router->match($this->request);
-        if (! ($matches instanceof RouteMatch || $matches instanceof V2RouteMatch)) {
+        if (! $matches instanceof RouteMatch) {
             $this->fail('Failed to route!');
         }
 

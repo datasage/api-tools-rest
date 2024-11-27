@@ -1,1691 +1,1622 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.30.0@d0bc6e25d89f649e4f36a534f330f8bb4643dd69">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
   <file src="src/AbstractResourceListener.php">
-    <MixedAssignment occurrences="10">
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
+    <MixedAssignment>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
     </MixedAssignment>
-    <PossiblyNullArgument occurrences="1">
-      <code>$event-&gt;getName()</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$event->getName()]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullPropertyAssignmentValue occurrences="2">
-      <code>$event-&gt;getIdentity()</code>
-      <code>$event-&gt;getInputFilter()</code>
+    <PossiblyNullPropertyAssignmentValue>
+      <code><![CDATA[$event->getIdentity()]]></code>
+      <code><![CDATA[$event->getInputFilter()]]></code>
     </PossiblyNullPropertyAssignmentValue>
-    <RedundantConditionGivenDocblockType occurrences="4">
-      <code>$this-&gt;identity</code>
-      <code>$this-&gt;identity</code>
-      <code>$this-&gt;inputFilter</code>
-      <code>$this-&gt;inputFilter</code>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[$this->identity]]></code>
+      <code><![CDATA[$this->inputFilter]]></code>
     </RedundantConditionGivenDocblockType>
   </file>
   <file src="src/Factory/OptionsListenerFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>OptionsListenerFactory</code>
+    <DeprecatedInterface>
+      <code><![CDATA[OptionsListenerFactory]]></code>
     </DeprecatedInterface>
-    <MixedArgument occurrences="1">
-      <code>$config</code>
+    <MixedArgument>
+      <code><![CDATA[$config]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$config</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
     </MixedAssignment>
-    <ParamNameMismatch occurrences="1">
-      <code>$container</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
   </file>
   <file src="src/Factory/RestControllerFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>RestControllerFactory</code>
+    <DeprecatedInterface>
+      <code><![CDATA[RestControllerFactory]]></code>
     </DeprecatedInterface>
-    <MissingReturnType occurrences="1">
-      <code>setControllerOptions</code>
+    <MissingReturnType>
+      <code><![CDATA[setControllerOptions]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="26">
-      <code>$config</code>
-      <code>$config[$requestedName]['listener']</code>
-      <code>$config[$requestedName]['listener']</code>
-      <code>$config['listener']</code>
-      <code>$config['listener']</code>
-      <code>$config['resource_identifiers']</code>
-      <code>$container</code>
-      <code>$container</code>
-      <code>$container-&gt;get('EventManager')</code>
-      <code>$controllerClass</code>
-      <code>$events</code>
-      <code>$key</code>
-      <code>$options</code>
-      <code>$request</code>
-      <code>$resource-&gt;getInputFilter()-&gt;getInputs()</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
-      <code>$value</code>
+    <MixedArgument>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config[$requestedName]['listener']]]></code>
+      <code><![CDATA[$config[$requestedName]['listener']]]></code>
+      <code><![CDATA[$config['listener']]]></code>
+      <code><![CDATA[$config['listener']]]></code>
+      <code><![CDATA[$config['resource_identifiers']]]></code>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$container->get('EventManager')]]></code>
+      <code><![CDATA[$controllerClass]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$options]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$resource->getInputFilter()->getInputs()]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="9">
-      <code>$config['api-tools-rest']</code>
-      <code>$config['controller_class']</code>
-      <code>$config['identifier']</code>
-      <code>$config['listener']</code>
-      <code>$config['listener']</code>
-      <code>$config['listener']</code>
-      <code>$config['resource_identifiers']</code>
-      <code>$config['resource_identifiers']</code>
-      <code>$config['resource_identifiers']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest'][$requestedName]]]></code>
+      <code><![CDATA[$config['controller_class']]]></code>
+      <code><![CDATA[$config['identifier']]]></code>
+      <code><![CDATA[$config['listener']]]></code>
+      <code><![CDATA[$config['listener']]]></code>
+      <code><![CDATA[$config['listener']]]></code>
+      <code><![CDATA[$config['resource_identifiers']]]></code>
+      <code><![CDATA[$config['resource_identifiers']]]></code>
+      <code><![CDATA[$config['resource_identifiers']]]></code>
     </MixedArrayAccess>
-    <MixedArrayAssignment occurrences="1">
-      <code>$config['resource_identifiers']</code>
+    <MixedArrayAssignment>
+      <code><![CDATA[$config['resource_identifiers']]]></code>
     </MixedArrayAssignment>
-    <MixedAssignment occurrences="13">
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$container</code>
-      <code>$container</code>
-      <code>$controllerClass</code>
-      <code>$events</code>
-      <code>$identifier</code>
-      <code>$key</code>
-      <code>$options</code>
-      <code>$query</code>
-      <code>$value</code>
-      <code>$value</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$controllerClass]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$identifier]]></code>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$options]]></code>
+      <code><![CDATA[$query]]></code>
+      <code><![CDATA[$value]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>bool</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[bool]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="6">
-      <code>getRequest</code>
-      <code>getResource</code>
-      <code>getResource</code>
-      <code>new $config['listener']()</code>
-      <code>new $controllerClass($identifier)</code>
-      <code>setIdentifiers</code>
+    <MixedMethodCall>
+      <code><![CDATA[getRequest]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[new $config['listener']()]]></code>
+      <code><![CDATA[new $controllerClass($identifier)]]></code>
+      <code><![CDATA[setIdentifiers]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$this-&gt;lookupCache[$requestedName]</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->lookupCache[$requestedName]]]></code>
     </MixedReturnStatement>
-    <ParamNameMismatch occurrences="2">
-      <code>$controllers</code>
-      <code>$controllers</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$controllers]]></code>
+      <code><![CDATA[$controllers]]></code>
     </ParamNameMismatch>
-    <PossiblyInvalidMethodCall occurrences="6">
-      <code>getRequest</code>
-      <code>getResource</code>
-      <code>getResource</code>
-      <code>getRouteOptions</code>
-      <code>hasRoute</code>
-      <code>setRouteOptions</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getRequest]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getRouteOptions]]></code>
+      <code><![CDATA[hasRoute]]></code>
+      <code><![CDATA[setRouteOptions]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullReference occurrences="8">
-      <code>getArrayCopy</code>
-      <code>getInputs</code>
-      <code>getRequest</code>
-      <code>getResource</code>
-      <code>getResource</code>
-      <code>getRouteOptions</code>
-      <code>hasRoute</code>
-      <code>setRouteOptions</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getArrayCopy]]></code>
+      <code><![CDATA[getInputs]]></code>
+      <code><![CDATA[getRequest]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getRouteOptions]]></code>
+      <code><![CDATA[hasRoute]]></code>
+      <code><![CDATA[setRouteOptions]]></code>
     </PossiblyNullReference>
-    <PossiblyUndefinedMethod occurrences="3">
-      <code>getRouteOptions</code>
-      <code>hasRoute</code>
-      <code>setRouteOptions</code>
-    </PossiblyUndefinedMethod>
-    <UndefinedInterfaceMethod occurrences="5">
-      <code>getInputs</code>
-      <code>getServiceLocator</code>
-      <code>getServiceLocator</code>
-      <code>setCollectionClass</code>
-      <code>setEntityClass</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getInputs]]></code>
+      <code><![CDATA[getRouteOptions]]></code>
+      <code><![CDATA[getServiceLocator]]></code>
+      <code><![CDATA[getServiceLocator]]></code>
+      <code><![CDATA[hasRoute]]></code>
+      <code><![CDATA[setCollectionClass]]></code>
+      <code><![CDATA[setEntityClass]]></code>
+      <code><![CDATA[setRouteOptions]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/Listener/OptionsListener.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>$response</code>
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$response]]></code>
     </ArgumentTypeCoercion>
-    <LessSpecificReturnStatement occurrences="1">
-      <code>$response</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[$response]]></code>
     </LessSpecificReturnStatement>
-    <MissingClosureParamType occurrences="1">
-      <code>$value</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
-    <MissingReturnType occurrences="1">
-      <code>createAllowHeader</code>
+    <MissingReturnType>
+      <code><![CDATA[createAllowHeader]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="3">
-      <code>$controller</code>
-      <code>$this-&gt;config[$controller]</code>
-      <code>$value</code>
+    <MixedArgument>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$identifier]]></code>
+      <code><![CDATA[$this->config[$controller]]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
     </MixedArgument>
-    <MixedArgumentTypeCoercion occurrences="1">
-      <code>$options</code>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$options]]></code>
     </MixedArgumentTypeCoercion>
-    <MixedAssignment occurrences="1">
-      <code>$controller</code>
+    <MixedAssignment>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$identifier]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
-    </MixedInferredReturnType>
-    <MoreSpecificReturnType occurrences="1">
-      <code>Response</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[Response]]></code>
     </MoreSpecificReturnType>
-    <TooManyArguments occurrences="1">
-      <code>setStatusCode</code>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[! $identifier]]></code>
+    </RiskyTruthyFalsyComparison>
+    <TooManyArguments>
+      <code><![CDATA[setStatusCode]]></code>
     </TooManyArguments>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RouteMatch|V2RouteMatch</code>
-    </UndefinedDocblockClass>
   </file>
   <file src="src/Listener/RestParametersListener.php">
-    <InvalidArgument occurrences="2">
-      <code>$listener</code>
-      <code>$listener</code>
+    <InvalidArgument>
+      <code><![CDATA[$listener]]></code>
+      <code><![CDATA[$listener]]></code>
     </InvalidArgument>
-    <InvalidPropertyAssignmentValue occurrences="1">
-      <code>$this-&gt;sharedListeners</code>
+    <InvalidPropertyAssignmentValue>
+      <code><![CDATA[$this->sharedListeners]]></code>
     </InvalidPropertyAssignmentValue>
-    <MissingReturnType occurrences="3">
-      <code>attachShared</code>
-      <code>detachShared</code>
-      <code>onDispatch</code>
+    <MissingReturnType>
+      <code><![CDATA[attachShared]]></code>
+      <code><![CDATA[detachShared]]></code>
+      <code><![CDATA[onDispatch]]></code>
     </MissingReturnType>
-    <MixedAssignment occurrences="2">
-      <code>$listener</code>
-      <code>$query</code>
+    <MixedAssignment>
+      <code><![CDATA[$listener]]></code>
+      <code><![CDATA[$query]]></code>
     </MixedAssignment>
-    <UndefinedDocblockClass occurrences="2">
-      <code>CallbackHandler[]</code>
-      <code>protected $sharedListeners = [];</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[CallbackHandler[]]]></code>
+      <code><![CDATA[protected $sharedListeners = [];]]></code>
     </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="3">
-      <code>getQuery</code>
-      <code>setQueryParams</code>
-      <code>setRouteMatch</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[setQueryParams]]></code>
+      <code><![CDATA[setRouteMatch]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/Module.php">
-    <MissingReturnType occurrences="1">
-      <code>onBootstrap</code>
+    <MissingReturnType>
+      <code><![CDATA[onBootstrap]]></code>
     </MissingReturnType>
-    <MixedAssignment occurrences="3">
-      <code>$events</code>
-      <code>$services</code>
-      <code>$sharedEvents</code>
+    <MixedAssignment>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$services]]></code>
+      <code><![CDATA[$sharedEvents]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="7">
-      <code>attach</code>
-      <code>attachShared</code>
-      <code>get</code>
-      <code>get</code>
-      <code>getEventManager</code>
-      <code>getServiceManager</code>
-      <code>getSharedManager</code>
+    <MixedMethodCall>
+      <code><![CDATA[attach]]></code>
+      <code><![CDATA[attachShared]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getServiceManager]]></code>
+      <code><![CDATA[getSharedManager]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidMethodCall occurrences="2">
-      <code>getEventManager</code>
-      <code>getServiceManager</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getServiceManager]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullReference occurrences="2">
-      <code>getEventManager</code>
-      <code>getServiceManager</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getServiceManager]]></code>
     </PossiblyNullReference>
   </file>
   <file src="src/Resource.php">
-    <DocblockTypeContradiction occurrences="8">
-      <code>! $this-&gt;events</code>
-      <code>! is_array($data)</code>
-      <code>$this-&gt;events</code>
-      <code>is_array($data)</code>
-      <code>is_array($data)</code>
-      <code>is_object($data)</code>
-      <code>is_object($data)</code>
-      <code>is_object($data)</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[! $this->events]]></code>
+      <code><![CDATA[$this->events]]></code>
+      <code><![CDATA[gettype($matches)]]></code>
+      <code><![CDATA[is_array($data)]]></code>
+      <code><![CDATA[is_array($data)]]></code>
+      <code><![CDATA[is_object($data)]]></code>
+      <code><![CDATA[is_object($data)]]></code>
+      <code><![CDATA[is_object($data)]]></code>
     </DocblockTypeContradiction>
-    <ImplementedReturnTypeMismatch occurrences="2">
-      <code>array|Traversable</code>
-      <code>self</code>
+    <ImplementedReturnTypeMismatch>
+      <code><![CDATA[array|Traversable]]></code>
+      <code><![CDATA[self]]></code>
     </ImplementedReturnTypeMismatch>
-    <InvalidReturnStatement occurrences="3">
-      <code>$last</code>
-      <code>$last</code>
-      <code>$params</code>
+    <InvalidReturnStatement>
+      <code><![CDATA[$last]]></code>
+      <code><![CDATA[$last]]></code>
+      <code><![CDATA[$last]]></code>
+      <code><![CDATA[$params]]></code>
     </InvalidReturnStatement>
-    <InvalidReturnType occurrences="2">
-      <code>bool</code>
-      <code>bool</code>
+    <InvalidReturnType>
+      <code><![CDATA[array|Traversable]]></code>
+      <code><![CDATA[bool]]></code>
+      <code><![CDATA[bool]]></code>
     </InvalidReturnType>
-    <LessSpecificReturnStatement occurrences="1">
-      <code>$last</code>
-    </LessSpecificReturnStatement>
-    <MissingClosureParamType occurrences="5">
-      <code>$key</code>
-      <code>$key</code>
-      <code>$result</code>
-      <code>$value</code>
-      <code>$value</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$value]]></code>
+      <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
-    <MissingConstructor occurrences="1">
-      <code>$events</code>
+    <MissingConstructor>
+      <code><![CDATA[$events]]></code>
     </MissingConstructor>
-    <MixedArrayAssignment occurrences="2">
-      <code>$data[$key]</code>
-      <code>$data[$key]</code>
-    </MixedArrayAssignment>
-    <MixedArrayOffset occurrences="3">
-      <code>$data[$key]</code>
-      <code>$data[$key]</code>
-      <code>$this-&gt;params[$name]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$data[$key]]]></code>
+      <code><![CDATA[$data[$key]]]></code>
+      <code><![CDATA[$this->params[$name]]]></code>
     </MixedArrayOffset>
-    <MixedInferredReturnType occurrences="2">
-      <code>ArrayObject</code>
-      <code>self</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[ArrayObject]]></code>
     </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="1">
-      <code>$this-&gt;getEventManager()-&gt;prepareArgs($params)</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->getEventManager()->prepareArgs($params)]]></code>
     </MixedReturnStatement>
-    <MoreSpecificReturnType occurrences="1">
-      <code>array|Traversable</code>
-    </MoreSpecificReturnType>
-    <UndefinedDocblockClass occurrences="3">
-      <code>RouteMatch|V2RouteMatch</code>
-      <code>null|RouteMatch|V2RouteMatch</code>
-      <code>null|RouteMatch|V2RouteMatch</code>
-    </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>prepareArgs</code>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[is_object($matches)]]></code>
+    </RedundantConditionGivenDocblockType>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[$data]]></code>
+    </RiskyTruthyFalsyComparison>
+    <TypeDoesNotContainType>
+      <code><![CDATA[! is_array($data)]]></code>
+    </TypeDoesNotContainType>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[prepareArgs]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ResourceEvent.php">
-    <DocblockTypeContradiction occurrences="1">
-      <code>! is_array($params) &amp;&amp; ! is_object($params)</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[! is_array($params) && ! is_object($params)]]></code>
+      <code><![CDATA[gettype($matches)]]></code>
     </DocblockTypeContradiction>
-    <ImplementedReturnTypeMismatch occurrences="1">
-      <code>self</code>
+    <ImplementedReturnTypeMismatch>
+      <code><![CDATA[self]]></code>
     </ImplementedReturnTypeMismatch>
-    <MixedArgument occurrences="1">
-      <code>$params['request']</code>
+    <MissingTemplateParam>
+      <code><![CDATA[ResourceEvent]]></code>
+    </MissingTemplateParam>
+    <MixedArgument>
+      <code><![CDATA[$params['request']]]></code>
     </MixedArgument>
-    <MixedInferredReturnType occurrences="1">
-      <code>self</code>
-    </MixedInferredReturnType>
-    <UndefinedDocblockClass occurrences="3">
-      <code>$matches</code>
-      <code>RouteMatch|V2RouteMatch</code>
-      <code>null|RouteMatch|V2RouteMatch</code>
-    </UndefinedDocblockClass>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[is_object($matches)]]></code>
+    </RedundantConditionGivenDocblockType>
   </file>
   <file src="src/RestController.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>$e-&gt;getRequest()</code>
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$e->getRequest()]]></code>
     </ArgumentTypeCoercion>
-    <DocblockTypeContradiction occurrences="10">
-      <code>! $event</code>
-      <code>! $event</code>
-      <code>! $request</code>
-      <code>! $this-&gt;getResource()</code>
-      <code>! is_array($params)</code>
-      <code>$event</code>
-      <code>$event</code>
-      <code>$request</code>
-      <code>$this-&gt;resource === null</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[! $event]]></code>
+      <code><![CDATA[! $event]]></code>
+      <code><![CDATA[! $request]]></code>
+      <code><![CDATA[! $this->getResource()]]></code>
+      <code><![CDATA[! is_array($collection)
+            && ! $collection instanceof Traversable]]></code>
+      <code><![CDATA[! is_array($params)]]></code>
+      <code><![CDATA[$event]]></code>
+      <code><![CDATA[$event]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$this->resource === null]]></code>
     </DocblockTypeContradiction>
-    <ImplementedParamTypeMismatch occurrences="1">
-      <code>$routeMatch</code>
+    <ImplementedParamTypeMismatch>
+      <code><![CDATA[$routeMatch]]></code>
     </ImplementedParamTypeMismatch>
-    <ImplementedReturnTypeMismatch occurrences="1">
-      <code>null|array|Traversable</code>
+    <ImplementedReturnTypeMismatch>
+      <code><![CDATA[null|array|Traversable]]></code>
     </ImplementedReturnTypeMismatch>
-    <InvalidArgument occurrences="1">
-      <code>$e-&gt;getRouteMatch()</code>
+    <InvalidArgument>
+      <code><![CDATA[$e->getRouteMatch()]]></code>
     </InvalidArgument>
-    <InvalidReturnStatement occurrences="13">
-      <code>$collection</code>
-      <code>$entity</code>
-      <code>$entity</code>
-      <code>$entity</code>
-      <code>$halCollection</code>
-      <code>$halCollection</code>
-      <code>$halCollection</code>
-      <code>$halEntity</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$this-&gt;create($this-&gt;bodyParams())</code>
-      <code>$this-&gt;prepareHalCollection($collection)</code>
-      <code>$value</code>
+    <InvalidReturnStatement>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$entity]]></code>
+      <code><![CDATA[$entity]]></code>
+      <code><![CDATA[$entity]]></code>
+      <code><![CDATA[$halCollection]]></code>
+      <code><![CDATA[$halCollection]]></code>
+      <code><![CDATA[$halCollection]]></code>
+      <code><![CDATA[$halEntity]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$this->create($this->bodyParams())]]></code>
+      <code><![CDATA[$this->prepareHalCollection($collection)]]></code>
+      <code><![CDATA[$value]]></code>
     </InvalidReturnStatement>
-    <InvalidReturnType occurrences="9">
-      <code>HalCollection</code>
-      <code>Response|ApiProblem|ApiProblemResponse</code>
-      <code>Response|ApiProblem|ApiProblemResponse</code>
-      <code>Response|ApiProblem|ApiProblemResponse|HalEntity</code>
-      <code>Response|ApiProblem|ApiProblemResponse|HalEntity</code>
-      <code>Response|ApiProblem|ApiProblemResponse|HalEntity</code>
-      <code>Response|ApiProblem|ApiProblemResponse|HalEntity</code>
-      <code>Response|HalCollection|ApiProblem</code>
-      <code>null|array|Traversable</code>
+    <InvalidReturnType>
+      <code><![CDATA[HalCollection]]></code>
+      <code><![CDATA[Response|ApiProblem|ApiProblemResponse]]></code>
+      <code><![CDATA[Response|ApiProblem|ApiProblemResponse]]></code>
+      <code><![CDATA[Response|ApiProblem|ApiProblemResponse|HalEntity]]></code>
+      <code><![CDATA[Response|ApiProblem|ApiProblemResponse|HalEntity]]></code>
+      <code><![CDATA[Response|ApiProblem|ApiProblemResponse|HalEntity]]></code>
+      <code><![CDATA[Response|ApiProblem|ApiProblemResponse|HalEntity]]></code>
+      <code><![CDATA[Response|HalCollection|ApiProblem]]></code>
     </InvalidReturnType>
-    <LessSpecificReturnStatement occurrences="4">
-      <code>$collection</code>
-      <code>$response</code>
-      <code>$response</code>
-      <code>$response</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
     </LessSpecificReturnStatement>
-    <MissingReturnType occurrences="12">
-      <code>injectEventIdentityIntoResource</code>
-      <code>injectEventInputFilterIntoResource</code>
-      <code>injectRequestIntoResourceEventParams</code>
-      <code>setCollectionHttpMethods</code>
-      <code>setCollectionName</code>
-      <code>setEntityHttpMethods</code>
-      <code>setMaxPageSize</code>
-      <code>setMinPageSize</code>
-      <code>setPageSize</code>
-      <code>setPageSizeParam</code>
-      <code>setResource</code>
-      <code>setRoute</code>
+    <MissingReturnType>
+      <code><![CDATA[injectEventIdentityIntoResource]]></code>
+      <code><![CDATA[injectEventInputFilterIntoResource]]></code>
+      <code><![CDATA[injectRequestIntoResourceEventParams]]></code>
+      <code><![CDATA[setCollectionHttpMethods]]></code>
+      <code><![CDATA[setCollectionName]]></code>
+      <code><![CDATA[setEntityHttpMethods]]></code>
+      <code><![CDATA[setMaxPageSize]]></code>
+      <code><![CDATA[setMinPageSize]]></code>
+      <code><![CDATA[setPageSize]]></code>
+      <code><![CDATA[setPageSizeParam]]></code>
+      <code><![CDATA[setResource]]></code>
+      <code><![CDATA[setRoute]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="7">
-      <code>$collection</code>
-      <code>$data</code>
-      <code>$e-&gt;getMessage()</code>
-      <code>$id</code>
-      <code>$pageSize</code>
-      <code>$this-&gt;bodyParams()</code>
-      <code>$this-&gt;getRequest()-&gt;getQuery('page', 1)</code>
+    <MixedArgument>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$e->getMessage()]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$pageSize]]></code>
+      <code><![CDATA[$this->bodyParams()]]></code>
+      <code><![CDATA[$this->getRequest()->getQuery('page', 1)]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="1">
-      <code>$self['href']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$self['href']]]></code>
     </MixedArrayAccess>
-    <MixedAssignment occurrences="14">
-      <code>$collection</code>
-      <code>$collection</code>
-      <code>$halPlugin</code>
-      <code>$headers</code>
-      <code>$id</code>
-      <code>$identity</code>
-      <code>$inputFilter</code>
-      <code>$pageSize</code>
-      <code>$plugin</code>
-      <code>$plugin</code>
-      <code>$plugin</code>
-      <code>$return</code>
-      <code>$self</code>
-      <code>$url</code>
+    <MixedAssignment>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$halPlugin]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$identity]]></code>
+      <code><![CDATA[$inputFilter]]></code>
+      <code><![CDATA[$pageSize]]></code>
+      <code><![CDATA[$plugin]]></code>
+      <code><![CDATA[$plugin]]></code>
+      <code><![CDATA[$plugin]]></code>
+      <code><![CDATA[$return]]></code>
+      <code><![CDATA[$self]]></code>
+      <code><![CDATA[$url]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="3">
-      <code>HalEntity</code>
-      <code>array|ApiProblem</code>
-      <code>null|array|Traversable</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[HalEntity]]></code>
+      <code><![CDATA[array|ApiProblem]]></code>
+      <code><![CDATA[null|array|Traversable]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="7">
-      <code>addHeader</code>
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>createCollection</code>
-      <code>createEntity</code>
-      <code>fromLink</code>
-      <code>injectSelfLink</code>
+    <MixedMethodCall>
+      <code><![CDATA[addHeader]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[createCollection]]></code>
+      <code><![CDATA[createEntity]]></code>
+      <code><![CDATA[fromLink]]></code>
+      <code><![CDATA[injectSelfLink]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="3">
-      <code>$collection</code>
-      <code>$this-&gt;bodyParams()</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$plugin->createEntity(
+            $entity,
+            $this->route,
+            $this->getRouteIdentifierName()
+        )]]></code>
+      <code><![CDATA[$this->bodyParams()]]></code>
     </MixedReturnStatement>
-    <MoreSpecificImplementedParamType occurrences="9">
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$request</code>
-      <code>$request</code>
+    <MoreSpecificImplementedParamType>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$request]]></code>
     </MoreSpecificImplementedParamType>
-    <MoreSpecificReturnType occurrences="2">
-      <code>Response</code>
-      <code>array|ApiProblem</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[Response]]></code>
+      <code><![CDATA[array|ApiProblem]]></code>
     </MoreSpecificReturnType>
-    <PossiblyInvalidArgument occurrences="1">
-      <code>$params</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$params]]></code>
     </PossiblyInvalidArgument>
-    <PropertyNotSetInConstructor occurrences="10">
-      <code>$maxPageSize</code>
-      <code>$minPageSize</code>
-      <code>$pageSizeParam</code>
-      <code>$resource</code>
-      <code>$route</code>
-      <code>RestController</code>
-      <code>RestController</code>
-      <code>RestController</code>
-      <code>RestController</code>
-      <code>RestController</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[$maxPageSize]]></code>
+      <code><![CDATA[$minPageSize]]></code>
+      <code><![CDATA[$pageSizeParam]]></code>
+      <code><![CDATA[$resource]]></code>
+      <code><![CDATA[$route]]></code>
+      <code><![CDATA[RestController]]></code>
+      <code><![CDATA[RestController]]></code>
+      <code><![CDATA[RestController]]></code>
+      <code><![CDATA[RestController]]></code>
+      <code><![CDATA[RestController]]></code>
     </PropertyNotSetInConstructor>
-    <RedundantCastGivenDocblockType occurrences="5">
-      <code>(int) $count</code>
-      <code>(int) $count</code>
-      <code>(int) $count</code>
-      <code>(string) $name</code>
-      <code>(string) $param</code>
+    <RedundantCastGivenDocblockType>
+      <code><![CDATA[(int) $count]]></code>
+      <code><![CDATA[(int) $count]]></code>
+      <code><![CDATA[(int) $count]]></code>
+      <code><![CDATA[(string) $name]]></code>
+      <code><![CDATA[(string) $param]]></code>
     </RedundantCastGivenDocblockType>
-    <RedundantConditionGivenDocblockType occurrences="3">
-      <code>! is_array($collection)</code>
-      <code>isset($this-&gt;maxPageSize) &amp;&amp; $pageSize &gt; $this-&gt;maxPageSize</code>
-      <code>isset($this-&gt;minPageSize) &amp;&amp; $pageSize &lt; $this-&gt;minPageSize</code>
+    <RedundantConditionGivenDocblockType>
+      <code><![CDATA[! is_array($collection)]]></code>
+      <code><![CDATA[isset($this->maxPageSize) && $pageSize > $this->maxPageSize]]></code>
+      <code><![CDATA[isset($this->minPageSize) && $pageSize < $this->minPageSize]]></code>
     </RedundantConditionGivenDocblockType>
-    <RedundantPropertyInitializationCheck occurrences="2">
-      <code>isset($this-&gt;maxPageSize)</code>
-      <code>isset($this-&gt;minPageSize)</code>
+    <RedundantPropertyInitializationCheck>
+      <code><![CDATA[isset($this->maxPageSize)]]></code>
+      <code><![CDATA[isset($this->minPageSize)]]></code>
     </RedundantPropertyInitializationCheck>
-    <UndefinedClass occurrences="2">
-      <code>$e</code>
-      <code>Exception\InvalidArgumentException</code>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[$entity]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+    </RiskyTruthyFalsyComparison>
+    <TypeDoesNotContainType>
+      <code><![CDATA[! is_array($collection)
+            && ! $collection instanceof Traversable
+            && ! $collection instanceof HalCollection
+            && is_object($collection)]]></code>
+      <code><![CDATA[is_object($collection)]]></code>
+    </TypeDoesNotContainType>
+    <UndefinedClass>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[Exception\InvalidArgumentException]]></code>
     </UndefinedClass>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RouteMatch</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[RouteMatch]]></code>
     </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="14">
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getIdentity</code>
-      <code>getInputFilter</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>patchList</code>
-      <code>setIdentity</code>
-      <code>setInputFilter</code>
-      <code>setStatusCode</code>
-      <code>setStatusCode</code>
-      <code>setStatusCode</code>
-      <code>setStatusCode</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getIdentity]]></code>
+      <code><![CDATA[getInputFilter]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[patchList]]></code>
+      <code><![CDATA[setIdentity]]></code>
+      <code><![CDATA[setInputFilter]]></code>
+      <code><![CDATA[setStatusCode]]></code>
+      <code><![CDATA[setStatusCode]]></code>
+      <code><![CDATA[setStatusCode]]></code>
+      <code><![CDATA[setStatusCode]]></code>
     </UndefinedInterfaceMethod>
-    <UndefinedMagicMethod occurrences="2">
-      <code>bodyParams</code>
-      <code>bodyParams</code>
+    <UndefinedMagicMethod>
+      <code><![CDATA[bodyParams]]></code>
+      <code><![CDATA[bodyParams]]></code>
     </UndefinedMagicMethod>
   </file>
   <file src="test/AbstractResourceListenerTest.php">
-    <MissingReturnType occurrences="3">
-      <code>testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent</code>
-      <code>testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod</code>
-      <code>testResourceMethodsAreInvokedWhenEventsAreTriggered</code>
+    <MissingReturnType>
+      <code><![CDATA[testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent]]></code>
+      <code><![CDATA[testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod]]></code>
+      <code><![CDATA[testResourceMethodsAreInvokedWhenEventsAreTriggered]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="10">
-      <code>$eventArgs['data']</code>
-      <code>$eventArgs['data']</code>
-      <code>$eventArgs['data']</code>
-      <code>$eventArgs['data']</code>
-      <code>$eventArgs['data']</code>
-      <code>$eventArgs['data']</code>
-      <code>$eventArgs['id']</code>
-      <code>$eventArgs['id']</code>
-      <code>$eventArgs['id']</code>
-      <code>$eventArgs['id']</code>
+    <MixedArgument>
+      <code><![CDATA[$eventArgs['data']]]></code>
+      <code><![CDATA[$eventArgs['data']]]></code>
+      <code><![CDATA[$eventArgs['data']]]></code>
+      <code><![CDATA[$eventArgs['data']]]></code>
+      <code><![CDATA[$eventArgs['data']]]></code>
+      <code><![CDATA[$eventArgs['data']]]></code>
+      <code><![CDATA[$eventArgs['id']]]></code>
+      <code><![CDATA[$eventArgs['id']]]></code>
+      <code><![CDATA[$eventArgs['id']]]></code>
+      <code><![CDATA[$eventArgs['id']]]></code>
     </MixedArgument>
-    <UndefinedPropertyFetch occurrences="2">
-      <code>$this-&gt;listener-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;listener-&gt;testCase-&gt;paramsPassedToListener</code>
+    <UndefinedPropertyFetch>
+      <code><![CDATA[$this->listener->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->listener->testCase->paramsPassedToListener]]></code>
     </UndefinedPropertyFetch>
   </file>
   <file src="test/ChildResourcesIntegrationTest.php">
-    <ArgumentTypeCoercion occurrences="2">
-      <code>$this-&gt;getRouteMatchClass()</code>
-      <code>$this-&gt;getRouteMatchClass()</code>
-    </ArgumentTypeCoercion>
-    <DeprecatedMethod occurrences="11">
-      <code>add</code>
-      <code>add</code>
-      <code>add</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
+    <DeprecatedMethod>
+      <code><![CDATA[add]]></code>
+      <code><![CDATA[add]]></code>
+      <code><![CDATA[add]]></code>
     </DeprecatedMethod>
-    <DocblockTypeContradiction occurrences="4">
-      <code>! $this-&gt;helpers</code>
-      <code>! $this-&gt;router</code>
-      <code>$this-&gt;helpers</code>
-      <code>$this-&gt;router</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[! $this->helpers]]></code>
+      <code><![CDATA[! $this->router]]></code>
+      <code><![CDATA[$this->helpers]]></code>
+      <code><![CDATA[$this->router]]></code>
     </DocblockTypeContradiction>
-    <MissingClosureParamType occurrences="2">
-      <code>$e</code>
-      <code>$e</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
-    <MissingReturnType occurrences="4">
-      <code>setUpAlternateRouter</code>
-      <code>setupHelpers</code>
-      <code>testChildResourceObjectIdentifierMappingInCollectionsViaControllerReturn</code>
-      <code>testChildResourceObjectIdentifierMappingViaControllerReturn</code>
+    <MissingReturnType>
+      <code><![CDATA[setUpAlternateRouter]]></code>
+      <code><![CDATA[setupHelpers]]></code>
+      <code><![CDATA[testChildResourceObjectIdentifierMappingInCollectionsViaControllerReturn]]></code>
+      <code><![CDATA[testChildResourceObjectIdentifierMappingViaControllerReturn]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="10">
-      <code>$child</code>
-      <code>$child-&gt;_links</code>
-      <code>$child-&gt;_links-&gt;self</code>
-      <code>$child-&gt;_links-&gt;self-&gt;href</code>
-      <code>$params</code>
-      <code>$test</code>
-      <code>$test</code>
-      <code>$test-&gt;_embedded</code>
-      <code>$test-&gt;_links</code>
-      <code>$test-&gt;_links-&gt;self</code>
+    <MixedArgument>
+      <code><![CDATA[$child]]></code>
+      <code><![CDATA[$child->_links]]></code>
+      <code><![CDATA[$child->_links->self]]></code>
+      <code><![CDATA[$child->_links->self->href]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$test]]></code>
+      <code><![CDATA[$test->_embedded]]></code>
+      <code><![CDATA[$test->_links]]></code>
+      <code><![CDATA[$test->_links->self]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="1">
-      <code>$params['child_id']</code>
-    </MixedArrayAccess>
-    <MixedArrayAssignment occurrences="1">
-      <code>$collection[]</code>
+    <MixedArrayAssignment>
+      <code><![CDATA[$collection[]]]></code>
     </MixedArrayAssignment>
-    <MixedAssignment occurrences="5">
-      <code>$child</code>
-      <code>$collection[]</code>
-      <code>$id</code>
-      <code>$params</code>
-      <code>$test</code>
+    <MixedAssignment>
+      <code><![CDATA[$child]]></code>
+      <code><![CDATA[$collection[]]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$params]]></code>
+      <code><![CDATA[$test]]></code>
     </MixedAssignment>
-    <MixedPropertyFetch occurrences="8">
-      <code>$child-&gt;_links</code>
-      <code>$child-&gt;_links-&gt;self</code>
-      <code>$child-&gt;_links-&gt;self-&gt;href</code>
-      <code>$test-&gt;_embedded</code>
-      <code>$test-&gt;_embedded-&gt;children</code>
-      <code>$test-&gt;_links</code>
-      <code>$test-&gt;_links-&gt;self</code>
-      <code>$test-&gt;_links-&gt;self-&gt;href</code>
-    </MixedPropertyFetch>
-    <PossiblyInvalidArgument occurrences="1">
-      <code>$this-&gt;router</code>
-    </PossiblyInvalidArgument>
-    <PossiblyInvalidMethodCall occurrences="4">
-      <code>getRouteParams</code>
-      <code>setRouteMatch</code>
-      <code>setRouteMatch</code>
-      <code>setRouter</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getRouteParams]]></code>
+      <code><![CDATA[setRouteMatch]]></code>
+      <code><![CDATA[setRouteMatch]]></code>
+      <code><![CDATA[setRouter]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullReference occurrences="3">
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getRouteParams</code>
+    <PossiblyNullReference>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getRouteParams]]></code>
     </PossiblyNullReference>
-    <PossiblyUndefinedMethod occurrences="1">
-      <code>getRouteParams</code>
-    </PossiblyUndefinedMethod>
-    <PossiblyUndefinedVariable occurrences="1">
-      <code>$collection</code>
+    <PossiblyUndefinedVariable>
+      <code><![CDATA[$collection]]></code>
     </PossiblyUndefinedVariable>
-    <UndefinedDocblockClass occurrences="5">
-      <code>$router</code>
-      <code>$router</code>
-      <code>$this-&gt;router</code>
-      <code>$this-&gt;router</code>
-      <code>TreeRouteStack|V2TreeRouteStack</code>
-    </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="3">
-      <code>setRouteMatch</code>
-      <code>setRouteMatch</code>
-      <code>setRouter</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getRouteParams]]></code>
+      <code><![CDATA[setRouteMatch]]></code>
+      <code><![CDATA[setRouteMatch]]></code>
+      <code><![CDATA[setRouter]]></code>
     </UndefinedInterfaceMethod>
-    <UnusedClosureParam occurrences="2">
-      <code>$e</code>
-      <code>$e</code>
+    <UnusedClosureParam>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/CollectionIntegrationTest.php">
-    <ImplicitToStringCast occurrences="1">
-      <code>$uri</code>
+    <ImplicitToStringCast>
+      <code><![CDATA[$uri]]></code>
     </ImplicitToStringCast>
-    <InvalidArgument occurrences="2">
-      <code>$viewModelSelector</code>
+    <InvalidArgument>
+      <code><![CDATA[$viewModelSelector]]></code>
     </InvalidArgument>
-    <MissingClosureParamType occurrences="3">
-      <code>$e</code>
-      <code>$first</code>
-      <code>$second</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$first]]></code>
+      <code><![CDATA[$second]]></code>
     </MissingClosureParamType>
-    <MissingReturnType occurrences="7">
-      <code>setUpHelpers</code>
-      <code>setUpRenderer</code>
-      <code>setUpRouter</code>
-      <code>testCollectionLinksIncludeFullQueryString</code>
-      <code>testFactoryEnabledListenerCreatesQueryStringWhitelist</code>
-      <code>testFactoryEnabledListenerInjectsWhitelistedQueryParams</code>
-      <code>testFactoryEnabledListenerMergeWhitelistedQueryParamsWithInputFilterKeys</code>
+    <MissingReturnType>
+      <code><![CDATA[setUpHelpers]]></code>
+      <code><![CDATA[setUpRenderer]]></code>
+      <code><![CDATA[setUpRouter]]></code>
+      <code><![CDATA[testCollectionLinksIncludeFullQueryString]]></code>
+      <code><![CDATA[testFactoryEnabledListenerCreatesQueryStringWhitelist]]></code>
+      <code><![CDATA[testFactoryEnabledListenerInjectsWhitelistedQueryParams]]></code>
+      <code><![CDATA[testFactoryEnabledListenerMergeWhitelistedQueryParamsWithInputFilterKeys]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="15">
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$link</code>
-      <code>$link</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$payload</code>
-      <code>$payload</code>
-      <code>$plugins</code>
-      <code>$shared</code>
-      <code>$shared</code>
+    <MixedArgument>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$link]]></code>
+      <code><![CDATA[$link]]></code>
+      <code><![CDATA[$link['href']]]></code>
+      <code><![CDATA[$link['href']]]></code>
+      <code><![CDATA[$link['href']]]></code>
+      <code><![CDATA[$link['href']]]></code>
+      <code><![CDATA[$link['href']]]></code>
+      <code><![CDATA[$payload]]></code>
+      <code><![CDATA[$payload]]></code>
+      <code><![CDATA[$plugins]]></code>
+      <code><![CDATA[$shared]]></code>
+      <code><![CDATA[$shared]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="12">
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$link['href']</code>
-      <code>$payload['_links']</code>
-      <code>$payload['_links']</code>
-    </MixedArrayAccess>
-    <MixedAssignment occurrences="17">
-      <code>$collection</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$instance</code>
-      <code>$link</code>
-      <code>$link</code>
-      <code>$links</code>
-      <code>$links</code>
-      <code>$name</code>
-      <code>$name</code>
-      <code>$payload</code>
-      <code>$payload</code>
-      <code>$plugins</code>
-      <code>$query</code>
-      <code>$request</code>
-      <code>$shared</code>
+    <MixedAssignment>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$instance]]></code>
+      <code><![CDATA[$link]]></code>
+      <code><![CDATA[$link]]></code>
+      <code><![CDATA[$links]]></code>
+      <code><![CDATA[$links]]></code>
+      <code><![CDATA[$name]]></code>
+      <code><![CDATA[$name]]></code>
+      <code><![CDATA[$payload]]></code>
+      <code><![CDATA[$payload]]></code>
+      <code><![CDATA[$plugins]]></code>
+      <code><![CDATA[$query]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$shared]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="15">
-      <code>get</code>
-      <code>get</code>
-      <code>get</code>
-      <code>getParam</code>
-      <code>getQuery</code>
-      <code>getRequest</code>
-      <code>getResource</code>
-      <code>getTarget</code>
-      <code>setAlias</code>
-      <code>setCollectionRouteOptions</code>
-      <code>setEvent</code>
-      <code>setEvent</code>
-      <code>setEvent</code>
-      <code>setInputFilter</code>
-      <code>setService</code>
+    <MixedMethodCall>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getRequest]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getTarget]]></code>
+      <code><![CDATA[setAlias]]></code>
+      <code><![CDATA[setCollectionRouteOptions]]></code>
+      <code><![CDATA[setEvent]]></code>
+      <code><![CDATA[setEvent]]></code>
+      <code><![CDATA[setEvent]]></code>
+      <code><![CDATA[setInputFilter]]></code>
+      <code><![CDATA[setService]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidArgument occurrences="3">
-      <code>$this-&gt;matches</code>
-      <code>$this-&gt;router</code>
-      <code>$this-&gt;router</code>
-    </PossiblyInvalidArgument>
-    <PossiblyInvalidMethodCall occurrences="2">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullArgument occurrences="8">
-      <code>$this-&gt;helpers</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;request</code>
-      <code>$this-&gt;response</code>
+    <PossiblyNullArgument>
+      <code><![CDATA[$this->helpers]]></code>
+      <code><![CDATA[$this->request]]></code>
+      <code><![CDATA[$this->request]]></code>
+      <code><![CDATA[$this->request]]></code>
+      <code><![CDATA[$this->request]]></code>
+      <code><![CDATA[$this->request]]></code>
+      <code><![CDATA[$this->request]]></code>
+      <code><![CDATA[$this->response]]></code>
+      <code><![CDATA[$this->router]]></code>
+      <code><![CDATA[$this->router]]></code>
     </PossiblyNullArgument>
-    <PossiblyNullReference occurrences="4">
-      <code>attach</code>
-      <code>get</code>
-      <code>render</code>
-      <code>render</code>
+    <PossiblyNullReference>
+      <code><![CDATA[attach]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[render]]></code>
+      <code><![CDATA[render]]></code>
     </PossiblyNullReference>
-    <PossiblyUndefinedMethod occurrences="2">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
     </PossiblyUndefinedMethod>
-    <UndefinedClass occurrences="2">
-      <code>$router</code>
-      <code>V2RouteMatch</code>
-    </UndefinedClass>
-    <UndefinedDocblockClass occurrences="4">
-      <code>$router</code>
-      <code>RouteMatch|V2RouteMatch</code>
-      <code>null|TreeRouteStack|V2TreeRouteStack</code>
-      <code>private $router = null;</code>
-    </UndefinedDocblockClass>
-    <UndefinedMagicMethod occurrences="2">
-      <code>getResource</code>
-      <code>getResource</code>
+    <UndefinedMagicMethod>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getResource]]></code>
     </UndefinedMagicMethod>
-    <UndefinedMethod occurrences="1">
-      <code>setSharedManager</code>
+    <UndefinedMethod>
+      <code><![CDATA[setSharedManager]]></code>
     </UndefinedMethod>
-    <UnusedClosureParam occurrences="1">
-      <code>$container</code>
+    <UnusedClosureParam>
+      <code><![CDATA[$container]]></code>
     </UnusedClosureParam>
   </file>
   <file src="test/Factory/OptionsListenerFactoryTest.php">
-    <MissingReturnType occurrences="1">
-      <code>testFactoryCreatesOptionsListenerFromRestConfiguration</code>
+    <MissingReturnType>
+      <code><![CDATA[testFactoryCreatesOptionsListenerFromRestConfiguration]]></code>
     </MissingReturnType>
-    <MixedAssignment occurrences="1">
-      <code>$instanceConfig</code>
+    <MixedAssignment>
+      <code><![CDATA[$instanceConfig]]></code>
     </MixedAssignment>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/Factory/RestControllerFactoryTest.php">
-    <MissingReturnType occurrences="7">
-      <code>testControllerEventManagerIdentifiersAreAsSpecified</code>
-      <code>testDefaultControllerEventManagerIdentifiersAreAsExpected</code>
-      <code>testDefaultResourceEventManagerIdentifiersAreAsExpected</code>
-      <code>testResourceEventManagerIdentifiersAreAsSpecifiedArray</code>
-      <code>testResourceEventManagerIdentifiersAreAsSpecifiedString</code>
-      <code>testWillInstantiateAlternateRestControllerWhenSpecified</code>
-      <code>testWillInstantiateListenerIfServiceNotFoundButClassExists</code>
+    <MissingReturnType>
+      <code><![CDATA[testControllerEventManagerIdentifiersAreAsSpecified]]></code>
+      <code><![CDATA[testDefaultControllerEventManagerIdentifiersAreAsExpected]]></code>
+      <code><![CDATA[testDefaultResourceEventManagerIdentifiersAreAsExpected]]></code>
+      <code><![CDATA[testResourceEventManagerIdentifiersAreAsSpecifiedArray]]></code>
+      <code><![CDATA[testResourceEventManagerIdentifiersAreAsSpecifiedString]]></code>
+      <code><![CDATA[testWillInstantiateAlternateRestControllerWhenSpecified]]></code>
+      <code><![CDATA[testWillInstantiateListenerIfServiceNotFoundButClassExists]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="9">
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
+    <MixedArgument>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="4">
-      <code>$config['api-tools-rest']</code>
-      <code>$config['api-tools-rest']</code>
-      <code>$config['api-tools-rest']</code>
-      <code>$config['api-tools-rest']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
     </MixedArrayAccess>
-    <MixedArrayAssignment occurrences="4">
-      <code>$config['api-tools-rest']</code>
-      <code>$config['api-tools-rest']</code>
-      <code>$config['api-tools-rest']</code>
-      <code>$config['api-tools-rest']</code>
+    <MixedArrayAssignment>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']['controller_class']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']['identifier']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']['resource_identifiers']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']['resource_identifiers']]]></code>
     </MixedArrayAssignment>
-    <MixedAssignment occurrences="24">
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config['api-tools-rest']['ApiController']['identifier']</code>
-      <code>$config['api-tools-rest']['ApiController']['resource_identifiers']</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$controller</code>
-      <code>$events</code>
-      <code>$events</code>
-      <code>$events</code>
-      <code>$events</code>
-      <code>$events</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$resource</code>
-      <code>$resource</code>
-      <code>$resource</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']['identifier']]]></code>
+      <code><![CDATA[$config['api-tools-rest']['ApiController']['resource_identifiers']]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$controller]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$resource]]></code>
+      <code><![CDATA[$resource]]></code>
+      <code><![CDATA[$resource]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="13">
-      <code>getEventManager</code>
-      <code>getEventManager</code>
-      <code>getEventManager</code>
-      <code>getEventManager</code>
-      <code>getEventManager</code>
-      <code>getIdentifiers</code>
-      <code>getIdentifiers</code>
-      <code>getIdentifiers</code>
-      <code>getIdentifiers</code>
-      <code>getIdentifiers</code>
-      <code>getResource</code>
-      <code>getResource</code>
-      <code>getResource</code>
+    <MixedMethodCall>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getEventManager]]></code>
+      <code><![CDATA[getIdentifiers]]></code>
+      <code><![CDATA[getIdentifiers]]></code>
+      <code><![CDATA[getIdentifiers]]></code>
+      <code><![CDATA[getIdentifiers]]></code>
+      <code><![CDATA[getIdentifiers]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getResource]]></code>
+      <code><![CDATA[getResource]]></code>
     </MixedMethodCall>
-    <UndefinedClass occurrences="8">
-      <code>TestAsset\ExtraControllerListener</code>
-      <code>TestAsset\ExtraControllerListener</code>
-      <code>TestAsset\ExtraResourceListener</code>
-      <code>TestAsset\ExtraResourceListener</code>
-      <code>TestAsset\ExtraResourceListener1</code>
-      <code>TestAsset\ExtraResourceListener1</code>
-      <code>TestAsset\ExtraResourceListener2</code>
-      <code>TestAsset\ExtraResourceListener2</code>
+    <UndefinedClass>
+      <code><![CDATA[TestAsset\ExtraControllerListener]]></code>
+      <code><![CDATA[TestAsset\ExtraControllerListener]]></code>
+      <code><![CDATA[TestAsset\ExtraResourceListener]]></code>
+      <code><![CDATA[TestAsset\ExtraResourceListener]]></code>
+      <code><![CDATA[TestAsset\ExtraResourceListener1]]></code>
+      <code><![CDATA[TestAsset\ExtraResourceListener1]]></code>
+      <code><![CDATA[TestAsset\ExtraResourceListener2]]></code>
+      <code><![CDATA[TestAsset\ExtraResourceListener2]]></code>
     </UndefinedClass>
   </file>
   <file src="test/Factory/TestAsset/CustomController.php">
-    <PropertyNotSetInConstructor occurrences="10">
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
-      <code>CustomController</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
+      <code><![CDATA[CustomController]]></code>
     </PropertyNotSetInConstructor>
   </file>
   <file src="test/Listener/OptionsListenerTest.php">
-    <InvalidDocblock occurrences="1">
-      <code>public function invalidMethodsProvider(): array</code>
-    </InvalidDocblock>
-    <MissingClosureParamType occurrences="1">
-      <code>$value</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
-    <MissingReturnType occurrences="7">
-      <code>testListenerRegistersAtExpectedPriority</code>
-      <code>testListenerReturns405ResponseWithAllowHeaderForInvalidRequestMethod</code>
-      <code>testListenerReturnsNullIfMatchingControllerInRouteMatchesButNoConfigForController</code>
-      <code>testListenerReturnsNullIfNoMatchingControllerInRouteMatches</code>
-      <code>testListenerReturnsNullIfNoRouteMatches</code>
-      <code>testListenerReturnsNullIfNotAnHttpRequest</code>
-      <code>testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest</code>
+    <MissingReturnType>
+      <code><![CDATA[testListenerRegistersAtExpectedPriority]]></code>
+      <code><![CDATA[testListenerReturns405ResponseWithAllowHeaderForInvalidRequestMethod]]></code>
+      <code><![CDATA[testListenerReturnsNullIfMatchingControllerInRouteMatchesButNoConfigForController]]></code>
+      <code><![CDATA[testListenerReturnsNullIfNoMatchingControllerInRouteMatches]]></code>
+      <code><![CDATA[testListenerReturnsNullIfNoRouteMatches]]></code>
+      <code><![CDATA[testListenerReturnsNullIfNotAnHttpRequest]]></code>
+      <code><![CDATA[testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="2">
-      <code>$allow</code>
-      <code>$value</code>
+    <MixedArgument>
+      <code><![CDATA[$allow]]></code>
+      <code><![CDATA[$value]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$allow</code>
+    <MixedAssignment>
+      <code><![CDATA[$allow]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1"/>
-    <PossiblyInvalidArgument occurrences="3">
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-    </PossiblyInvalidArgument>
-    <PossiblyInvalidMethodCall occurrences="1">
-      <code>getFieldValue</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getFieldValue]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyUndefinedMethod occurrences="1">
-      <code>getFieldValue</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[getFieldValue]]></code>
     </PossiblyUndefinedMethod>
-    <TooManyArguments occurrences="1">
-      <code>new Request('GET')</code>
+    <TooManyArguments>
+      <code><![CDATA[new Request('GET')]]></code>
     </TooManyArguments>
-    <UnusedVariable occurrences="2">
-      <code>$matches</code>
-      <code>$matches</code>
+    <UnusedVariable>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
     </UnusedVariable>
   </file>
   <file src="test/Listener/RestParametersListenerTest.php">
-    <MissingReturnType occurrences="5">
-      <code>testAttachSharedAttachOneListenerOnEventDispatch</code>
-      <code>testDetachSharedDetachAttachedListener</code>
-      <code>testIgnoresNonRestControllers</code>
-      <code>testInjectsQueryParamsOnDispatchOfRestController</code>
-      <code>testInjectsRouteMatchOnDispatchOfRestController</code>
+    <MissingReturnType>
+      <code><![CDATA[testAttachSharedAttachOneListenerOnEventDispatch]]></code>
+      <code><![CDATA[testDetachSharedDetachAttachedListener]]></code>
+      <code><![CDATA[testIgnoresNonRestControllers]]></code>
+      <code><![CDATA[testInjectsQueryParamsOnDispatchOfRestController]]></code>
+      <code><![CDATA[testInjectsRouteMatchOnDispatchOfRestController]]></code>
     </MissingReturnType>
-    <PossiblyInvalidArgument occurrences="3">
-      <code>$identifiers</code>
-      <code>$identifiers</code>
-      <code>$matches</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$identifiers]]></code>
+      <code><![CDATA[$identifiers]]></code>
     </PossiblyInvalidArgument>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RouteMatch|V2RouteMatch</code>
-    </UndefinedDocblockClass>
-    <UndefinedThisPropertyAssignment occurrences="1">
-      <code>$this-&gt;request</code>
-    </UndefinedThisPropertyAssignment>
   </file>
   <file src="test/ResourceEventTest.php">
-    <MissingReturnType occurrences="17">
-      <code>testCanComposeIdentity</code>
-      <code>testCanComposeInputFilter</code>
-      <code>testCanFetchIndividualQueryParameter</code>
-      <code>testCanFetchIndividualRouteParameter</code>
-      <code>testCanInjectRequestViaSetParams</code>
-      <code>testCanNullifyIdentity</code>
-      <code>testCanNullifyInputFilter</code>
-      <code>testIdentityIsUndefinedByDefault</code>
-      <code>testInputFilterIsUndefinedByDefault</code>
-      <code>testQueryParamsAreNullByDefault</code>
-      <code>testQueryParamsAreNullable</code>
-      <code>testRequestIsNullByDefault</code>
-      <code>testRequestIsNullable</code>
-      <code>testReturnsDefaultParameterWhenPullingUnknownQueryParameter</code>
-      <code>testReturnsDefaultParameterWhenPullingUnknownRouteParameter</code>
-      <code>testRouteMatchIsNullByDefault</code>
-      <code>testRouteMatchIsNullable</code>
+    <MissingReturnType>
+      <code><![CDATA[testCanComposeIdentity]]></code>
+      <code><![CDATA[testCanComposeInputFilter]]></code>
+      <code><![CDATA[testCanFetchIndividualQueryParameter]]></code>
+      <code><![CDATA[testCanFetchIndividualRouteParameter]]></code>
+      <code><![CDATA[testCanInjectRequestViaSetParams]]></code>
+      <code><![CDATA[testCanNullifyIdentity]]></code>
+      <code><![CDATA[testCanNullifyInputFilter]]></code>
+      <code><![CDATA[testIdentityIsUndefinedByDefault]]></code>
+      <code><![CDATA[testInputFilterIsUndefinedByDefault]]></code>
+      <code><![CDATA[testQueryParamsAreNullByDefault]]></code>
+      <code><![CDATA[testQueryParamsAreNullable]]></code>
+      <code><![CDATA[testRequestIsNullByDefault]]></code>
+      <code><![CDATA[testRequestIsNullable]]></code>
+      <code><![CDATA[testReturnsDefaultParameterWhenPullingUnknownQueryParameter]]></code>
+      <code><![CDATA[testReturnsDefaultParameterWhenPullingUnknownRouteParameter]]></code>
+      <code><![CDATA[testRouteMatchIsNullByDefault]]></code>
+      <code><![CDATA[testRouteMatchIsNullable]]></code>
     </MissingReturnType>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RouteMatch|V2RouteMatch</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$this->matches]]></code>
+      <code><![CDATA[$this->matches]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedDocblockClass>
+      <code><![CDATA[RouteMatch|V2RouteMatch]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="test/ResourceTest.php">
-    <DeprecatedMethod occurrences="2">
-      <code>assertObjectHasAttribute</code>
-      <code>assertObjectHasAttribute</code>
-    </DeprecatedMethod>
-    <MissingClosureParamType occurrences="38">
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
-    <MissingClosureReturnType occurrences="2">
-      <code>function ($e) use ($return) {</code>
-      <code>function ($e) use ($return) {</code>
+    <MissingClosureReturnType>
+      <code><![CDATA[function ($e) use ($return) {]]></code>
+      <code><![CDATA[function ($e) use ($return) {]]></code>
     </MissingClosureReturnType>
-    <MissingReturnType occurrences="33">
-      <code>testAllowsReturningResponsesReturnedFromResources</code>
-      <code>testClearOldParamsOnSetEventParams</code>
-      <code>testComposedQueryParametersAndRouteMatchesAreInjectedIntoEvent</code>
-      <code>testCreateRaisesExceptionWithInvalidData</code>
-      <code>testCreateReturnsDataIfLastListenerDoesNotReturnResource</code>
-      <code>testCreateReturnsResultOfLastListener</code>
-      <code>testDeleteListRaisesInvalidArgumentExceptionForInvalidData</code>
-      <code>testDeleteListReturnsFalseIfLastListenerDoesNotReturnBoolean</code>
-      <code>testDeleteListReturnsResultOfLastListenerIfBoolean</code>
-      <code>testDeleteReturnsFalseIfLastListenerDoesNotReturnBoolean</code>
-      <code>testDeleteReturnsResultOfLastListenerIfBoolean</code>
-      <code>testEventManagerIdentifiersAreAsExpected</code>
-      <code>testEventParametersAreInjectedIntoEventWhenTriggered</code>
-      <code>testEventParamsReturnDefaultValueOnNonExistingParam</code>
-      <code>testEventTerminateIfApiProblemIsReturned</code>
-      <code>testFetchAllReturnsEmptyArrayIfLastListenerReturnsScalar</code>
-      <code>testFetchAllReturnsResultOfLastListener</code>
-      <code>testFetchAllShouldAllowReturningArbitraryObjects</code>
-      <code>testFetchReturnsFalseIfLastListenerDoesNotReturnArrayOrObject</code>
-      <code>testFetchReturnsResultOfLastListener</code>
-      <code>testPatchListListRaisesExceptionWithInvalidData</code>
-      <code>testPatchListReturnsDataIfLastListenerDoesNotReturnResource</code>
-      <code>testPatchListReturnsResultOfLastListener</code>
-      <code>testPatchRaisesExceptionWithInvalidData</code>
-      <code>testPatchReturnsDataIfLastListenerDoesNotReturnResource</code>
-      <code>testPatchReturnsResultOfLastListener</code>
-      <code>testReplaceListRaisesExceptionWithInvalidData</code>
-      <code>testReplaceListReturnsDataIfLastListenerDoesNotReturnResource</code>
-      <code>testReplaceListReturnsResultOfLastListener</code>
-      <code>testSameInstanceReturnedByEventParams</code>
-      <code>testUpdateRaisesExceptionWithInvalidData</code>
-      <code>testUpdateReturnsDataIfLastListenerDoesNotReturnResource</code>
-      <code>testUpdateReturnsResultOfLastListener</code>
+    <MissingReturnType>
+      <code><![CDATA[testAllowsReturningResponsesReturnedFromResources]]></code>
+      <code><![CDATA[testClearOldParamsOnSetEventParams]]></code>
+      <code><![CDATA[testComposedQueryParametersAndRouteMatchesAreInjectedIntoEvent]]></code>
+      <code><![CDATA[testCreateRaisesExceptionWithInvalidData]]></code>
+      <code><![CDATA[testCreateReturnsDataIfLastListenerDoesNotReturnResource]]></code>
+      <code><![CDATA[testCreateReturnsResultOfLastListener]]></code>
+      <code><![CDATA[testDeleteListRaisesInvalidArgumentExceptionForInvalidData]]></code>
+      <code><![CDATA[testDeleteListReturnsFalseIfLastListenerDoesNotReturnBoolean]]></code>
+      <code><![CDATA[testDeleteListReturnsResultOfLastListenerIfBoolean]]></code>
+      <code><![CDATA[testDeleteReturnsFalseIfLastListenerDoesNotReturnBoolean]]></code>
+      <code><![CDATA[testDeleteReturnsResultOfLastListenerIfBoolean]]></code>
+      <code><![CDATA[testEventManagerIdentifiersAreAsExpected]]></code>
+      <code><![CDATA[testEventParametersAreInjectedIntoEventWhenTriggered]]></code>
+      <code><![CDATA[testEventParamsReturnDefaultValueOnNonExistingParam]]></code>
+      <code><![CDATA[testEventTerminateIfApiProblemIsReturned]]></code>
+      <code><![CDATA[testFetchAllReturnsEmptyArrayIfLastListenerReturnsScalar]]></code>
+      <code><![CDATA[testFetchAllReturnsResultOfLastListener]]></code>
+      <code><![CDATA[testFetchAllShouldAllowReturningArbitraryObjects]]></code>
+      <code><![CDATA[testFetchReturnsFalseIfLastListenerDoesNotReturnArrayOrObject]]></code>
+      <code><![CDATA[testFetchReturnsResultOfLastListener]]></code>
+      <code><![CDATA[testPatchListListRaisesExceptionWithInvalidData]]></code>
+      <code><![CDATA[testPatchListReturnsDataIfLastListenerDoesNotReturnResource]]></code>
+      <code><![CDATA[testPatchListReturnsResultOfLastListener]]></code>
+      <code><![CDATA[testPatchRaisesExceptionWithInvalidData]]></code>
+      <code><![CDATA[testPatchReturnsDataIfLastListenerDoesNotReturnResource]]></code>
+      <code><![CDATA[testPatchReturnsResultOfLastListener]]></code>
+      <code><![CDATA[testReplaceListRaisesExceptionWithInvalidData]]></code>
+      <code><![CDATA[testReplaceListReturnsDataIfLastListenerDoesNotReturnResource]]></code>
+      <code><![CDATA[testReplaceListReturnsResultOfLastListener]]></code>
+      <code><![CDATA[testSameInstanceReturnedByEventParams]]></code>
+      <code><![CDATA[testUpdateRaisesExceptionWithInvalidData]]></code>
+      <code><![CDATA[testUpdateReturnsDataIfLastListenerDoesNotReturnResource]]></code>
+      <code><![CDATA[testUpdateReturnsResultOfLastListener]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="6">
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
+    <MixedArgument>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$e</code>
+    <MixedAssignment>
+      <code><![CDATA[$e]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="6">
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
-    </MixedInferredReturnType>
-    <MixedMethodCall occurrences="4">
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
+    <MixedMethodCall>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
     </MixedMethodCall>
-    <TooManyArguments occurrences="1">
-      <code>delete</code>
+    <MixedReturnStatement>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+    </MixedReturnStatement>
+    <TooManyArguments>
+      <code><![CDATA[delete]]></code>
     </TooManyArguments>
-    <UnusedClosureParam occurrences="36">
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
+    <UnusedClosureParam>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
   </file>
   <file src="test/RestControllerTest.php">
-    <DeprecatedMethod occurrences="2">
-      <code>add</code>
-      <code>add</code>
+    <DeprecatedMethod>
+      <code><![CDATA[add]]></code>
+      <code><![CDATA[add]]></code>
     </DeprecatedMethod>
-    <DocblockTypeContradiction occurrences="6">
-      <code>assertInstanceOf</code>
-      <code>assertInstanceOf</code>
-      <code>assertInstanceOf</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
+    <DocblockTypeContradiction>
+      <code><![CDATA[assertInstanceOf]]></code>
+      <code><![CDATA[assertInstanceOf]]></code>
+      <code><![CDATA[assertInstanceOf]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
     </DocblockTypeContradiction>
-    <InvalidArgument occurrences="2">
-      <code>$test-&gt;collection</code>
-      <code>new stdClass()</code>
+    <InvalidArgument>
+      <code><![CDATA[$test->collection]]></code>
+      <code><![CDATA[new stdClass()]]></code>
     </InvalidArgument>
-    <LessSpecificReturnStatement occurrences="1">
-      <code>$this-&gt;controller-&gt;getResponse()</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[$this->controller->getResponse()]]></code>
     </LessSpecificReturnStatement>
-    <MissingClosureParamType occurrences="85">
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
-    <MissingClosureReturnType occurrences="1">
-      <code>function ($e) use ($problem) {</code>
+    <MissingClosureReturnType>
+      <code><![CDATA[function ($e) use ($problem) {]]></code>
     </MissingClosureReturnType>
-    <MissingReturnType occurrences="87">
-      <code>assertProblemApiResult</code>
-      <code>testAllowsReturningHalCollectionFromCreate</code>
-      <code>testAllowsReturningHalEntityFromCreate</code>
-      <code>testAllowsReturningResponsesReturnedFromResources</code>
-      <code>testCanSetIdentifierName</code>
-      <code>testContentLocationHeaderIsGeneratedOnlyFromLinkHref</code>
-      <code>testCreateAllowsReturningApiProblemFromResource</code>
-      <code>testCreateDoesNotSetLocationHeaderOnMissingSelfRelationalLink</code>
-      <code>testCreateHalCollectionInjectsExistingCollectionWithMetadataIfMissing</code>
-      <code>testCreateHalCollectionInjectsExistingCollectionWithSelfRelationalLinkIfNotPresent</code>
-      <code>testCreateHalEntityDoesNotInjectExistingEntityWithSelfRelationalLinkIfAlreadyPresent</code>
-      <code>testCreateHalEntityInjectsExistingEntityWithSelfRelationalLinkIfNotPresent</code>
-      <code>testCreateReturnsProblemResultOnCreationException</code>
-      <code>testCreateTriggersPreAndPostEvents</code>
-      <code>testCreateUsesHalEntityReturnedByResource</code>
-      <code>testDeleteAllowsReturningApiProblemFromResource</code>
-      <code>testDeleteCollectionBackwardsCompatibleWithNoData</code>
-      <code>testDeleteListAllowsReturningApiProblemFromResource</code>
-      <code>testDeleteListTriggersPreAndPostEvents</code>
-      <code>testDeleteTriggersPreAndPostEvents</code>
-      <code>testDispatchReturnsEarlyIfApiProblemReturnedFromListener</code>
-      <code>testErrorInMethodReturnsApiProblem</code>
-      <code>testExceptionDuringDeleteReturnsApiProblem</code>
-      <code>testExceptionInMethodReturnsApiProblem</code>
-      <code>testFalseFromDeleteCollectionReturnsProblemApiResult</code>
-      <code>testFalseFromDeleteEntityReturnsProblemApiResult</code>
-      <code>testGetAllowsReturningApiProblemFromResource</code>
-      <code>testGetListAllowsReturningApiProblemFromResource</code>
-      <code>testGetListAllowsReturningEntitiesInsteadOfCollections</code>
-      <code>testGetListTriggersPreAndPostEvents</code>
-      <code>testGetListUsesHalCollectionReturnedByResource</code>
-      <code>testGetResourceReturnsSameInstance</code>
-      <code>testGetResourceThrowsExceptionOnMissingResource</code>
-      <code>testGetTriggersPreAndPostEvents</code>
-      <code>testGetUsesHalEntityReturnedByResource</code>
-      <code>testHalCollectionReturnedIncludesRoutes</code>
-      <code>testHalCollectionUsesControllerCollectionName</code>
-      <code>testHeadReturnsEntityResponseWhenIdProvided</code>
-      <code>testHeadReturnsListResponseWhenNoIdProvided</code>
-      <code>testIdentifierNameHasSaneDefault</code>
-      <code>testInjectsContentValidationInputFilterFromMvcEventIntoResourceEvent</code>
-      <code>testInjectsIdentityFromMvcEventIntoResourceEvent</code>
-      <code>testInjectsRequestFromControllerIntoResourceEvent</code>
-      <code>testNonArrayToReplaceListReturnsApiProblem</code>
-      <code>testOnDispatchRaisesDomainExceptionOnMissingEntity</code>
-      <code>testOnDispatchRaisesDomainExceptionOnMissingRoute</code>
-      <code>testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForCollection</code>
-      <code>testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForEntity</code>
-      <code>testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForEntityWhenRouteIdentifierIsCustomized</code>
-      <code>testOptionsTriggersPreAndPostEventsForCollection</code>
-      <code>testOptionsTriggersPreAndPostEventsForEntity</code>
-      <code>testPassingIdentifierToConstructorAllowsListeningOnThatIdentifier</code>
-      <code>testPatchAllowsReturningApiProblemFromResource</code>
-      <code>testPatchListAllowsReturningApiProblemFromResource</code>
-      <code>testPatchListReturnsHalCollectionWithRoutesInjected</code>
-      <code>testPatchListReturnsProblemResultOnUpdateException</code>
-      <code>testPatchListTriggersPreAndPostEvents</code>
-      <code>testPatchListUsesHalCollectionReturnedByResource</code>
-      <code>testPatchReturnsHalEntityOnSuccess</code>
-      <code>testPatchReturnsProblemResultOnPatchException</code>
-      <code>testPatchTriggersPreAndPostEvents</code>
-      <code>testPatchUsesHalEntityReturnedByResource</code>
-      <code>testReplaceListAllowsReturningApiProblemFromResource</code>
-      <code>testReplaceListReturnsHalCollectionWithRoutesInjected</code>
-      <code>testReplaceListReturnsProblemResultOnUpdateException</code>
-      <code>testReplaceListTriggersPreAndPostEvents</code>
-      <code>testReplaceListUsesHalCollectionReturnedByResource</code>
-      <code>testReturningEmptyResultFromGetReturnsProblemApiResult</code>
-      <code>testReturningEntityFromGetReturnsExpectedHalEntity</code>
-      <code>testReturnsErrorResponseWhenPageNonInteger</code>
-      <code>testReturnsErrorResponseWhenPageSizeBelowMin</code>
-      <code>testReturnsErrorResponseWhenPageSizeExceedsMax</code>
-      <code>testReturnsErrorResponseWhenPageSizeInNotPositive</code>
-      <code>testReturnsHalCollectionForPaginatedList</code>
-      <code>testReturnsHalCollectionForPaginatedListUsingPassedPageSizeParameter</code>
-      <code>testSuccessfulCreationWithEntityIdentifierSetsResponseContentLocationHeader</code>
-      <code>testSuccessfulCreationWithEntityIdentifierSetsResponseLocationHeader</code>
-      <code>testTrueFromDeleteCollectionReturnsResponseWithNoContent</code>
-      <code>testTrueFromDeleteEntityReturnsResponseWithNoContent</code>
-      <code>testUpdateAllowsReturningApiProblemFromResource</code>
-      <code>testUpdateReturnsHalEntityOnSuccess</code>
-      <code>testUpdateReturnsProblemResultOnUpdateException</code>
-      <code>testUpdateTriggersPreAndPostEvents</code>
-      <code>testUpdateUsesHalEntityReturnedByResource</code>
-      <code>testUsesConfiguredIdentifierNameToGetIdentifier</code>
-      <code>testValidMethodReturningHalOrApiValueCastsReturnToContentNegotiationViewModel</code>
-      <code>testValidMethodReturningHalOrApiValueIsCastToViewModel</code>
+    <MissingReturnType>
+      <code><![CDATA[assertProblemApiResult]]></code>
+      <code><![CDATA[testAllowsReturningHalCollectionFromCreate]]></code>
+      <code><![CDATA[testAllowsReturningHalEntityFromCreate]]></code>
+      <code><![CDATA[testAllowsReturningResponsesReturnedFromResources]]></code>
+      <code><![CDATA[testCanSetIdentifierName]]></code>
+      <code><![CDATA[testContentLocationHeaderIsGeneratedOnlyFromLinkHref]]></code>
+      <code><![CDATA[testCreateAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testCreateDoesNotSetLocationHeaderOnMissingSelfRelationalLink]]></code>
+      <code><![CDATA[testCreateHalCollectionInjectsExistingCollectionWithMetadataIfMissing]]></code>
+      <code><![CDATA[testCreateHalCollectionInjectsExistingCollectionWithSelfRelationalLinkIfNotPresent]]></code>
+      <code><![CDATA[testCreateHalEntityDoesNotInjectExistingEntityWithSelfRelationalLinkIfAlreadyPresent]]></code>
+      <code><![CDATA[testCreateHalEntityInjectsExistingEntityWithSelfRelationalLinkIfNotPresent]]></code>
+      <code><![CDATA[testCreateReturnsProblemResultOnCreationException]]></code>
+      <code><![CDATA[testCreateTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testCreateUsesHalEntityReturnedByResource]]></code>
+      <code><![CDATA[testDeleteAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testDeleteCollectionBackwardsCompatibleWithNoData]]></code>
+      <code><![CDATA[testDeleteListAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testDeleteListTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testDeleteTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testDispatchReturnsEarlyIfApiProblemReturnedFromListener]]></code>
+      <code><![CDATA[testErrorInMethodReturnsApiProblem]]></code>
+      <code><![CDATA[testExceptionDuringDeleteReturnsApiProblem]]></code>
+      <code><![CDATA[testExceptionInMethodReturnsApiProblem]]></code>
+      <code><![CDATA[testFalseFromDeleteCollectionReturnsProblemApiResult]]></code>
+      <code><![CDATA[testFalseFromDeleteEntityReturnsProblemApiResult]]></code>
+      <code><![CDATA[testGetAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testGetListAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testGetListAllowsReturningEntitiesInsteadOfCollections]]></code>
+      <code><![CDATA[testGetListTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testGetListUsesHalCollectionReturnedByResource]]></code>
+      <code><![CDATA[testGetResourceReturnsSameInstance]]></code>
+      <code><![CDATA[testGetResourceThrowsExceptionOnMissingResource]]></code>
+      <code><![CDATA[testGetTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testGetUsesHalEntityReturnedByResource]]></code>
+      <code><![CDATA[testHalCollectionReturnedIncludesRoutes]]></code>
+      <code><![CDATA[testHalCollectionUsesControllerCollectionName]]></code>
+      <code><![CDATA[testHeadReturnsEntityResponseWhenIdProvided]]></code>
+      <code><![CDATA[testHeadReturnsListResponseWhenNoIdProvided]]></code>
+      <code><![CDATA[testIdentifierNameHasSaneDefault]]></code>
+      <code><![CDATA[testInjectsContentValidationInputFilterFromMvcEventIntoResourceEvent]]></code>
+      <code><![CDATA[testInjectsIdentityFromMvcEventIntoResourceEvent]]></code>
+      <code><![CDATA[testInjectsRequestFromControllerIntoResourceEvent]]></code>
+      <code><![CDATA[testNonArrayToReplaceListReturnsApiProblem]]></code>
+      <code><![CDATA[testOnDispatchRaisesDomainExceptionOnMissingEntity]]></code>
+      <code><![CDATA[testOnDispatchRaisesDomainExceptionOnMissingRoute]]></code>
+      <code><![CDATA[testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForCollection]]></code>
+      <code><![CDATA[testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForEntity]]></code>
+      <code><![CDATA[testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForEntityWhenRouteIdentifierIsCustomized]]></code>
+      <code><![CDATA[testOptionsTriggersPreAndPostEventsForCollection]]></code>
+      <code><![CDATA[testOptionsTriggersPreAndPostEventsForEntity]]></code>
+      <code><![CDATA[testPassingIdentifierToConstructorAllowsListeningOnThatIdentifier]]></code>
+      <code><![CDATA[testPatchAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testPatchListAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testPatchListReturnsHalCollectionWithRoutesInjected]]></code>
+      <code><![CDATA[testPatchListReturnsProblemResultOnUpdateException]]></code>
+      <code><![CDATA[testPatchListTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testPatchListUsesHalCollectionReturnedByResource]]></code>
+      <code><![CDATA[testPatchReturnsHalEntityOnSuccess]]></code>
+      <code><![CDATA[testPatchReturnsProblemResultOnPatchException]]></code>
+      <code><![CDATA[testPatchTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testPatchUsesHalEntityReturnedByResource]]></code>
+      <code><![CDATA[testReplaceListAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testReplaceListReturnsHalCollectionWithRoutesInjected]]></code>
+      <code><![CDATA[testReplaceListReturnsProblemResultOnUpdateException]]></code>
+      <code><![CDATA[testReplaceListTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testReplaceListUsesHalCollectionReturnedByResource]]></code>
+      <code><![CDATA[testReturningEmptyResultFromGetReturnsProblemApiResult]]></code>
+      <code><![CDATA[testReturningEntityFromGetReturnsExpectedHalEntity]]></code>
+      <code><![CDATA[testReturnsErrorResponseWhenPageNonInteger]]></code>
+      <code><![CDATA[testReturnsErrorResponseWhenPageSizeBelowMin]]></code>
+      <code><![CDATA[testReturnsErrorResponseWhenPageSizeExceedsMax]]></code>
+      <code><![CDATA[testReturnsErrorResponseWhenPageSizeInNotPositive]]></code>
+      <code><![CDATA[testReturnsHalCollectionForPaginatedList]]></code>
+      <code><![CDATA[testReturnsHalCollectionForPaginatedListUsingPassedPageSizeParameter]]></code>
+      <code><![CDATA[testSuccessfulCreationWithEntityIdentifierSetsResponseContentLocationHeader]]></code>
+      <code><![CDATA[testSuccessfulCreationWithEntityIdentifierSetsResponseLocationHeader]]></code>
+      <code><![CDATA[testTrueFromDeleteCollectionReturnsResponseWithNoContent]]></code>
+      <code><![CDATA[testTrueFromDeleteEntityReturnsResponseWithNoContent]]></code>
+      <code><![CDATA[testUpdateAllowsReturningApiProblemFromResource]]></code>
+      <code><![CDATA[testUpdateReturnsHalEntityOnSuccess]]></code>
+      <code><![CDATA[testUpdateReturnsProblemResultOnUpdateException]]></code>
+      <code><![CDATA[testUpdateTriggersPreAndPostEvents]]></code>
+      <code><![CDATA[testUpdateUsesHalEntityReturnedByResource]]></code>
+      <code><![CDATA[testUsesConfiguredIdentifierNameToGetIdentifier]]></code>
+      <code><![CDATA[testValidMethodReturningHalOrApiValueCastsReturnToContentNegotiationViewModel]]></code>
+      <code><![CDATA[testValidMethodReturningHalOrApiValueIsCastToViewModel]]></code>
     </MissingReturnType>
-    <MixedArgument occurrences="9">
-      <code>$httpMethods</code>
-      <code>$httpMethods</code>
-      <code>$httpMethods</code>
-      <code>$location</code>
-      <code>$location</code>
-      <code>$problem['detail']</code>
-      <code>$test</code>
-      <code>$test</code>
-      <code>$test</code>
+    <MixedArgument>
+      <code><![CDATA[$httpMethods]]></code>
+      <code><![CDATA[$httpMethods]]></code>
+      <code><![CDATA[$httpMethods]]></code>
+      <code><![CDATA[$location]]></code>
+      <code><![CDATA[$location]]></code>
+      <code><![CDATA[$problem['detail']]]></code>
+      <code><![CDATA[$test]]></code>
+      <code><![CDATA[$test]]></code>
+      <code><![CDATA[$test]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="21">
-      <code>$event</code>
-      <code>$headers</code>
-      <code>$headers</code>
-      <code>$headers</code>
-      <code>$headers</code>
-      <code>$httpMethods</code>
-      <code>$httpMethods</code>
-      <code>$httpMethods</code>
-      <code>$location</code>
-      <code>$location</code>
-      <code>$resourceEvent</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$test</code>
-      <code>$test</code>
-      <code>$test</code>
+    <MixedAssignment>
+      <code><![CDATA[$event]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[$httpMethods]]></code>
+      <code><![CDATA[$httpMethods]]></code>
+      <code><![CDATA[$httpMethods]]></code>
+      <code><![CDATA[$location]]></code>
+      <code><![CDATA[$location]]></code>
+      <code><![CDATA[$resourceEvent]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$test]]></code>
+      <code><![CDATA[$test]]></code>
+      <code><![CDATA[$test]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="5">
-      <code>Headers</code>
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[Headers]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="48">
-      <code>addHeaderLine</code>
-      <code>addHeaderLine</code>
-      <code>get</code>
-      <code>get</code>
-      <code>getFieldValue</code>
-      <code>getLinks</code>
-      <code>getLinks</code>
-      <code>getLinks</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getParam</code>
-      <code>getRequest</code>
-      <code>has</code>
-      <code>has</code>
-      <code>has</code>
-      <code>has</code>
-      <code>has</code>
-      <code>has</code>
-      <code>set</code>
-      <code>set</code>
-      <code>set</code>
-      <code>setParam</code>
+    <MixedMethodCall>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[addHeaderLine]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getLinks]]></code>
+      <code><![CDATA[getLinks]]></code>
+      <code><![CDATA[getLinks]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getRequest]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[set]]></code>
+      <code><![CDATA[set]]></code>
+      <code><![CDATA[set]]></code>
+      <code><![CDATA[setParam]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$headers</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$headers]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
     </MixedReturnStatement>
-    <MoreSpecificReturnType occurrences="1">
-      <code>PhpEnvironmentResponse</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[PhpEnvironmentResponse]]></code>
     </MoreSpecificReturnType>
-    <PossiblyInvalidArgument occurrences="4">
-      <code>$route</code>
-      <code>$router</code>
-      <code>$this-&gt;createRouteMatch([])</code>
-      <code>$this-&gt;router</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$route]]></code>
+      <code><![CDATA[$router]]></code>
+      <code><![CDATA[$this->router]]></code>
     </PossiblyInvalidArgument>
-    <PossiblyInvalidMethodCall occurrences="4">
-      <code>getFieldValue</code>
-      <code>getFieldValue</code>
-      <code>getFieldValue</code>
-      <code>getFieldValue</code>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getFieldValue]]></code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullReference occurrences="7">
-      <code>setParam</code>
-      <code>setParam</code>
-      <code>setParam</code>
-      <code>setParam</code>
-      <code>setParam</code>
-      <code>setParam</code>
-      <code>setParam</code>
+    <PossiblyNullReference>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
     </PossiblyNullReference>
-    <PossiblyUndefinedMethod occurrences="4">
-      <code>getFieldValue</code>
-      <code>getFieldValue</code>
-      <code>getFieldValue</code>
-      <code>getFieldValue</code>
+    <PossiblyUndefinedMethod>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getFieldValue]]></code>
+      <code><![CDATA[getFieldValue]]></code>
     </PossiblyUndefinedMethod>
-    <TooManyArguments occurrences="8">
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
-      <code>new HalEntity($data, 'foo', 'resource')</code>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[$id]]></code>
+    </RiskyTruthyFalsyComparison>
+    <TooManyArguments>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
+      <code><![CDATA[new HalEntity($data, 'foo', 'resource')]]></code>
     </TooManyArguments>
-    <TypeDoesNotContainType occurrences="30">
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertSame</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
-      <code>assertTrue</code>
+    <TypeDoesNotContainType>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
+      <code><![CDATA[assertSame]]></code>
     </TypeDoesNotContainType>
-    <UndefinedDocblockClass occurrences="2">
-      <code>$router</code>
-      <code>SimpleRouteStack|V2SimpleRouteStack</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[$router]]></code>
+      <code><![CDATA[SimpleRouteStack|V2SimpleRouteStack]]></code>
     </UndefinedDocblockClass>
-    <UndefinedInterfaceMethod occurrences="20">
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getHeaders</code>
-      <code>getIdentity</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>setMethod</code>
-      <code>setMethod</code>
-      <code>setMethod</code>
-      <code>setQuery</code>
-      <code>setQuery</code>
-      <code>setQuery</code>
-      <code>setQuery</code>
-      <code>setQuery</code>
-      <code>setQuery</code>
-      <code>setQuery</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getIdentity]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[setMethod]]></code>
+      <code><![CDATA[setMethod]]></code>
+      <code><![CDATA[setMethod]]></code>
+      <code><![CDATA[setQuery]]></code>
+      <code><![CDATA[setQuery]]></code>
+      <code><![CDATA[setQuery]]></code>
+      <code><![CDATA[setQuery]]></code>
+      <code><![CDATA[setQuery]]></code>
+      <code><![CDATA[setQuery]]></code>
+      <code><![CDATA[setQuery]]></code>
     </UndefinedInterfaceMethod>
-    <UndefinedMethod occurrences="1">
-      <code>setSharedManager</code>
+    <UndefinedMethod>
+      <code><![CDATA[setSharedManager]]></code>
     </UndefinedMethod>
-    <UnusedClosureParam occurrences="64">
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
+    <UnusedClosureParam>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
-    <UnusedVariable occurrences="10">
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
+    <UnusedVariable>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
     </UnusedVariable>
   </file>
   <file src="test/RouteMatchFactoryTrait.php">
-    <InvalidStringClass occurrences="1">
-      <code>new $class($params)</code>
-    </InvalidStringClass>
-    <MoreSpecificReturnType occurrences="1">
-      <code>RouteMatch|V2RouteMatch</code>
+    <MixedMethodCall>
+      <code><![CDATA[new $class($params)]]></code>
+    </MixedMethodCall>
+    <MoreSpecificReturnType>
+      <code><![CDATA[RouteMatch]]></code>
     </MoreSpecificReturnType>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RouteMatch|V2RouteMatch</code>
-    </UndefinedDocblockClass>
   </file>
   <file src="test/SegmentRouteFactoryTrait.php">
-    <UndefinedDocblockClass occurrences="1">
-      <code>SegmentRoute|V2SegmentRoute</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[SegmentRoute|V2SegmentRoute]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="test/SimpleRouteStackFactoryTrait.php">
-    <UndefinedDocblockClass occurrences="1">
-      <code>SimpleRouteStack|V2SimpleRouteStack</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[SimpleRouteStack|V2SimpleRouteStack]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="test/TestAsset/CollectionIntegrationListener.php">
-    <MissingConstructor occurrences="1">
-      <code>$collection</code>
+    <MissingConstructor>
+      <code><![CDATA[$collection]]></code>
     </MissingConstructor>
   </file>
   <file src="test/TestAsset/TestResourceListener.php">
-    <InvalidReturnType occurrences="9">
-      <code>create</code>
-      <code>delete</code>
-      <code>deleteList</code>
-      <code>fetch</code>
-      <code>fetchAll</code>
-      <code>patch</code>
-      <code>patchList</code>
-      <code>replaceList</code>
-      <code>update</code>
+    <InvalidReturnType>
+      <code><![CDATA[create]]></code>
+      <code><![CDATA[delete]]></code>
+      <code><![CDATA[deleteList]]></code>
+      <code><![CDATA[fetch]]></code>
+      <code><![CDATA[fetchAll]]></code>
+      <code><![CDATA[patch]]></code>
+      <code><![CDATA[patchList]]></code>
+      <code><![CDATA[replaceList]]></code>
+      <code><![CDATA[update]]></code>
     </InvalidReturnType>
-    <MoreSpecificImplementedParamType occurrences="11">
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$params</code>
+    <MoreSpecificImplementedParamType>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$params]]></code>
     </MoreSpecificImplementedParamType>
-    <PropertyNotSetInConstructor occurrences="5">
-      <code>TestResourceListener</code>
-      <code>TestResourceListener</code>
-      <code>TestResourceListener</code>
-      <code>TestResourceListener</code>
-      <code>TestResourceListener</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[TestResourceListener]]></code>
+      <code><![CDATA[TestResourceListener]]></code>
+      <code><![CDATA[TestResourceListener]]></code>
+      <code><![CDATA[TestResourceListener]]></code>
+      <code><![CDATA[TestResourceListener]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedPropertyAssignment occurrences="18">
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;methodInvokedInListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
-      <code>$this-&gt;testCase-&gt;paramsPassedToListener</code>
+    <UndefinedPropertyAssignment>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->methodInvokedInListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
+      <code><![CDATA[$this->testCase->paramsPassedToListener]]></code>
     </UndefinedPropertyAssignment>
-  </file>
-  <file src="test/TreeRouteStackFactoryTrait.php">
-    <UndefinedDocblockClass occurrences="1">
-      <code>TreeRouteStack|V2TreeRouteStack</code>
-    </UndefinedDocblockClass>
   </file>
 </files>
