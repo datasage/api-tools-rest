@@ -10,7 +10,6 @@ use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\Http\Request;
 use Laminas\Http\Response;
 use Laminas\Mvc\MvcEvent;
-use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 
 use function array_key_exists;
@@ -28,9 +27,6 @@ class OptionsListener implements ListenerAggregateInterface
     /** @var array */
     protected $config;
 
-    /**
-     * @param  array $config
-     */
     public function __construct(array $config)
     {
         $this->config = $config;
@@ -115,8 +111,6 @@ class OptionsListener implements ListenerAggregateInterface
 
     /**
      * Create the Allow header
-     *
-     * @param  array $options
      */
     protected function createAllowHeader(array $options, Response $response)
     {
@@ -129,7 +123,6 @@ class OptionsListener implements ListenerAggregateInterface
      *
      * Creates an empty response with an Allow header.
      *
-     * @param  array $options
      * @return Response
      */
     protected function getOptionsResponse(MvcEvent $event, array $options)
@@ -142,7 +135,6 @@ class OptionsListener implements ListenerAggregateInterface
     /**
      * Prepare a 405 response
      *
-     * @param  array $options
      * @return Response
      */
     protected function get405Response(MvcEvent $event, array $options)
@@ -161,7 +153,7 @@ class OptionsListener implements ListenerAggregateInterface
      * If an entity request was detected, but no entity configuration exists, returns
      * empty array.
      *
-     * @param RouteMatch|V2RouteMatch $matches
+     * @param RouteMatch $matches
      */
     protected function getConfigForControllerAndMatches(array $config, $matches): array
     {

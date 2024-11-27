@@ -11,7 +11,6 @@ use Laminas\EventManager\SharedEventManager;
 use Laminas\Http\PhpEnvironment\Request;
 use Laminas\Mvc\Controller\AbstractRestfulController;
 use Laminas\Mvc\MvcEvent;
-use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
 use LaminasTest\ApiTools\Rest\RouteMatchFactoryTrait;
@@ -23,20 +22,12 @@ class RestParametersListenerTest extends TestCase
 {
     use RouteMatchFactoryTrait;
 
-    /** @var Resource */
-    private $resource;
-
-    /** @var RouteMatch|V2RouteMatch */
-    private $matches;
-
-    /** @var Parameters */
-    private $query;
-
-    /** @var MvcEvent */
-    private $event;
-
-    /** @var RestParametersListener */
-    private $listener;
+    private Resource $resource;
+    private RouteMatch $matches;
+    private Parameters $query;
+    private MvcEvent $event;
+    private RestParametersListener $listener;
+    private Request $request;
 
     public function setUp(): void
     {

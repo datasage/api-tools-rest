@@ -84,12 +84,9 @@ class OptionsListenerTest extends TestCase
     }
 
     /**
-     * @psalm-return array<string, array{
-     *     0: string,
-     *     1: array<string, string>
-     * }>
+     * @psalm-return array<string, array{string,array<string, string>}>
      */
-    public function validMethodsProvider(): array
+    public static function validMethodsProvider(): array
     {
         return [
             'collection-get'             => [
@@ -174,13 +171,9 @@ class OptionsListenerTest extends TestCase
     }
 
     /**
-     * @psalm-return array<string, array{
-     *     0: string,
-     *     1: array<string, string>
-     *     2: string[]
-     * }>
+     * @psalm-return array<string, array{string, array<string, string>, string[]}>
      */
-    public function invalidMethodsProvider(): array
+    public static function invalidMethodsProvider(): array
     {
         return [
             'collection-patch'         => [
@@ -284,7 +277,6 @@ class OptionsListenerTest extends TestCase
     /**
      * @dataProvider validMethodsProvider
      * @param string $method
-     * @param array $matchParams
      */
     public function testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest($method, array $matchParams)
     {
@@ -303,7 +295,6 @@ class OptionsListenerTest extends TestCase
     /**
      * @dataProvider invalidMethodsProvider
      * @param string $method
-     * @param array $matchParams
      */
     public function testListenerReturnsNullIfNotAnHttpRequest($method, array $matchParams)
     {
@@ -363,8 +354,6 @@ class OptionsListenerTest extends TestCase
     /**
      * @dataProvider invalidMethodsProvider
      * @param string $method
-     * @param array $matchParams
-     * @param array $expectedAllow
      */
     public function testListenerReturns405ResponseWithAllowHeaderForInvalidRequestMethod(
         $method,

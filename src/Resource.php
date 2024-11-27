@@ -16,7 +16,6 @@ use Laminas\EventManager\EventManagerInterface;
 use Laminas\EventManager\ResponseCollection;
 use Laminas\Http\Response;
 use Laminas\InputFilter\InputFilterInterface;
-use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
 use Traversable;
@@ -53,11 +52,10 @@ class Resource implements ResourceInterface
     /** @var null|Parameters */
     protected $queryParams;
 
-    /** @var null|RouteMatch|V2RouteMatch */
+    /** @var null|RouteMatch */
     protected $routeMatch;
 
     /**
-     * @param array $params
      * @return self
      */
     public function setEventParams(array $params)
@@ -126,17 +124,16 @@ class Resource implements ResourceInterface
     }
 
     /**
-     * @param RouteMatch|V2RouteMatch $matches
+     * @param RouteMatch $matches
      * @return self
      */
     public function setRouteMatch($matches)
     {
-        if (! ($matches instanceof RouteMatch || $matches instanceof V2RouteMatch)) {
+        if (! $matches instanceof RouteMatch) {
             throw new InvalidArgumentException(sprintf(
-                '%s expects a %s or %s instance; received %s',
+                '%s expects a %s instance; received %s',
                 __METHOD__,
                 RouteMatch::class,
-                V2RouteMatch::class,
                 is_object($matches) ? $matches::class : gettype($matches)
             ));
         }
@@ -145,7 +142,7 @@ class Resource implements ResourceInterface
     }
 
     /**
-     * @return null|RouteMatch|V2RouteMatch
+     * @return null|RouteMatch
      */
     public function getRouteMatch()
     {
@@ -536,7 +533,6 @@ class Resource implements ResourceInterface
 
     /**
      * @param  string $name
-     * @param  array $args
      * @return ResponseCollection
      */
     protected function triggerEvent($name, array $args)
@@ -558,7 +554,6 @@ class Resource implements ResourceInterface
      * If an input filter is composed, this, too, is injected into the event.
      *
      * @param  string $name
-     * @param  array $args
      * @return ResourceEvent
      */
     protected function prepareEvent($name, array $args)
@@ -578,7 +573,6 @@ class Resource implements ResourceInterface
      * Ensures event parameters are created as an array object, allowing them to be modified
      * by listeners and retrieved.
      *
-     * @param  array $args
      * @return ArrayObject
      */
     protected function prepareEventParams(array $args)

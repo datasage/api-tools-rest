@@ -1130,7 +1130,7 @@ class RestControllerTest extends TestCase
         $this->assertEquals($this->resource, $this->controller->getResource());
     }
 
-    public function eventsProducingApiProblems(): array
+    public static function eventsProducingApiProblems(): array
     {
         return [
             'delete'     => [
@@ -1446,7 +1446,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    public function validResourcePayloads(): array
+    public static function validResourcePayloads(): array
     {
         return [
             'GET_collection'    => [
@@ -1583,7 +1583,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($request, $event->getRequest());
     }
 
-    public function entitiesReturnedForCollections(): array
+    public static function entitiesReturnedForCollections(): array
     {
         return [
             'with-identifier' => [(object) ['id' => 'foo', 'foo' => 'bar']],
@@ -1607,7 +1607,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($entity, $result->getEntity());
     }
 
-    public function methods(): array
+    public static function methods(): array
     {
         return [
             'get-list'    => ['getList', 'fetchAll', [null]],
@@ -1627,7 +1627,6 @@ class RestControllerTest extends TestCase
      * @dataProvider methods
      * @param string $method
      * @param string $event
-     * @param array $argv
      */
     public function testAllowsReturningResponsesReturnedFromResources($method, $event, array $argv)
     {
