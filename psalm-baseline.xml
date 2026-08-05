@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+<files psalm-version="6.16.1@f1f5de594dc76faf8784e02d3dc4716c91c6f6ac">
   <file src="src/AbstractResourceListener.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$data]]></code>
       <code><![CDATA[$data]]></code>
@@ -20,15 +23,55 @@
       <code><![CDATA[$event->getIdentity()]]></code>
       <code><![CDATA[$event->getInputFilter()]]></code>
     </PossiblyNullPropertyAssignmentValue>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[getCollectionClass]]></code>
+      <code><![CDATA[getEntityClass]]></code>
+      <code><![CDATA[getIdentity]]></code>
+      <code><![CDATA[getInputFilter]]></code>
+      <code><![CDATA[setCollectionClass]]></code>
+      <code><![CDATA[setEntityClass]]></code>
+    </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
       <code><![CDATA[$this->identity]]></code>
       <code><![CDATA[$this->inputFilter]]></code>
     </RedundantConditionGivenDocblockType>
   </file>
+  <file src="src/Exception/CreationException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CreationException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/Exception/InvalidArgumentException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvalidArgumentException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/Exception/PatchException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PatchException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/Exception/RuntimeException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RuntimeException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/Exception/UpdateException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UpdateException]]></code>
+    </ClassMustBeFinal>
+  </file>
   <file src="src/Factory/OptionsListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OptionsListenerFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedInterface>
       <code><![CDATA[OptionsListenerFactory]]></code>
     </DeprecatedInterface>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function createService(ServiceLocatorInterface $container)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
     </MixedArgument>
@@ -40,9 +83,18 @@
     </ParamNameMismatch>
   </file>
   <file src="src/Factory/RestControllerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RestControllerFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedInterface>
       <code><![CDATA[RestControllerFactory]]></code>
     </DeprecatedInterface>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function canCreate(ContainerInterface $container, $requestedName)]]></code>
+      <code><![CDATA[public function canCreateServiceWithName(ServiceLocatorInterface $controllers, $name, $requestedName)]]></code>
+      <code><![CDATA[public function createServiceWithName(ServiceLocatorInterface $controllers, $name, $requestedName)]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[setControllerOptions]]></code>
     </MissingReturnType>
@@ -103,9 +155,6 @@
       <code><![CDATA[$query]]></code>
       <code><![CDATA[$value]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[bool]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[getRequest]]></code>
       <code><![CDATA[getResource]]></code>
@@ -154,6 +203,9 @@
     <ArgumentTypeCoercion>
       <code><![CDATA[$response]]></code>
     </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[OptionsListener]]></code>
+    </ClassMustBeFinal>
     <LessSpecificReturnStatement>
       <code><![CDATA[$response]]></code>
     </LessSpecificReturnStatement>
@@ -162,6 +214,9 @@
       <code><![CDATA[$value]]></code>
       <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[createAllowHeader]]></code>
     </MissingReturnType>
@@ -191,6 +246,12 @@
     </TooManyArguments>
   </file>
   <file src="src/Listener/RestParametersListener.php">
+    <AssignmentToVoid>
+      <code><![CDATA[$listener]]></code>
+    </AssignmentToVoid>
+    <ClassMustBeFinal>
+      <code><![CDATA[RestParametersListener]]></code>
+    </ClassMustBeFinal>
     <InvalidArgument>
       <code><![CDATA[$listener]]></code>
       <code><![CDATA[$listener]]></code>
@@ -198,15 +259,21 @@
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->sharedListeners]]></code>
     </InvalidPropertyAssignmentValue>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[attachShared]]></code>
       <code><![CDATA[detachShared]]></code>
       <code><![CDATA[onDispatch]]></code>
     </MissingReturnType>
     <MixedAssignment>
-      <code><![CDATA[$listener]]></code>
       <code><![CDATA[$query]]></code>
     </MixedAssignment>
+    <RedundantCondition>
+      <code><![CDATA[! $listener]]></code>
+      <code><![CDATA[$listener]]></code>
+    </RedundantCondition>
     <UndefinedDocblockClass>
       <code><![CDATA[CallbackHandler[]]]></code>
       <code><![CDATA[protected $sharedListeners = [];]]></code>
@@ -216,8 +283,14 @@
       <code><![CDATA[setQueryParams]]></code>
       <code><![CDATA[setRouteMatch]]></code>
     </UndefinedInterfaceMethod>
+    <UnusedVariable>
+      <code><![CDATA[$listener]]></code>
+    </UnusedVariable>
   </file>
   <file src="src/Module.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Module]]></code>
+    </ClassMustBeFinal>
     <MissingReturnType>
       <code><![CDATA[onBootstrap]]></code>
     </MissingReturnType>
@@ -243,8 +316,14 @@
       <code><![CDATA[getEventManager]]></code>
       <code><![CDATA[getServiceManager]]></code>
     </PossiblyNullReference>
+    <UnusedClass>
+      <code><![CDATA[Module]]></code>
+    </UnusedClass>
   </file>
   <file src="src/Resource.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Resource]]></code>
+    </ClassMustBeFinal>
     <DocblockTypeContradiction>
       <code><![CDATA[! $this->events]]></code>
       <code><![CDATA[$this->events]]></code>
@@ -280,17 +359,34 @@
     <MissingConstructor>
       <code><![CDATA[$events]]></code>
     </MissingConstructor>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function create($data)]]></code>
+      <code><![CDATA[public function delete($id)]]></code>
+      <code><![CDATA[public function deleteList($data = null)]]></code>
+      <code><![CDATA[public function fetch($id)]]></code>
+      <code><![CDATA[public function fetchAll()]]></code>
+      <code><![CDATA[public function getEventManager()]]></code>
+      <code><![CDATA[public function getEventParam($name, $default = null)]]></code>
+      <code><![CDATA[public function getEventParams()]]></code>
+      <code><![CDATA[public function patch($id, $data)]]></code>
+      <code><![CDATA[public function replaceList($data)]]></code>
+      <code><![CDATA[public function setEventManager(EventManagerInterface $eventManager)]]></code>
+      <code><![CDATA[public function setEventParam($name, $value)]]></code>
+      <code><![CDATA[public function setEventParams(array $params)]]></code>
+      <code><![CDATA[public function update($id, $data)]]></code>
+    </MissingOverrideAttribute>
     <MixedArrayOffset>
       <code><![CDATA[$data[$key]]]></code>
       <code><![CDATA[$data[$key]]]></code>
       <code><![CDATA[$this->params[$name]]]></code>
     </MixedArrayOffset>
-    <MixedInferredReturnType>
-      <code><![CDATA[ArrayObject]]></code>
-    </MixedInferredReturnType>
     <MixedReturnStatement>
       <code><![CDATA[$this->getEventManager()->prepareArgs($params)]]></code>
     </MixedReturnStatement>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[setIdentity]]></code>
+      <code><![CDATA[setInputFilter]]></code>
+    </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
       <code><![CDATA[is_object($matches)]]></code>
     </RedundantConditionGivenDocblockType>
@@ -305,6 +401,9 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/ResourceEvent.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ResourceEvent]]></code>
+    </ClassMustBeFinal>
     <DocblockTypeContradiction>
       <code><![CDATA[! is_array($params) && ! is_object($params)]]></code>
       <code><![CDATA[gettype($matches)]]></code>
@@ -312,6 +411,9 @@
     <ImplementedReturnTypeMismatch>
       <code><![CDATA[self]]></code>
     </ImplementedReturnTypeMismatch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setParams($params)]]></code>
+    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[ResourceEvent]]></code>
     </MissingTemplateParam>
@@ -321,6 +423,12 @@
     <RedundantConditionGivenDocblockType>
       <code><![CDATA[is_object($matches)]]></code>
     </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="src/ResourceInterface.php">
+    <PossiblyUnusedReturnValue>
+      <code><![CDATA[mixed]]></code>
+      <code><![CDATA[self]]></code>
+    </PossiblyUnusedReturnValue>
   </file>
   <file src="src/RestController.php">
     <ArgumentTypeCoercion>
@@ -379,6 +487,23 @@
       <code><![CDATA[$response]]></code>
       <code><![CDATA[$response]]></code>
     </LessSpecificReturnStatement>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function getIdentifier($routeMatch, $request)]]></code>
+      <code><![CDATA[protected function processBodyContent($request)]]></code>
+      <code><![CDATA[public function create($data)]]></code>
+      <code><![CDATA[public function delete($id)]]></code>
+      <code><![CDATA[public function deleteList($data)]]></code>
+      <code><![CDATA[public function get($id)]]></code>
+      <code><![CDATA[public function getList()]]></code>
+      <code><![CDATA[public function head($id = null)]]></code>
+      <code><![CDATA[public function onDispatch(MvcEvent $e)]]></code>
+      <code><![CDATA[public function options()]]></code>
+      <code><![CDATA[public function patch($id, $data)]]></code>
+      <code><![CDATA[public function patchList($data)]]></code>
+      <code><![CDATA[public function processPostData(RequestInterface $request)]]></code>
+      <code><![CDATA[public function replaceList($data)]]></code>
+      <code><![CDATA[public function update($id, $data)]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[injectEventIdentityIntoResource]]></code>
       <code><![CDATA[injectEventInputFilterIntoResource]]></code>
@@ -421,11 +546,6 @@
       <code><![CDATA[$self]]></code>
       <code><![CDATA[$url]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[HalEntity]]></code>
-      <code><![CDATA[array|ApiProblem]]></code>
-      <code><![CDATA[null|array|Traversable]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[addHeader]]></code>
       <code><![CDATA[addHeaderLine]]></code>
@@ -449,6 +569,8 @@
       <code><![CDATA[$data]]></code>
       <code><![CDATA[$data]]></code>
       <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$id]]></code>
       <code><![CDATA[$id]]></code>
       <code><![CDATA[$id]]></code>
       <code><![CDATA[$id]]></code>
@@ -462,6 +584,10 @@
     <PossiblyInvalidArgument>
       <code><![CDATA[$params]]></code>
     </PossiblyInvalidArgument>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[getMaxPageSize]]></code>
+      <code><![CDATA[getMinPageSize]]></code>
+    </PossiblyUnusedMethod>
     <PropertyNotSetInConstructor>
       <code><![CDATA[$maxPageSize]]></code>
       <code><![CDATA[$minPageSize]]></code>
@@ -531,6 +657,12 @@
     </UndefinedMagicMethod>
   </file>
   <file src="test/AbstractResourceListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AbstractResourceListenerTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent]]></code>
       <code><![CDATA[testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod]]></code>
@@ -554,6 +686,16 @@
     </UndefinedPropertyFetch>
   </file>
   <file src="test/ChildResourcesIntegrationTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ChildResourcesIntegrationTest]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedClass>
+      <code><![CDATA[$serverUrlHelper->setHost('localhost.localdomain')]]></code>
+      <code><![CDATA[$serverUrlHelper->setScheme('http')]]></code>
+      <code><![CDATA[$urlHelper->setRouter($this->router)]]></code>
+      <code><![CDATA[new ServerUrlHelper()]]></code>
+      <code><![CDATA[new UrlHelper()]]></code>
+    </DeprecatedClass>
     <DeprecatedMethod>
       <code><![CDATA[add]]></code>
       <code><![CDATA[add]]></code>
@@ -569,6 +711,9 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[setUpAlternateRouter]]></code>
       <code><![CDATA[setupHelpers]]></code>
@@ -610,6 +755,13 @@
     <PossiblyUndefinedVariable>
       <code><![CDATA[$collection]]></code>
     </PossiblyUndefinedVariable>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[setUpChildCollection]]></code>
+      <code><![CDATA[setUpParentResource]]></code>
+    </PossiblyUnusedMethod>
+    <PossiblyUnusedReturnValue>
+      <code><![CDATA[HalEntity]]></code>
+    </PossiblyUnusedReturnValue>
     <UndefinedInterfaceMethod>
       <code><![CDATA[getRouteParams]]></code>
       <code><![CDATA[setRouteMatch]]></code>
@@ -620,12 +772,18 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
+    <UnusedVariable>
+      <code><![CDATA[$m]]></code>
+    </UnusedVariable>
   </file>
   <file src="test/CollectionIntegrationTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CollectionIntegrationTest]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedClass>
+      <code><![CDATA[new ServerUrlHelper()]]></code>
+      <code><![CDATA[new UrlHelper()]]></code>
+    </DeprecatedClass>
     <ImplicitToStringCast>
       <code><![CDATA[$uri]]></code>
     </ImplicitToStringCast>
@@ -637,6 +795,9 @@
       <code><![CDATA[$first]]></code>
       <code><![CDATA[$second]]></code>
     </MissingClosureParamType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[setUpHelpers]]></code>
       <code><![CDATA[setUpRenderer]]></code>
@@ -737,17 +898,26 @@
     </UnusedClosureParam>
   </file>
   <file src="test/Factory/OptionsListenerFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OptionsListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[testFactoryCreatesOptionsListenerFromRestConfiguration]]></code>
     </MissingReturnType>
     <MixedAssignment>
       <code><![CDATA[$instanceConfig]]></code>
     </MixedAssignment>
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
   </file>
   <file src="test/Factory/RestControllerFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RestControllerFactoryTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[testControllerEventManagerIdentifiersAreAsSpecified]]></code>
       <code><![CDATA[testDefaultControllerEventManagerIdentifiersAreAsExpected]]></code>
@@ -845,6 +1015,9 @@
     </UndefinedClass>
   </file>
   <file src="test/Factory/TestAsset/CustomController.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CustomController]]></code>
+    </ClassMustBeFinal>
     <PropertyNotSetInConstructor>
       <code><![CDATA[CustomController]]></code>
       <code><![CDATA[CustomController]]></code>
@@ -858,7 +1031,19 @@
       <code><![CDATA[CustomController]]></code>
     </PropertyNotSetInConstructor>
   </file>
+  <file src="test/Factory/TestAsset/Listener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Listener]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+      <code><![CDATA[public function detach(EventManagerInterface $events)]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="test/Listener/OptionsListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[OptionsListenerTest]]></code>
+    </ClassMustBeFinal>
     <MissingClosureParamType>
       <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
@@ -884,6 +1069,9 @@
     <PossiblyUndefinedMethod>
       <code><![CDATA[getFieldValue]]></code>
     </PossiblyUndefinedMethod>
+    <PossiblyUnusedParam>
+      <code><![CDATA[$method]]></code>
+    </PossiblyUnusedParam>
     <TooManyArguments>
       <code><![CDATA[new Request('GET')]]></code>
     </TooManyArguments>
@@ -893,6 +1081,12 @@
     </UnusedVariable>
   </file>
   <file src="test/Listener/RestParametersListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RestParametersListenerTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[testAttachSharedAttachOneListenerOnEventDispatch]]></code>
       <code><![CDATA[testDetachSharedDetachAttachedListener]]></code>
@@ -904,8 +1098,17 @@
       <code><![CDATA[$identifiers]]></code>
       <code><![CDATA[$identifiers]]></code>
     </PossiblyInvalidArgument>
+    <UnusedProperty>
+      <code><![CDATA[$request]]></code>
+    </UnusedProperty>
   </file>
   <file src="test/ResourceEventTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ResourceEventTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[testCanComposeIdentity]]></code>
       <code><![CDATA[testCanComposeInputFilter]]></code>
@@ -934,6 +1137,9 @@
     </UndefinedDocblockClass>
   </file>
   <file src="test/ResourceTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ResourceTest]]></code>
+    </ClassMustBeFinal>
     <MissingClosureParamType>
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
@@ -978,6 +1184,9 @@
       <code><![CDATA[function ($e) use ($return) {]]></code>
       <code><![CDATA[function ($e) use ($return) {]]></code>
     </MissingClosureReturnType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[testAllowsReturningResponsesReturnedFromResources]]></code>
       <code><![CDATA[testClearOldParamsOnSetEventParams]]></code>
@@ -1081,6 +1290,13 @@
     </UnusedClosureParam>
   </file>
   <file src="test/RestControllerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RestControllerTest]]></code>
+    </ClassMustBeFinal>
+    <DeprecatedClass>
+      <code><![CDATA[new ServerUrlHelper()]]></code>
+      <code><![CDATA[new UrlHelper()]]></code>
+    </DeprecatedClass>
     <DeprecatedMethod>
       <code><![CDATA[add]]></code>
       <code><![CDATA[add]]></code>
@@ -1190,6 +1406,9 @@
     <MissingClosureReturnType>
       <code><![CDATA[function ($e) use ($problem) {]]></code>
     </MissingClosureReturnType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MissingReturnType>
       <code><![CDATA[assertProblemApiResult]]></code>
       <code><![CDATA[testAllowsReturningHalCollectionFromCreate]]></code>
@@ -1313,9 +1532,6 @@
       <code><![CDATA[$test]]></code>
       <code><![CDATA[$test]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[Headers]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[addHeaderLine]]></code>
       <code><![CDATA[addHeaderLine]]></code>
@@ -1519,17 +1735,6 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
     <UnusedVariable>
       <code><![CDATA[$result]]></code>
       <code><![CDATA[$result]]></code>
@@ -1561,12 +1766,51 @@
       <code><![CDATA[SimpleRouteStack|V2SimpleRouteStack]]></code>
     </UndefinedDocblockClass>
   </file>
+  <file src="test/TestAsset/ArraySerializable.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ArraySerializable]]></code>
+    </ClassMustBeFinal>
+    <UnusedClass>
+      <code><![CDATA[ArraySerializable]]></code>
+    </UnusedClass>
+  </file>
+  <file src="test/TestAsset/ClassMethods.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ClassMethods]]></code>
+    </ClassMustBeFinal>
+    <UnusedClass>
+      <code><![CDATA[ClassMethods]]></code>
+    </UnusedClass>
+  </file>
   <file src="test/TestAsset/CollectionIntegrationListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CollectionIntegrationListener]]></code>
+    </ClassMustBeFinal>
     <MissingConstructor>
       <code><![CDATA[$collection]]></code>
     </MissingConstructor>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1): void]]></code>
+    </MissingOverrideAttribute>
+    <PossiblyUnusedParam>
+      <code><![CDATA[$e]]></code>
+    </PossiblyUnusedParam>
+  </file>
+  <file src="test/TestAsset/JsonSerializable.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[JsonSerializable]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function jsonSerialize(): mixed]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[JsonSerializable]]></code>
+    </UnusedClass>
   </file>
   <file src="test/TestAsset/TestResourceListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[TestResourceListener]]></code>
+    </ClassMustBeFinal>
     <InvalidReturnType>
       <code><![CDATA[create]]></code>
       <code><![CDATA[delete]]></code>
@@ -1578,6 +1822,17 @@
       <code><![CDATA[replaceList]]></code>
       <code><![CDATA[update]]></code>
     </InvalidReturnType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function create($data)]]></code>
+      <code><![CDATA[public function delete($id)]]></code>
+      <code><![CDATA[public function deleteList($data)]]></code>
+      <code><![CDATA[public function fetch($id)]]></code>
+      <code><![CDATA[public function fetchAll($params = [])]]></code>
+      <code><![CDATA[public function patch($id, $data)]]></code>
+      <code><![CDATA[public function patchList($data)]]></code>
+      <code><![CDATA[public function replaceList($data)]]></code>
+      <code><![CDATA[public function update($id, $data)]]></code>
+    </MissingOverrideAttribute>
     <MoreSpecificImplementedParamType>
       <code><![CDATA[$data]]></code>
       <code><![CDATA[$data]]></code>

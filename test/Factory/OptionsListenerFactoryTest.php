@@ -51,9 +51,8 @@ class OptionsListenerFactoryTest extends TestCase
 
         $this->assertInstanceOf(OptionsListener::class, $listener);
 
-        $r = new ReflectionObject($listener);
-        $p = $r->getProperty('config');
-        $p->setAccessible(true);
+        $r              = new ReflectionObject($listener);
+        $p              = $r->getProperty('config');
         $instanceConfig = $p->getValue($listener);
         $this->assertEquals($config['api-tools-rest'], $instanceConfig);
     }
