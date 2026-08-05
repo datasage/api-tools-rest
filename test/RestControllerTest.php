@@ -470,8 +470,7 @@ class RestControllerTest extends TestCase
     {
         $r               = new ReflectionObject($this->controller);
         $httpMethodsProp = $r->getProperty('collectionHttpMethods');
-        $httpMethodsProp->setAccessible(true);
-        $httpMethods = $httpMethodsProp->getValue($this->controller);
+        $httpMethods     = $httpMethodsProp->getValue($this->controller);
         sort($httpMethods);
 
         $result = $this->controller->options();
@@ -490,8 +489,7 @@ class RestControllerTest extends TestCase
     {
         $r               = new ReflectionObject($this->controller);
         $httpMethodsProp = $r->getProperty('entityHttpMethods');
-        $httpMethodsProp->setAccessible(true);
-        $httpMethods = $httpMethodsProp->getValue($this->controller);
+        $httpMethods     = $httpMethodsProp->getValue($this->controller);
         sort($httpMethods);
 
         $this->event->getRouteMatch()->setParam('id', 'foo');
@@ -514,8 +512,7 @@ class RestControllerTest extends TestCase
 
         $r               = new ReflectionObject($this->controller);
         $httpMethodsProp = $r->getProperty('entityHttpMethods');
-        $httpMethodsProp->setAccessible(true);
-        $httpMethods = $httpMethodsProp->getValue($this->controller);
+        $httpMethods     = $httpMethodsProp->getValue($this->controller);
         sort($httpMethods);
 
         $this->event->getRouteMatch()->setParam('user_id', 'foo');
@@ -1188,7 +1185,6 @@ class RestControllerTest extends TestCase
     {
         $r             = new ReflectionObject($this->controller);
         $getIdentifier = $r->getMethod('getIdentifier');
-        $getIdentifier->setAccessible(true);
 
         $this->controller->setIdentifierName('name');
 
@@ -1576,9 +1572,8 @@ class RestControllerTest extends TestCase
         $request  = $this->controller->getRequest();
         $resource = $this->controller->getResource();
 
-        $r = new ReflectionObject($resource);
-        $m = $r->getMethod('prepareEvent');
-        $m->setAccessible(true);
+        $r     = new ReflectionObject($resource);
+        $m     = $r->getMethod('prepareEvent');
         $event = $m->invoke($resource, 'fetch', []);
         $this->assertSame($request, $event->getRequest());
     }
@@ -1738,7 +1733,6 @@ class RestControllerTest extends TestCase
         $halEntity = new HalEntity($entity, 1);
 
         $r = new ReflectionMethod($this->controller, 'createHalEntity');
-        $r->setAccessible(true);
 
         $result = $r->invoke($this->controller, $halEntity);
         $this->assertSame($result, $halEntity);
@@ -1762,7 +1756,6 @@ class RestControllerTest extends TestCase
         $halEntity->getLinks()->add($self);
 
         $r = new ReflectionMethod($this->controller, 'createHalEntity');
-        $r->setAccessible(true);
 
         $result = $r->invoke($this->controller, $halEntity);
         $this->assertSame($result, $halEntity);
@@ -1792,7 +1785,6 @@ class RestControllerTest extends TestCase
         $halCollection = new HalCollection($collection);
 
         $r = new ReflectionMethod($this->controller, 'createHalCollection');
-        $r->setAccessible(true);
 
         $result = $r->invoke($this->controller, $halCollection);
         $this->assertSame($halCollection, $result);
@@ -1827,7 +1819,6 @@ class RestControllerTest extends TestCase
         $request->getQuery()->set('page', 3);
 
         $r = new ReflectionMethod($this->controller, 'createHalCollection');
-        $r->setAccessible(true);
 
         $result = $r->invoke($this->controller, $halCollection);
         $this->assertSame($halCollection, $result);

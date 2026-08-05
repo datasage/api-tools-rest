@@ -248,7 +248,6 @@ class ChildResourcesIntegrationTest extends TestCase
         $controller->setIdentifierName('child_id');
         $r = new ReflectionObject($controller);
         $m = $r->getMethod('getIdentifier');
-        $m->setAccessible(true);
 
         $uri     = 'http://localhost.localdomain/api/parent/anakin/child/luke';
         $request = new Request();
@@ -299,7 +298,6 @@ class ChildResourcesIntegrationTest extends TestCase
         $controller->setCollectionName('children');
         $r = new ReflectionObject($controller);
         $m = $r->getMethod('getIdentifier');
-        $m->setAccessible(true);
 
         $uri     = 'http://localhost.localdomain/api/parent/anakin/child';
         $request = new Request();
