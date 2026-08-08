@@ -20,6 +20,7 @@ use Laminas\Mvc\Controller\AbstractRestfulController;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Mvc\Router\RouteMatch;
 use Laminas\Stdlib\RequestInterface;
+use Override;
 use Throwable;
 use Traversable;
 
@@ -306,6 +307,7 @@ class RestController extends AbstractRestfulController
      * @return mixed
      * @throws DomainException
      */
+    #[Override]
     public function onDispatch(MvcEvent $e)
     {
         if (! $this->getResource()) {
@@ -360,6 +362,7 @@ class RestController extends AbstractRestfulController
      * @param  array $data
      * @return Response|ApiProblem|ApiProblemResponse|HalEntity
      */
+    #[Override]
     public function create($data)
     {
         $events = $this->getEventManager();
@@ -417,6 +420,7 @@ class RestController extends AbstractRestfulController
      * @param  int|string $id
      * @return Response|ApiProblem|ApiProblemResponse
      */
+    #[Override]
     public function delete($id)
     {
         $events = $this->getEventManager();
@@ -448,6 +452,7 @@ class RestController extends AbstractRestfulController
      * @param mixed $data Typically an array
      * @return Response|ApiProblem|ApiProblemResponse
      */
+    #[Override]
     public function deleteList($data)
     {
         $events = $this->getEventManager();
@@ -480,6 +485,7 @@ class RestController extends AbstractRestfulController
      * @param  int|string $id
      * @return Response|ApiProblem|ApiProblemResponse|HalEntity
      */
+    #[Override]
     public function get($id)
     {
         $events = $this->getEventManager();
@@ -513,6 +519,7 @@ class RestController extends AbstractRestfulController
      *
      * @return Response|HalCollection|ApiProblem
      */
+    #[Override]
     public function getList()
     {
         $events = $this->getEventManager();
@@ -578,6 +585,7 @@ class RestController extends AbstractRestfulController
      * @param  null|mixed $id
      * @return Response|ApiProblem|ApiProblemResponse|HalEntity|HalCollection
      */
+    #[Override]
     public function head($id = null)
     {
         if ($id) {
@@ -593,6 +601,7 @@ class RestController extends AbstractRestfulController
      *
      * @return Response
      */
+    #[Override]
     public function options()
     {
         $e  = $this->getEvent();
@@ -625,6 +634,7 @@ class RestController extends AbstractRestfulController
      * @param  array $data
      * @return Response|ApiProblem|ApiProblemResponse|HalEntity
      */
+    #[Override]
     public function patch($id, $data)
     {
         $events = $this->getEventManager();
@@ -660,6 +670,7 @@ class RestController extends AbstractRestfulController
      * @param  array $data
      * @return Response|ApiProblem|ApiProblemResponse|HalEntity
      */
+    #[Override]
     public function update($id, $data)
     {
         $events = $this->getEventManager();
@@ -694,6 +705,7 @@ class RestController extends AbstractRestfulController
      * @param array $data
      * @return array|ApiProblem
      */
+    #[Override]
     public function patchList($data)
     {
         $events = $this->getEventManager();
@@ -725,6 +737,7 @@ class RestController extends AbstractRestfulController
      * @param array $data
      * @return array|ApiProblem
      */
+    #[Override]
     public function replaceList($data)
     {
         $events = $this->getEventManager();
@@ -762,6 +775,7 @@ class RestController extends AbstractRestfulController
      * @param Request $request
      * @return false|mixed
      */
+    #[Override]
     protected function getIdentifier($routeMatch, $request)
     {
         $identifier = $this->getIdentifierName();
@@ -885,6 +899,7 @@ class RestController extends AbstractRestfulController
      *
      * @return null|array|Traversable
      */
+    #[Override]
     public function processPostData(RequestInterface $request)
     {
         return $this->create($this->bodyParams());
@@ -896,6 +911,7 @@ class RestController extends AbstractRestfulController
      * @param Request $request
      * @return null|array|Traversable
      */
+    #[Override]
     protected function processBodyContent($request)
     {
         return $this->bodyParams();

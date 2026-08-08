@@ -11,6 +11,7 @@ use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\EventManager\SharedEventManagerInterface;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Stdlib\CallbackHandler;
+use Override;
 
 use function method_exists;
 
@@ -22,6 +23,7 @@ class RestParametersListener implements ListenerAggregateInterface
     protected $sharedListeners = [];
 
     /** @param int $priority */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(MvcEvent::EVENT_DISPATCH, [$this, 'onDispatch'], 100);

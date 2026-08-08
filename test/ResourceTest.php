@@ -14,9 +14,13 @@ use Laminas\EventManager\EventManager;
 use Laminas\Http\Response;
 use Laminas\Stdlib\ArrayObject;
 use Laminas\Stdlib\Parameters;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
+use function array_map;
 use function array_values;
 use function call_user_func_array;
 
@@ -30,6 +34,7 @@ class ResourceTest extends TestCase
     /** @var Resource */
     private $resource;
 
+    #[Override]
     public function setUp(): void
     {
         $this->events   = new EventManager();
@@ -59,9 +64,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badData
      * @param mixed $data
      */
+    #[DataProvider('badData')]
     public function testCreateRaisesExceptionWithInvalidData($data)
     {
         $this->expectException(InvalidArgumentException::class);
@@ -123,9 +128,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badData
      * @param mixed $data
      */
+    #[DataProvider('badData')]
     public function testUpdateRaisesExceptionWithInvalidData($data)
     {
         $this->expectException(InvalidArgumentException::class);
@@ -162,9 +167,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badUpdateCollectionData
      * @param mixed $data
      */
+    #[DataProvider('badUpdateCollectionData')]
     public function testReplaceListRaisesExceptionWithInvalidData($data)
     {
         $this->expectException(InvalidArgumentException::class);
@@ -204,9 +209,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badData
      * @param mixed $data
      */
+    #[DataProvider('badData')]
     public function testPatchRaisesExceptionWithInvalidData($data)
     {
         $this->expectException(InvalidArgumentException::class);
@@ -280,9 +285,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badDeleteCollections
      * @param mixed $data
      */
+    #[DataProvider('badDeleteCollections')]
     public function testDeleteListRaisesInvalidArgumentExceptionForInvalidData($data)
     {
         $this->expectException(InvalidArgumentException::class);
@@ -331,9 +336,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badData
      * @param mixed $return
      */
+    #[DataProvider('badData')]
     public function testFetchReturnsFalseIfLastListenerDoesNotReturnArrayOrObject($return)
     {
         $this->events->attach('fetch', function ($e) use ($return) {
@@ -355,10 +360,10 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @group 31
-     * @dataProvider invalidCollection
      * @param mixed $return
      */
+    #[Group('31')]
+    #[DataProvider('invalidCollection')]
     public function testFetchAllReturnsEmptyArrayIfLastListenerReturnsScalar($return)
     {
         $this->events->attach('fetchAll', function ($e) use ($return) {
@@ -408,9 +413,22 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider eventsToTrigger
+     * eventsToTrigger without the id-is-present column.
+     *
+     * @return array<string, array{0: string, 1: array<mixed>}>
+     */
+    public static function eventsToTriggerWithoutIdFlag(): array
+    {
+        return array_map(
+            static fn (array $set): array => [$set[0], $set[1]],
+            self::eventsToTrigger()
+        );
+    }
+
+    /**
      * @param string $eventName
      */
+    #[DataProvider('eventsToTriggerWithoutIdFlag')]
     public function testEventTerminateIfApiProblemIsReturned($eventName, array $args)
     {
         $called = false;
@@ -429,10 +447,10 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider eventsToTrigger
      * @param string $eventName
      * @param bool $idIsPresent
      */
+    #[DataProvider('eventsToTrigger')]
     public function testEventParametersAreInjectedIntoEventWhenTriggered($eventName, array $args, $idIsPresent)
     {
         $test = (object) [];
@@ -457,9 +475,9 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider eventsToTrigger
      * @param string $eventName
      */
+    #[DataProvider('eventsToTriggerWithoutIdFlag')]
     public function testComposedQueryParametersAndRouteMatchesAreInjectedIntoEvent($eventName, array $args)
     {
         $test = (object) [];
@@ -490,10 +508,10 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @dataProvider badData
-     * @dataProvider badUpdateCollectionData
      * @param mixed $data
      */
+    #[DataProvider('badData')]
+    #[DataProvider('badUpdateCollectionData')]
     public function testPatchListListRaisesExceptionWithInvalidData($data)
     {
         $this->expectException(InvalidArgumentException::class);
@@ -532,9 +550,7 @@ class ResourceTest extends TestCase
         $this->assertSame($data, $test);
     }
 
-    /**
-     * @group 31
-     */
+    #[Group('31')]
     public function testFetchAllShouldAllowReturningArbitraryObjects()
     {
         $return = (object) ['foo' => 'bar'];
@@ -561,10 +577,10 @@ class ResourceTest extends TestCase
     }
 
     /**
-     * @group 68
-     * @dataProvider actions
      * @param string $action
      */
+    #[Group('68')]
+    #[DataProvider('actions')]
     public function testAllowsReturningResponsesReturnedFromResources($action, array $argv)
     {
         $response = new Response();

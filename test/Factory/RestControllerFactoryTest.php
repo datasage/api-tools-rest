@@ -14,6 +14,7 @@ use Laminas\Mvc\Controller\ControllerManager;
 use Laminas\Mvc\Service\ControllerPluginManagerFactory;
 use Laminas\ServiceManager\ServiceLocatorInterface;
 use Laminas\ServiceManager\ServiceManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 use function array_values;
@@ -26,6 +27,7 @@ class RestControllerFactoryTest extends TestCase
     /** @var ControllerManager */
     private $controllers;
 
+    #[Override]
     public function setUp(): void
     {
         $this->services    = $services    = new ServiceManager();

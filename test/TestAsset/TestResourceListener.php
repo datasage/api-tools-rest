@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LaminasTest\ApiTools\Rest\TestAsset;
 
 use Laminas\ApiTools\Rest\AbstractResourceListener;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 use function func_get_args;
@@ -20,6 +21,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param array $data */
+    #[Override]
     public function create($data)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -30,6 +32,7 @@ class TestResourceListener extends AbstractResourceListener
      * @param int|string $id
      * @param array $data
      */
+    #[Override]
     public function update($id, $data)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -37,6 +40,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param array $data */
+    #[Override]
     public function replaceList($data)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -47,6 +51,7 @@ class TestResourceListener extends AbstractResourceListener
      * @param int|string $id
      * @param array $data
      */
+    #[Override]
     public function patch($id, $data)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -54,6 +59,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param array $data */
+    #[Override]
     public function patchList($data)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -61,6 +67,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param int|string $id */
+    #[Override]
     public function delete($id)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -68,6 +75,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param array $data */
+    #[Override]
     public function deleteList($data)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -75,6 +83,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param int|string $id */
+    #[Override]
     public function fetch($id)
     {
         $this->testCase->methodInvokedInListener = __METHOD__;
@@ -82,6 +91,7 @@ class TestResourceListener extends AbstractResourceListener
     }
 
     /** @param array $params */
+    #[Override]
     public function fetchAll($params = [])
     {
         $this->testCase->methodInvokedInListener = __METHOD__;

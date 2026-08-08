@@ -8,6 +8,9 @@ use Laminas\ApiTools\Rest\Resource;
 use Laminas\ApiTools\Rest\ResourceEvent;
 use Laminas\EventManager\EventManager;
 use Laminas\Stdlib\Parameters;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
 use function array_values;
@@ -28,6 +31,7 @@ class AbstractResourceListenerTest extends TestCase
     /** @var TestAsset\TestResourceListener */
     private $listener;
 
+    #[Override]
     public function setUp(): void
     {
         $this->methodInvokedInListener = null;
@@ -65,9 +69,9 @@ class AbstractResourceListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider events
      * @param string $method
      */
+    #[DataProvider('events')]
     public function testResourceMethodsAreInvokedWhenEventsAreTriggered($method, array $eventArgs)
     {
         $this->methodInvokedInListener = null;
@@ -118,9 +122,7 @@ class AbstractResourceListenerTest extends TestCase
         );
     }
 
-    /**
-     * @group 7
-     */
+    #[Group('7')]
     public function testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod()
     {
         $queryParams = new Parameters(['foo' => 'bar']);
@@ -133,9 +135,7 @@ class AbstractResourceListenerTest extends TestCase
         $this->assertEquals($queryParams, $this->listener->testCase->paramsPassedToListener);
     }
 
-    /**
-     * @group 7
-     */
+    #[Group('7')]
     public function testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent()
     {
         $event = new ResourceEvent();

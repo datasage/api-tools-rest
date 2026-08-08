@@ -11,6 +11,8 @@ use Laminas\InputFilter\InputFilter;
 use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
+use Override;
+use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 
 class ResourceEventTest extends TestCase
@@ -26,6 +28,7 @@ class ResourceEventTest extends TestCase
     /** @var ResourceEvent */
     private $event;
 
+    #[Override]
     public function setUp(): void
     {
         $this->matches = $this->createRouteMatch([
@@ -77,27 +80,21 @@ class ResourceEventTest extends TestCase
         return $this->event;
     }
 
-    /**
-     * @depends testRouteMatchIsMutable
-     */
+    #[Depends('testRouteMatchIsMutable')]
     public function testRouteMatchIsNullable(ResourceEvent $event)
     {
         $event->setRouteMatch(null);
         $this->assertNull($event->getRouteMatch());
     }
 
-    /**
-     * @depends testQueryParamsAreMutable
-     */
+    #[Depends('testQueryParamsAreMutable')]
     public function testQueryParamsAreNullable(ResourceEvent $event)
     {
         $event->setQueryParams(null);
         $this->assertNull($event->getQueryParams());
     }
 
-    /**
-     * @depends testRequestIsMutable
-     */
+    #[Depends('testRequestIsMutable')]
     public function testRequestIsNullable(ResourceEvent $event)
     {
         $event->setRequest(null);
@@ -142,9 +139,7 @@ class ResourceEventTest extends TestCase
         $this->assertNull($this->event->getInputFilter());
     }
 
-    /**
-     * @depends testInputFilterIsUndefinedByDefault
-     */
+    #[Depends('testInputFilterIsUndefinedByDefault')]
     public function testCanComposeInputFilter()
     {
         $inputFilter = new InputFilter();
@@ -152,9 +147,7 @@ class ResourceEventTest extends TestCase
         $this->assertSame($inputFilter, $this->event->getInputFilter());
     }
 
-    /**
-     * @depends testCanComposeInputFilter
-     */
+    #[Depends('testCanComposeInputFilter')]
     public function testCanNullifyInputFilter()
     {
         $this->event->setInputFilter(null);
@@ -166,9 +159,7 @@ class ResourceEventTest extends TestCase
         $this->assertNull($this->event->getIdentity());
     }
 
-    /**
-     * @depends testIdentityIsUndefinedByDefault
-     */
+    #[Depends('testIdentityIsUndefinedByDefault')]
     public function testCanComposeIdentity()
     {
         $identity = new GuestIdentity();
@@ -176,9 +167,7 @@ class ResourceEventTest extends TestCase
         $this->assertSame($identity, $this->event->getIdentity());
     }
 
-    /**
-     * @depends testCanComposeIdentity
-     */
+    #[Depends('testCanComposeIdentity')]
     public function testCanNullifyIdentity()
     {
         $this->event->setIdentity(null);

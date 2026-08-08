@@ -12,8 +12,10 @@ use Laminas\Http\Response;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Stdlib\Request as StdlibRequest;
 use LaminasTest\ApiTools\Rest\RouteMatchFactoryTrait;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
+use function array_map;
 use function array_walk;
 use function explode;
 use function sort;
@@ -275,9 +277,9 @@ class OptionsListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider validMethodsProvider
      * @param string $method
      */
+    #[DataProvider('validMethodsProvider')]
     public function testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest($method, array $matchParams)
     {
         $listener = new OptionsListener($this->seedListenerConfig());
@@ -293,9 +295,35 @@ class OptionsListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider invalidMethodsProvider
+     * invalidMethodsProvider without the expected-Allow column.
+     *
+     * @return array<string, array{0: string, 1: array<string, string>}>
+     */
+    public static function invalidMethodsWithoutAllowProvider(): array
+    {
+        return array_map(
+            static fn (array $set): array => [$set[0], $set[1]],
+            self::invalidMethodsProvider()
+        );
+    }
+
+    /**
+     * invalidMethodsProvider reduced to the request method alone.
+     *
+     * @return array<string, array{0: string}>
+     */
+    public static function invalidMethodsMethodOnlyProvider(): array
+    {
+        return array_map(
+            static fn (array $set): array => [$set[0]],
+            self::invalidMethodsProvider()
+        );
+    }
+
+    /**
      * @param string $method
      */
+    #[DataProvider('invalidMethodsWithoutAllowProvider')]
     public function testListenerReturnsNullIfNotAnHttpRequest($method, array $matchParams)
     {
         $listener = new OptionsListener($this->seedListenerConfig());
@@ -310,9 +338,9 @@ class OptionsListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider invalidMethodsProvider
      * @param string $method
      */
+    #[DataProvider('invalidMethodsMethodOnlyProvider')]
     public function testListenerReturnsNullIfNoRouteMatches($method)
     {
         $listener = new OptionsListener($this->seedListenerConfig());
@@ -352,9 +380,9 @@ class OptionsListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider invalidMethodsProvider
      * @param string $method
      */
+    #[DataProvider('invalidMethodsProvider')]
     public function testListenerReturns405ResponseWithAllowHeaderForInvalidRequestMethod(
         $method,
         array $matchParams,

@@ -7,6 +7,7 @@ namespace LaminasTest\ApiTools\Rest\Factory;
 use Laminas\ApiTools\Rest\Factory\OptionsListenerFactory;
 use Laminas\ApiTools\Rest\Listener\OptionsListener;
 use Laminas\ServiceManager\ServiceManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 use ReflectionObject;
 
@@ -18,6 +19,7 @@ class OptionsListenerFactoryTest extends TestCase
     /** @var OptionsListenerFactory */
     private $factory;
 
+    #[Override]
     public function setUp(): void
     {
         $this->services = new ServiceManager();

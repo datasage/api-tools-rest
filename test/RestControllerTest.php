@@ -42,6 +42,10 @@ use Laminas\Stdlib\ResponseInterface;
 use Laminas\View\Helper\ServerUrl as ServerUrlHelper;
 use Laminas\View\Helper\Url as UrlHelper;
 use Laminas\View\Model\ModelInterface;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Depends;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Container\ContainerInterface;
@@ -77,6 +81,7 @@ class RestControllerTest extends TestCase
     /** @var Resource */
     private $resource;
 
+    #[Override]
     public function setUp(): void
     {
         $this->controller = $controller = new RestController();
@@ -195,9 +200,7 @@ class RestControllerTest extends TestCase
         $this->assertProblemApiResult(416, 'Page size is out of range, minimum page size is 2', $result);
     }
 
-    /**
-     * @group hotfix/77
-     */
+    #[Group('hotfix/77')]
     public function testReturnsErrorResponseWhenPageNonInteger()
     {
         $request = $this->controller->getRequest();
@@ -232,9 +235,8 @@ class RestControllerTest extends TestCase
 
     /**
      * Addresses zfcampus/zf-hal#51
-     *
-     * @group 43
      */
+    #[Group('43')]
     public function testCreateDoesNotSetLocationHeaderOnMissingSelfRelationalLink()
     {
         $this->resource->getEventManager()->attach('create', function ($e) {
@@ -261,20 +263,16 @@ class RestControllerTest extends TestCase
         return $this->controller->getResponse();
     }
 
-    /**
-     * @depends testCreateReturnsHalEntityOnSuccess
-     */
+    #[Depends('testCreateReturnsHalEntityOnSuccess')]
     public function testSuccessfulCreationWithEntityIdentifierSetsResponseLocationHeader(ResponseInterface $response)
     {
         $headers = $response->getHeaders();
         $this->assertTrue($headers->has('Location'));
     }
 
-    /**
-     * @group 95
-     * @group 96
-     * @depends testCreateReturnsHalEntityOnSuccess
-     */
+    #[Group('95')]
+    #[Group('96')]
+    #[Depends('testCreateReturnsHalEntityOnSuccess')]
     public function testSuccessfulCreationWithEntityIdentifierSetsResponseContentLocationHeader(
         ResponseInterface $response
     ) {
@@ -423,9 +421,7 @@ class RestControllerTest extends TestCase
         $this->assertEquals(1, $result->getPageSize());
     }
 
-    /**
-     * @depends testReturnsHalCollectionForNonPaginatedList
-     */
+    #[Depends('testReturnsHalCollectionForNonPaginatedList')]
     public function testHalCollectionReturnedIncludesRoutes(Collection $collection)
     {
         $this->assertEquals('resource', $collection->getCollectionRoute());
@@ -598,9 +594,7 @@ class RestControllerTest extends TestCase
         return $result;
     }
 
-    /**
-     * @depends testReplaceListReturnsHalCollectionOnSuccess
-     */
+    #[Depends('testReplaceListReturnsHalCollectionOnSuccess')]
     public function testReplaceListReturnsHalCollectionWithRoutesInjected(Collection $collection)
     {
         $this->assertEquals('resource', $collection->getCollectionRoute());
@@ -1154,12 +1148,12 @@ class RestControllerTest extends TestCase
     }
 
     /**
-     * @group 36
-     * @dataProvider eventsProducingApiProblems
      * @param string $event
      * @param string $method
      * @param null|string $args
      */
+    #[Group('36')]
+    #[DataProvider('eventsProducingApiProblems')]
     public function testExceptionDuringDeleteReturnsApiProblem($event, $method, $args)
     {
         $this->resource->getEventManager()->attach($event, function ($e) {
@@ -1201,9 +1195,7 @@ class RestControllerTest extends TestCase
         $this->assertFalse($getIdentifier->invoke($this->controller, $routeMatch, $request));
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testCreateAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(
@@ -1221,9 +1213,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testDeleteAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(
@@ -1241,9 +1231,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testDeleteListAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(400, 'Invalid list', null, null, ['delete' => 'Invalid collection']);
@@ -1255,9 +1243,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testGetAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(400, 'Invalid identifier', null, null, ['get' => 'Invalid identifier provided']);
@@ -1269,9 +1255,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testGetListAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(400, 'Invalid collection', null, null, ['fetchAll' => 'Invalid collection']);
@@ -1283,9 +1267,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testPatchAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(
@@ -1303,9 +1285,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testUpdateAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(
@@ -1323,9 +1303,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($problem, $result);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testReplaceListAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(
@@ -1368,9 +1346,7 @@ class RestControllerTest extends TestCase
         return $result;
     }
 
-    /**
-     * @depends testPatchListReturnsHalCollectionOnSuccess
-     */
+    #[Depends('testPatchListReturnsHalCollectionOnSuccess')]
     public function testPatchListReturnsHalCollectionWithRoutesInjected(Collection $collection)
     {
         $this->assertEquals('resource', $collection->getCollectionRoute());
@@ -1422,9 +1398,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($collection, $test->collection);
     }
 
-    /**
-     * @group 44
-     */
+    #[Group('44')]
     public function testPatchListAllowsReturningApiProblemFromResource()
     {
         $problem = new ApiProblem(
@@ -1512,13 +1486,13 @@ class RestControllerTest extends TestCase
     }
 
     /**
-     * @dataProvider validResourcePayloads
      * @param string $method
      * @param string $event
      * @param null|string $id
      * @param null|array $data
      * @param bool|array $returnValue
      */
+    #[DataProvider('validResourcePayloads')]
     public function testInjectsContentValidationInputFilterFromMvcEventIntoResourceEvent(
         $method,
         $event,
@@ -1556,9 +1530,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($inputFilter, $resourceEvent->getInputFilter());
     }
 
-    /**
-     * @group api-tools-mvc-auth-20
-     */
+    #[Group('api-tools-mvc-auth-20')]
     public function testInjectsIdentityFromMvcEventIntoResourceEvent()
     {
         $identity = $this->getMockBuilder(IdentityInterface::class)->getMock();
@@ -1587,10 +1559,10 @@ class RestControllerTest extends TestCase
     }
 
     /**
-     * @group 31
-     * @dataProvider entitiesReturnedForCollections
      * @param stdClass $entity
      */
+    #[Group('31')]
+    #[DataProvider('entitiesReturnedForCollections')]
     public function testGetListAllowsReturningEntitiesInsteadOfCollections($entity)
     {
         $this->resource->getEventManager()->attach('fetchAll', function ($e) use ($entity) {
@@ -1618,11 +1590,11 @@ class RestControllerTest extends TestCase
     }
 
     /**
-     * @group 68
-     * @dataProvider methods
      * @param string $method
      * @param string $event
      */
+    #[Group('68')]
+    #[DataProvider('methods')]
     public function testAllowsReturningResponsesReturnedFromResources($method, $event, array $argv)
     {
         $response = new Response();
@@ -1637,9 +1609,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($response, $result);
     }
 
-    /**
-     * @group 74
-     */
+    #[Group('74')]
     public function testNonArrayToReplaceListReturnsApiProblem()
     {
         $response = $this->controller->replaceList(new stdClass());
@@ -1648,9 +1618,7 @@ class RestControllerTest extends TestCase
         $this->assertEquals(400, $details['status']);
     }
 
-    /**
-     * @group 79
-     */
+    #[Group('79')]
     public function testAllowsReturningHalCollectionFromCreate()
     {
         $collection    = [
@@ -1695,9 +1663,7 @@ class RestControllerTest extends TestCase
         $this->assertTrue($halCollection->getLinks()->has('self'));
     }
 
-    /**
-     * @group 79
-     */
+    #[Group('79')]
     public function testAllowsReturningHalEntityFromCreate()
     {
         $entity    = [
@@ -1721,9 +1687,7 @@ class RestControllerTest extends TestCase
         $this->assertTrue($halEntity->getLinks()->has('self'));
     }
 
-    /**
-     * @group 79
-     */
+    #[Group('79')]
     public function testCreateHalEntityInjectsExistingEntityWithSelfRelationalLinkIfNotPresent()
     {
         $entity    = [
@@ -1739,9 +1703,7 @@ class RestControllerTest extends TestCase
         $this->assertTrue($result->getLinks()->has('self'));
     }
 
-    /**
-     * @group 79
-     */
+    #[Group('79')]
     public function testCreateHalEntityDoesNotInjectExistingEntityWithSelfRelationalLinkIfAlreadyPresent()
     {
         $entity    = [
@@ -1763,9 +1725,7 @@ class RestControllerTest extends TestCase
         $this->assertSame($self, $result->getLinks()->get('self'));
     }
 
-    /**
-     * @group 79
-     */
+    #[Group('79')]
     public function testCreateHalCollectionInjectsExistingCollectionWithSelfRelationalLinkIfNotPresent()
     {
         $collection    = [
@@ -1791,9 +1751,7 @@ class RestControllerTest extends TestCase
         $this->assertTrue($result->getLinks()->has('self'));
     }
 
-    /**
-     * @group 79
-     */
+    #[Group('79')]
     public function testCreateHalCollectionInjectsExistingCollectionWithMetadataIfMissing()
     {
         $collection    = [
@@ -1830,9 +1788,7 @@ class RestControllerTest extends TestCase
         $this->assertEquals(3, $halCollection->getPage());
     }
 
-    /**
-     * @group 97
-     */
+    #[Group('97')]
     public function testLocationHeaderGeneratedDuringCreateContainsOnlyLinkHref(): Headers
     {
         $self = new Link('self');
@@ -1861,11 +1817,9 @@ class RestControllerTest extends TestCase
         return $headers;
     }
 
-    /**
-     * @group 95
-     * @group 96
-     * @depends testLocationHeaderGeneratedDuringCreateContainsOnlyLinkHref
-     */
+    #[Group('95')]
+    #[Group('96')]
+    #[Depends('testLocationHeaderGeneratedDuringCreateContainsOnlyLinkHref')]
     public function testContentLocationHeaderIsGeneratedOnlyFromLinkHref(Headers $headers)
     {
         $this->assertTrue($headers->has('Content-Location'));
@@ -1876,11 +1830,11 @@ class RestControllerTest extends TestCase
     }
 
     /**
-     * @dataProvider methods
      * @param string $method
      * @param string $event
      * @param array $argv
      */
+    #[DataProvider('methods')]
     public function testErrorInMethodReturnsApiProblem($method, $event, $argv)
     {
         if (version_compare(PHP_VERSION, '7.0', 'lt')) {
@@ -1896,11 +1850,11 @@ class RestControllerTest extends TestCase
     }
 
     /**
-     * @dataProvider methods
      * @param string $method
      * @param string $event
      * @param array $argv
      */
+    #[DataProvider('methods')]
     public function testExceptionInMethodReturnsApiProblem($method, $event, $argv)
     {
         $this->resource->getEventManager()->attach($event, function ($e) {

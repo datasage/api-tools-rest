@@ -11,6 +11,7 @@ use Laminas\EventManager\ListenerAggregateInterface;
 use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\InputFilter\InputFilterInterface;
 use Laminas\Stdlib\Parameters;
+use Override;
 
 use function sprintf;
 
@@ -144,6 +145,7 @@ abstract class AbstractResourceListener implements ListenerAggregateInterface
      *
      * @param int $priority
      */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach('create', [$this, 'dispatch']);
