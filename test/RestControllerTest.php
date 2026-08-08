@@ -1533,7 +1533,7 @@ class RestControllerTest extends TestCase
     #[Group('api-tools-mvc-auth-20')]
     public function testInjectsIdentityFromMvcEventIntoResourceEvent()
     {
-        $identity = $this->getMockBuilder(IdentityInterface::class)->getMock();
+        $identity = $this->createStub(IdentityInterface::class);
         $this->event->setParam('Laminas\ApiTools\MvcAuth\Identity', $identity);
         $resource = $this->controller->getResource();
         $this->assertSame($identity, $resource->getIdentity());
