@@ -18,6 +18,7 @@ use Laminas\Http\Response;
 use Laminas\InputFilter\InputFilterInterface;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
+use Override;
 use Traversable;
 
 use function array_merge;
@@ -58,6 +59,7 @@ class Resource implements ResourceInterface
     /**
      * @return self
      */
+    #[Override]
     public function setEventParams(array $params)
     {
         $this->params = $params;
@@ -67,6 +69,7 @@ class Resource implements ResourceInterface
     /**
      * @return array
      */
+    #[Override]
     public function getEventParams()
     {
         return $this->params;
@@ -154,6 +157,7 @@ class Resource implements ResourceInterface
      * @param mixed  $value
      * @return self
      */
+    #[Override]
     public function setEventParam($name, $value)
     {
         $this->params[$name] = $value;
@@ -165,6 +169,7 @@ class Resource implements ResourceInterface
      * @param mixed $default
      * @return mixed
      */
+    #[Override]
     public function getEventParam($name, $default = null)
     {
         if (isset($this->params[$name])) {
@@ -182,6 +187,7 @@ class Resource implements ResourceInterface
      *
      * @return self
      */
+    #[Override]
     public function setEventManager(EventManagerInterface $eventManager)
     {
         $eventManager->addIdentifiers([
@@ -200,6 +206,7 @@ class Resource implements ResourceInterface
      *
      * @return EventManagerInterface
      */
+    #[Override]
     public function getEventManager()
     {
         if (! $this->events) {
@@ -223,6 +230,7 @@ class Resource implements ResourceInterface
      * @return array|object
      * @throws Exception\InvalidArgumentException
      */
+    #[Override]
     public function create($data)
     {
         if (is_array($data)) {
@@ -260,6 +268,7 @@ class Resource implements ResourceInterface
      * @return array|object
      * @throws Exception\InvalidArgumentException
      */
+    #[Override]
     public function update($id, $data)
     {
         if (is_array($data)) {
@@ -299,6 +308,7 @@ class Resource implements ResourceInterface
      * @return array|object
      * @throws Exception\InvalidArgumentException
      */
+    #[Override]
     public function replaceList($data)
     {
         if (! is_array($data)) {
@@ -349,6 +359,7 @@ class Resource implements ResourceInterface
      * @return array|object
      * @throws Exception\InvalidArgumentException
      */
+    #[Override]
     public function patch($id, $data)
     {
         if (is_array($data)) {
@@ -433,6 +444,7 @@ class Resource implements ResourceInterface
      * @param  string|int $id
      * @return bool
      */
+    #[Override]
     public function delete($id)
     {
         $results = $this->triggerEvent(__FUNCTION__, ['id' => $id]);
@@ -454,6 +466,7 @@ class Resource implements ResourceInterface
      * @param  null|array $data
      * @return bool
      */
+    #[Override]
     public function deleteList($data = null)
     {
         if (
@@ -491,6 +504,7 @@ class Resource implements ResourceInterface
      * @param  string|int $id
      * @return false|array|object
      */
+    #[Override]
     public function fetch($id)
     {
         $results = $this->triggerEvent(__FUNCTION__, ['id' => $id]);
@@ -514,6 +528,7 @@ class Resource implements ResourceInterface
      *
      * @return array|Traversable
      */
+    #[Override]
     public function fetchAll()
     {
         $params  = func_get_args();

@@ -14,6 +14,7 @@ use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\Exception\ServiceNotFoundException;
 use Laminas\ServiceManager\ServiceLocatorInterface;
 use Laminas\Stdlib\Parameters;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function array_key_exists;
@@ -46,6 +47,7 @@ class RestControllerFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return bool
      */
+    #[Override]
     public function canCreate(ContainerInterface $container, $requestedName)
     {
         if (array_key_exists($requestedName, $this->lookupCache)) {
@@ -104,6 +106,7 @@ class RestControllerFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return bool
      */
+    #[Override]
     public function canCreateServiceWithName(ServiceLocatorInterface $controllers, $name, $requestedName)
     {
         $container = $controllers->getServiceLocator() ?: $controllers;
@@ -118,6 +121,7 @@ class RestControllerFactory implements AbstractFactoryInterface
      * @return RestController
      * @throws ServiceNotCreatedException If listener specified is not a ListenerAggregate.
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         $config = $container->get('config');
@@ -193,6 +197,7 @@ class RestControllerFactory implements AbstractFactoryInterface
      * @return RestController
      * @throws ServiceNotCreatedException If listener specified is not a ListenerAggregate.
      */
+    #[Override]
     public function createServiceWithName(ServiceLocatorInterface $controllers, $name, $requestedName)
     {
         $container = $controllers->getServiceLocator() ?: $controllers;

@@ -24,6 +24,7 @@ use Laminas\Router\Http\TreeRouteStack;
 use Laminas\View\Helper\ServerUrl as ServerUrlHelper;
 use Laminas\View\Helper\Url as UrlHelper;
 use Laminas\View\HelperPluginManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Container\ContainerInterface;
@@ -60,6 +61,7 @@ class ChildResourcesIntegrationTest extends TestCase
     /** @var ControllerPluginManager */
     private $plugins;
 
+    #[Override]
     public function setUp(): void
     {
         $this->setupRouter();

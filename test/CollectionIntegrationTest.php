@@ -36,6 +36,7 @@ use Laminas\Uri;
 use Laminas\View\Helper\ServerUrl as ServerUrlHelper;
 use Laminas\View\Helper\Url as UrlHelper;
 use Laminas\View\HelperPluginManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Container\ContainerInterface;
@@ -76,6 +77,7 @@ class CollectionIntegrationTest extends TestCase
     /** @var RestController */
     private $controller;
 
+    #[Override]
     public function setUp(): void
     {
         $this->setUpRenderer();

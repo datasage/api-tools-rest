@@ -7,6 +7,7 @@ namespace LaminasTest\ApiTools\Rest\TestAsset;
 use Laminas\EventManager\EventManagerInterface;
 use Laminas\EventManager\ListenerAggregateInterface;
 use Laminas\EventManager\ListenerAggregateTrait;
+use Override;
 
 class CollectionIntegrationListener implements ListenerAggregateInterface
 {
@@ -16,6 +17,7 @@ class CollectionIntegrationListener implements ListenerAggregateInterface
     public $collection;
 
     /** @param int $priority */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1): void
     {
         $this->listeners[] = $events->attach('fetchAll', [$this, 'onFetchAll']);

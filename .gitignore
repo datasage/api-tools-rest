@@ -3,4 +3,5 @@
 /coveralls-upload.json
 /phpunit.xml
 /vendor/
+/.phpunit.cache/
 /.phpunit.result.cache

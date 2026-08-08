@@ -13,6 +13,7 @@ use Laminas\InputFilter\InputFilterInterface;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
 use Laminas\Stdlib\RequestInterface;
+use Override;
 
 use function gettype;
 use function is_array;
@@ -42,6 +43,7 @@ class ResourceEvent extends Event
      * @param array|ArrayAccess|object $params
      * @return self
      */
+    #[Override]
     public function setParams($params)
     {
         if (! is_array($params) && ! is_object($params)) {

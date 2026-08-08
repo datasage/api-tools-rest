@@ -7,6 +7,7 @@ namespace Laminas\ApiTools\Rest\Factory;
 use Laminas\ApiTools\Rest\Listener\OptionsListener;
 use Laminas\ServiceManager\FactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function array_key_exists;
@@ -21,6 +22,7 @@ class OptionsListenerFactory implements FactoryInterface
      * @param null|array $options
      * @return OptionsListener
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         return new OptionsListener($this->getConfig($container));
@@ -33,6 +35,7 @@ class OptionsListenerFactory implements FactoryInterface
      *
      * @return OptionsListener
      */
+    #[Override]
     public function createService(ServiceLocatorInterface $container)
     {
         return $this($container, OptionsListener::class);

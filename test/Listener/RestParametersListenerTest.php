@@ -14,6 +14,7 @@ use Laminas\Mvc\MvcEvent;
 use Laminas\Router\RouteMatch;
 use Laminas\Stdlib\Parameters;
 use LaminasTest\ApiTools\Rest\RouteMatchFactoryTrait;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 use function method_exists;
@@ -29,6 +30,7 @@ class RestParametersListenerTest extends TestCase
     private RestParametersListener $listener;
     private Request $request;
 
+    #[Override]
     public function setUp(): void
     {
         $this->resource = $resource = new Resource();
