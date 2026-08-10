@@ -72,7 +72,7 @@ class AbstractResourceListenerTest extends TestCase
      * @param string $method
      */
     #[DataProvider('events')]
-    public function testResourceMethodsAreInvokedWhenEventsAreTriggered($method, array $eventArgs)
+    public function testResourceMethodsAreInvokedWhenEventsAreTriggered($method, array $eventArgs): void
     {
         $this->methodInvokedInListener = null;
         $this->paramsPassedToListener  = null;
@@ -123,7 +123,7 @@ class AbstractResourceListenerTest extends TestCase
     }
 
     #[Group('7')]
-    public function testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod()
+    public function testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod(): void
     {
         $queryParams = new Parameters(['foo' => 'bar']);
         $event       = new ResourceEvent();
@@ -136,7 +136,7 @@ class AbstractResourceListenerTest extends TestCase
     }
 
     #[Group('7')]
-    public function testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent()
+    public function testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent(): void
     {
         $event = new ResourceEvent();
         $event->setName('fetchAll');

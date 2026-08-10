@@ -26,7 +26,7 @@ class Module
      *
      * Attaches a listener to the RestController dispatch event.
      */
-    public function onBootstrap(MvcEvent $e)
+    public function onBootstrap(MvcEvent $e): void
     {
         $app      = $e->getTarget();
         $services = $app->getServiceManager();

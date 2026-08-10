@@ -44,7 +44,7 @@ class OptionsListenerFactoryTest extends TestCase
         ];
     }
 
-    public function testFactoryCreatesOptionsListenerFromRestConfiguration()
+    public function testFactoryCreatesOptionsListenerFromRestConfiguration(): void
     {
         $config = $this->seedConfigService();
         $this->services->setService('config', $config);

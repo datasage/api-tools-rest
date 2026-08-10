@@ -42,7 +42,7 @@ class ResourceTest extends TestCase
         $this->resource->setEventManager($this->events);
     }
 
-    public function testEventManagerIdentifiersAreAsExpected()
+    public function testEventManagerIdentifiersAreAsExpected(): void
     {
         $expected    = [
             Resource::class,
@@ -67,18 +67,18 @@ class ResourceTest extends TestCase
      * @param mixed $data
      */
     #[DataProvider('badData')]
-    public function testCreateRaisesExceptionWithInvalidData($data)
+    public function testCreateRaisesExceptionWithInvalidData($data): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->resource->create($data);
     }
 
-    public function testEventParamsReturnDefaultValueOnNonExistingParam()
+    public function testEventParamsReturnDefaultValueOnNonExistingParam(): void
     {
         $this->assertEquals('world', $this->resource->getEventParam('hello', 'world'));
     }
 
-    public function testSameInstanceReturnedByEventParams()
+    public function testSameInstanceReturnedByEventParams(): void
     {
         $instance = new ArrayObject();
 
@@ -87,7 +87,7 @@ class ResourceTest extends TestCase
         $this->assertEquals($instance, $this->resource->getEventParam('instance'));
     }
 
-    public function testClearOldParamsOnSetEventParams()
+    public function testClearOldParamsOnSetEventParams(): void
     {
         $this->resource->setEventParam('world', 'hello');
 
@@ -98,7 +98,7 @@ class ResourceTest extends TestCase
         $this->assertEquals($params, $this->resource->getEventParams());
     }
 
-    public function testCreateReturnsResultOfLastListener()
+    public function testCreateReturnsResultOfLastListener(): void
     {
         $this->events->attach('create', function ($e) {
             return null;
@@ -112,7 +112,7 @@ class ResourceTest extends TestCase
         $this->assertSame($object, $test);
     }
 
-    public function testCreateReturnsDataIfLastListenerDoesNotReturnResource()
+    public function testCreateReturnsDataIfLastListenerDoesNotReturnResource(): void
     {
         $data   = new stdClass();
         $object = new stdClass();
@@ -131,13 +131,13 @@ class ResourceTest extends TestCase
      * @param mixed $data
      */
     #[DataProvider('badData')]
-    public function testUpdateRaisesExceptionWithInvalidData($data)
+    public function testUpdateRaisesExceptionWithInvalidData($data): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->resource->update('foo', $data);
     }
 
-    public function testUpdateReturnsResultOfLastListener()
+    public function testUpdateReturnsResultOfLastListener(): void
     {
         $this->events->attach('update', function ($e) {
             return null;
@@ -151,7 +151,7 @@ class ResourceTest extends TestCase
         $this->assertSame($object, $test);
     }
 
-    public function testUpdateReturnsDataIfLastListenerDoesNotReturnResource()
+    public function testUpdateReturnsDataIfLastListenerDoesNotReturnResource(): void
     {
         $data   = new stdClass();
         $object = new stdClass();
@@ -170,7 +170,7 @@ class ResourceTest extends TestCase
      * @param mixed $data
      */
     #[DataProvider('badUpdateCollectionData')]
-    public function testReplaceListRaisesExceptionWithInvalidData($data)
+    public function testReplaceListRaisesExceptionWithInvalidData($data): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('Data');
@@ -179,7 +179,7 @@ class ResourceTest extends TestCase
         $this->resource->replaceList($data);
     }
 
-    public function testReplaceListReturnsResultOfLastListener()
+    public function testReplaceListReturnsResultOfLastListener(): void
     {
         $this->events->attach('replaceList', function ($e) {
             return null;
@@ -193,7 +193,7 @@ class ResourceTest extends TestCase
         $this->assertSame($object, $test);
     }
 
-    public function testReplaceListReturnsDataIfLastListenerDoesNotReturnResource()
+    public function testReplaceListReturnsDataIfLastListenerDoesNotReturnResource(): void
     {
         $data   = [new stdClass()];
         $object = new stdClass();
@@ -212,13 +212,13 @@ class ResourceTest extends TestCase
      * @param mixed $data
      */
     #[DataProvider('badData')]
-    public function testPatchRaisesExceptionWithInvalidData($data)
+    public function testPatchRaisesExceptionWithInvalidData($data): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->resource->patch('foo', $data);
     }
 
-    public function testPatchReturnsResultOfLastListener()
+    public function testPatchReturnsResultOfLastListener(): void
     {
         $this->events->attach('patch', function ($e) {
             return null;
@@ -232,7 +232,7 @@ class ResourceTest extends TestCase
         $this->assertSame($object, $test);
     }
 
-    public function testPatchReturnsDataIfLastListenerDoesNotReturnResource()
+    public function testPatchReturnsDataIfLastListenerDoesNotReturnResource(): void
     {
         $data   = new stdClass();
         $object = new stdClass();
@@ -247,7 +247,7 @@ class ResourceTest extends TestCase
         $this->assertSame($data, $test);
     }
 
-    public function testDeleteReturnsResultOfLastListenerIfBoolean()
+    public function testDeleteReturnsResultOfLastListenerIfBoolean(): void
     {
         $this->events->attach('delete', function ($e) {
             return new stdClass();
@@ -260,7 +260,7 @@ class ResourceTest extends TestCase
         $this->assertTrue($test);
     }
 
-    public function testDeleteReturnsFalseIfLastListenerDoesNotReturnBoolean()
+    public function testDeleteReturnsFalseIfLastListenerDoesNotReturnBoolean(): void
     {
         $this->events->attach('delete', function ($e) {
             return true;
@@ -288,14 +288,14 @@ class ResourceTest extends TestCase
      * @param mixed $data
      */
     #[DataProvider('badDeleteCollections')]
-    public function testDeleteListRaisesInvalidArgumentExceptionForInvalidData($data)
+    public function testDeleteListRaisesInvalidArgumentExceptionForInvalidData($data): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('::deleteList');
         $this->resource->deleteList($data);
     }
 
-    public function testDeleteListReturnsResultOfLastListenerIfBoolean()
+    public function testDeleteListReturnsResultOfLastListenerIfBoolean(): void
     {
         $this->events->attach('deleteList', function ($e) {
             return new stdClass();
@@ -308,7 +308,7 @@ class ResourceTest extends TestCase
         $this->assertTrue($test);
     }
 
-    public function testDeleteListReturnsFalseIfLastListenerDoesNotReturnBoolean()
+    public function testDeleteListReturnsFalseIfLastListenerDoesNotReturnBoolean(): void
     {
         $this->events->attach('deleteList', function ($e) {
             return true;
@@ -321,7 +321,7 @@ class ResourceTest extends TestCase
         $this->assertFalse($test);
     }
 
-    public function testFetchReturnsResultOfLastListener()
+    public function testFetchReturnsResultOfLastListener(): void
     {
         $this->events->attach('fetch', function ($e) {
             return true;
@@ -339,7 +339,7 @@ class ResourceTest extends TestCase
      * @param mixed $return
      */
     #[DataProvider('badData')]
-    public function testFetchReturnsFalseIfLastListenerDoesNotReturnArrayOrObject($return)
+    public function testFetchReturnsFalseIfLastListenerDoesNotReturnArrayOrObject($return): void
     {
         $this->events->attach('fetch', function ($e) use ($return) {
             return $return;
@@ -364,7 +364,7 @@ class ResourceTest extends TestCase
      */
     #[Group('31')]
     #[DataProvider('invalidCollection')]
-    public function testFetchAllReturnsEmptyArrayIfLastListenerReturnsScalar($return)
+    public function testFetchAllReturnsEmptyArrayIfLastListenerReturnsScalar($return): void
     {
         $this->events->attach('fetchAll', function ($e) use ($return) {
             return $return;
@@ -373,7 +373,7 @@ class ResourceTest extends TestCase
         $this->assertEquals([], $test);
     }
 
-    public function testFetchAllReturnsResultOfLastListener()
+    public function testFetchAllReturnsResultOfLastListener(): void
     {
         $this->events->attach('fetchAll', function ($e) {
             return true;
@@ -429,7 +429,7 @@ class ResourceTest extends TestCase
      * @param string $eventName
      */
     #[DataProvider('eventsToTriggerWithoutIdFlag')]
-    public function testEventTerminateIfApiProblemIsReturned($eventName, array $args)
+    public function testEventTerminateIfApiProblemIsReturned($eventName, array $args): void
     {
         $called = false;
 
@@ -451,7 +451,7 @@ class ResourceTest extends TestCase
      * @param bool $idIsPresent
      */
     #[DataProvider('eventsToTrigger')]
-    public function testEventParametersAreInjectedIntoEventWhenTriggered($eventName, array $args, $idIsPresent)
+    public function testEventParametersAreInjectedIntoEventWhenTriggered($eventName, array $args, $idIsPresent): void
     {
         $test = (object) [];
         $this->events->attach($eventName, function ($e) use ($test) {
@@ -478,7 +478,7 @@ class ResourceTest extends TestCase
      * @param string $eventName
      */
     #[DataProvider('eventsToTriggerWithoutIdFlag')]
-    public function testComposedQueryParametersAndRouteMatchesAreInjectedIntoEvent($eventName, array $args)
+    public function testComposedQueryParametersAndRouteMatchesAreInjectedIntoEvent($eventName, array $args): void
     {
         $test = (object) [];
         $this->events->attach($eventName, function ($e) use ($test) {
@@ -512,7 +512,7 @@ class ResourceTest extends TestCase
      */
     #[DataProvider('badData')]
     #[DataProvider('badUpdateCollectionData')]
-    public function testPatchListListRaisesExceptionWithInvalidData($data)
+    public function testPatchListListRaisesExceptionWithInvalidData($data): void
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('Data');
@@ -521,7 +521,7 @@ class ResourceTest extends TestCase
         $this->resource->patchList($data);
     }
 
-    public function testPatchListReturnsResultOfLastListener()
+    public function testPatchListReturnsResultOfLastListener(): void
     {
         $this->events->attach('patchList', function ($e) {
             return null;
@@ -535,7 +535,7 @@ class ResourceTest extends TestCase
         $this->assertSame($object, $test);
     }
 
-    public function testPatchListReturnsDataIfLastListenerDoesNotReturnResource()
+    public function testPatchListReturnsDataIfLastListenerDoesNotReturnResource(): void
     {
         $data   = [new stdClass()];
         $object = new stdClass();
@@ -551,7 +551,7 @@ class ResourceTest extends TestCase
     }
 
     #[Group('31')]
-    public function testFetchAllShouldAllowReturningArbitraryObjects()
+    public function testFetchAllShouldAllowReturningArbitraryObjects(): void
     {
         $return = (object) ['foo' => 'bar'];
         $this->events->attach('fetchAll', function ($e) use ($return) {
@@ -581,7 +581,7 @@ class ResourceTest extends TestCase
      */
     #[Group('68')]
     #[DataProvider('actions')]
-    public function testAllowsReturningResponsesReturnedFromResources($action, array $argv)
+    public function testAllowsReturningResponsesReturnedFromResources($action, array $argv): void
     {
         $response = new Response();
         $response->setStatusCode(418);

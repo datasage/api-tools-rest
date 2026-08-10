@@ -73,9 +73,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[RestControllerFactory]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[setControllerOptions]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$config[$requestedName]['listener']]]></code>
@@ -182,9 +179,6 @@
       <code><![CDATA[$value]]></code>
       <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
-    <MissingReturnType>
-      <code><![CDATA[createAllowHeader]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$controller]]></code>
       <code><![CDATA[$identifier]]></code>
@@ -224,11 +218,6 @@
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->sharedListeners]]></code>
     </InvalidPropertyAssignmentValue>
-    <MissingReturnType>
-      <code><![CDATA[attachShared]]></code>
-      <code><![CDATA[detachShared]]></code>
-      <code><![CDATA[onDispatch]]></code>
-    </MissingReturnType>
     <MixedAssignment>
       <code><![CDATA[$query]]></code>
     </MixedAssignment>
@@ -253,9 +242,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[Module]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[onBootstrap]]></code>
-    </MissingReturnType>
     <MixedAssignment>
       <code><![CDATA[$events]]></code>
       <code><![CDATA[$services]]></code>
@@ -430,20 +416,6 @@
       <code><![CDATA[$response]]></code>
       <code><![CDATA[$response]]></code>
     </LessSpecificReturnStatement>
-    <MissingReturnType>
-      <code><![CDATA[injectEventIdentityIntoResource]]></code>
-      <code><![CDATA[injectEventInputFilterIntoResource]]></code>
-      <code><![CDATA[injectRequestIntoResourceEventParams]]></code>
-      <code><![CDATA[setCollectionHttpMethods]]></code>
-      <code><![CDATA[setCollectionName]]></code>
-      <code><![CDATA[setEntityHttpMethods]]></code>
-      <code><![CDATA[setMaxPageSize]]></code>
-      <code><![CDATA[setMinPageSize]]></code>
-      <code><![CDATA[setPageSize]]></code>
-      <code><![CDATA[setPageSizeParam]]></code>
-      <code><![CDATA[setResource]]></code>
-      <code><![CDATA[setRoute]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$collection]]></code>
       <code><![CDATA[$data]]></code>
@@ -586,11 +558,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[AbstractResourceListenerTest]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[testDispatchShouldPassEmptyArrayToFetchAllMethodIfNoQueryParamsArePresent]]></code>
-      <code><![CDATA[testDispatchShouldPassWhitelistedQueryParamsToFetchAllMethod]]></code>
-      <code><![CDATA[testResourceMethodsAreInvokedWhenEventsAreTriggered]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$eventArgs['data']]]></code>
       <code><![CDATA[$eventArgs['data']]]></code>
@@ -634,12 +601,6 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
-    <MissingReturnType>
-      <code><![CDATA[setUpAlternateRouter]]></code>
-      <code><![CDATA[setupHelpers]]></code>
-      <code><![CDATA[testChildResourceObjectIdentifierMappingInCollectionsViaControllerReturn]]></code>
-      <code><![CDATA[testChildResourceObjectIdentifierMappingViaControllerReturn]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$child]]></code>
       <code><![CDATA[$child->_links]]></code>
@@ -715,15 +676,6 @@
       <code><![CDATA[$first]]></code>
       <code><![CDATA[$second]]></code>
     </MissingClosureParamType>
-    <MissingReturnType>
-      <code><![CDATA[setUpHelpers]]></code>
-      <code><![CDATA[setUpRenderer]]></code>
-      <code><![CDATA[setUpRouter]]></code>
-      <code><![CDATA[testCollectionLinksIncludeFullQueryString]]></code>
-      <code><![CDATA[testFactoryEnabledListenerCreatesQueryStringWhitelist]]></code>
-      <code><![CDATA[testFactoryEnabledListenerInjectsWhitelistedQueryParams]]></code>
-      <code><![CDATA[testFactoryEnabledListenerMergeWhitelistedQueryParamsWithInputFilterKeys]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$controller]]></code>
       <code><![CDATA[$controller]]></code>
@@ -818,9 +770,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[OptionsListenerFactoryTest]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[testFactoryCreatesOptionsListenerFromRestConfiguration]]></code>
-    </MissingReturnType>
     <MixedAssignment>
       <code><![CDATA[$instanceConfig]]></code>
     </MixedAssignment>
@@ -829,15 +778,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[RestControllerFactoryTest]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[testControllerEventManagerIdentifiersAreAsSpecified]]></code>
-      <code><![CDATA[testDefaultControllerEventManagerIdentifiersAreAsExpected]]></code>
-      <code><![CDATA[testDefaultResourceEventManagerIdentifiersAreAsExpected]]></code>
-      <code><![CDATA[testResourceEventManagerIdentifiersAreAsSpecifiedArray]]></code>
-      <code><![CDATA[testResourceEventManagerIdentifiersAreAsSpecifiedString]]></code>
-      <code><![CDATA[testWillInstantiateAlternateRestControllerWhenSpecified]]></code>
-      <code><![CDATA[testWillInstantiateListenerIfServiceNotFoundButClassExists]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$config]]></code>
@@ -954,15 +894,6 @@
     <MissingClosureParamType>
       <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
-    <MissingReturnType>
-      <code><![CDATA[testListenerRegistersAtExpectedPriority]]></code>
-      <code><![CDATA[testListenerReturns405ResponseWithAllowHeaderForInvalidRequestMethod]]></code>
-      <code><![CDATA[testListenerReturnsNullIfMatchingControllerInRouteMatchesButNoConfigForController]]></code>
-      <code><![CDATA[testListenerReturnsNullIfNoMatchingControllerInRouteMatches]]></code>
-      <code><![CDATA[testListenerReturnsNullIfNoRouteMatches]]></code>
-      <code><![CDATA[testListenerReturnsNullIfNotAnHttpRequest]]></code>
-      <code><![CDATA[testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$allow]]></code>
       <code><![CDATA[$value]]></code>
@@ -991,13 +922,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[RestParametersListenerTest]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[testAttachSharedAttachOneListenerOnEventDispatch]]></code>
-      <code><![CDATA[testDetachSharedDetachAttachedListener]]></code>
-      <code><![CDATA[testIgnoresNonRestControllers]]></code>
-      <code><![CDATA[testInjectsQueryParamsOnDispatchOfRestController]]></code>
-      <code><![CDATA[testInjectsRouteMatchOnDispatchOfRestController]]></code>
-    </MissingReturnType>
     <PossiblyInvalidArgument>
       <code><![CDATA[$identifiers]]></code>
       <code><![CDATA[$identifiers]]></code>
@@ -1010,25 +934,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[ResourceEventTest]]></code>
     </ClassMustBeFinal>
-    <MissingReturnType>
-      <code><![CDATA[testCanComposeIdentity]]></code>
-      <code><![CDATA[testCanComposeInputFilter]]></code>
-      <code><![CDATA[testCanFetchIndividualQueryParameter]]></code>
-      <code><![CDATA[testCanFetchIndividualRouteParameter]]></code>
-      <code><![CDATA[testCanInjectRequestViaSetParams]]></code>
-      <code><![CDATA[testCanNullifyIdentity]]></code>
-      <code><![CDATA[testCanNullifyInputFilter]]></code>
-      <code><![CDATA[testIdentityIsUndefinedByDefault]]></code>
-      <code><![CDATA[testInputFilterIsUndefinedByDefault]]></code>
-      <code><![CDATA[testQueryParamsAreNullByDefault]]></code>
-      <code><![CDATA[testQueryParamsAreNullable]]></code>
-      <code><![CDATA[testRequestIsNullByDefault]]></code>
-      <code><![CDATA[testRequestIsNullable]]></code>
-      <code><![CDATA[testReturnsDefaultParameterWhenPullingUnknownQueryParameter]]></code>
-      <code><![CDATA[testReturnsDefaultParameterWhenPullingUnknownRouteParameter]]></code>
-      <code><![CDATA[testRouteMatchIsNullByDefault]]></code>
-      <code><![CDATA[testRouteMatchIsNullable]]></code>
-    </MissingReturnType>
     <PossiblyInvalidArgument>
       <code><![CDATA[$this->matches]]></code>
       <code><![CDATA[$this->matches]]></code>
@@ -1085,41 +990,6 @@
       <code><![CDATA[function ($e) use ($return) {]]></code>
       <code><![CDATA[function ($e) use ($return) {]]></code>
     </MissingClosureReturnType>
-    <MissingReturnType>
-      <code><![CDATA[testAllowsReturningResponsesReturnedFromResources]]></code>
-      <code><![CDATA[testClearOldParamsOnSetEventParams]]></code>
-      <code><![CDATA[testComposedQueryParametersAndRouteMatchesAreInjectedIntoEvent]]></code>
-      <code><![CDATA[testCreateRaisesExceptionWithInvalidData]]></code>
-      <code><![CDATA[testCreateReturnsDataIfLastListenerDoesNotReturnResource]]></code>
-      <code><![CDATA[testCreateReturnsResultOfLastListener]]></code>
-      <code><![CDATA[testDeleteListRaisesInvalidArgumentExceptionForInvalidData]]></code>
-      <code><![CDATA[testDeleteListReturnsFalseIfLastListenerDoesNotReturnBoolean]]></code>
-      <code><![CDATA[testDeleteListReturnsResultOfLastListenerIfBoolean]]></code>
-      <code><![CDATA[testDeleteReturnsFalseIfLastListenerDoesNotReturnBoolean]]></code>
-      <code><![CDATA[testDeleteReturnsResultOfLastListenerIfBoolean]]></code>
-      <code><![CDATA[testEventManagerIdentifiersAreAsExpected]]></code>
-      <code><![CDATA[testEventParametersAreInjectedIntoEventWhenTriggered]]></code>
-      <code><![CDATA[testEventParamsReturnDefaultValueOnNonExistingParam]]></code>
-      <code><![CDATA[testEventTerminateIfApiProblemIsReturned]]></code>
-      <code><![CDATA[testFetchAllReturnsEmptyArrayIfLastListenerReturnsScalar]]></code>
-      <code><![CDATA[testFetchAllReturnsResultOfLastListener]]></code>
-      <code><![CDATA[testFetchAllShouldAllowReturningArbitraryObjects]]></code>
-      <code><![CDATA[testFetchReturnsFalseIfLastListenerDoesNotReturnArrayOrObject]]></code>
-      <code><![CDATA[testFetchReturnsResultOfLastListener]]></code>
-      <code><![CDATA[testPatchListListRaisesExceptionWithInvalidData]]></code>
-      <code><![CDATA[testPatchListReturnsDataIfLastListenerDoesNotReturnResource]]></code>
-      <code><![CDATA[testPatchListReturnsResultOfLastListener]]></code>
-      <code><![CDATA[testPatchRaisesExceptionWithInvalidData]]></code>
-      <code><![CDATA[testPatchReturnsDataIfLastListenerDoesNotReturnResource]]></code>
-      <code><![CDATA[testPatchReturnsResultOfLastListener]]></code>
-      <code><![CDATA[testReplaceListRaisesExceptionWithInvalidData]]></code>
-      <code><![CDATA[testReplaceListReturnsDataIfLastListenerDoesNotReturnResource]]></code>
-      <code><![CDATA[testReplaceListReturnsResultOfLastListener]]></code>
-      <code><![CDATA[testSameInstanceReturnedByEventParams]]></code>
-      <code><![CDATA[testUpdateRaisesExceptionWithInvalidData]]></code>
-      <code><![CDATA[testUpdateReturnsDataIfLastListenerDoesNotReturnResource]]></code>
-      <code><![CDATA[testUpdateReturnsResultOfLastListener]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$data]]></code>
       <code><![CDATA[$data]]></code>
@@ -1311,95 +1181,6 @@
     <MissingClosureReturnType>
       <code><![CDATA[function ($e) use ($problem) {]]></code>
     </MissingClosureReturnType>
-    <MissingReturnType>
-      <code><![CDATA[assertProblemApiResult]]></code>
-      <code><![CDATA[testAllowsReturningHalCollectionFromCreate]]></code>
-      <code><![CDATA[testAllowsReturningHalEntityFromCreate]]></code>
-      <code><![CDATA[testAllowsReturningResponsesReturnedFromResources]]></code>
-      <code><![CDATA[testCanSetIdentifierName]]></code>
-      <code><![CDATA[testContentLocationHeaderIsGeneratedOnlyFromLinkHref]]></code>
-      <code><![CDATA[testCreateAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testCreateDoesNotSetLocationHeaderOnMissingSelfRelationalLink]]></code>
-      <code><![CDATA[testCreateHalCollectionInjectsExistingCollectionWithMetadataIfMissing]]></code>
-      <code><![CDATA[testCreateHalCollectionInjectsExistingCollectionWithSelfRelationalLinkIfNotPresent]]></code>
-      <code><![CDATA[testCreateHalEntityDoesNotInjectExistingEntityWithSelfRelationalLinkIfAlreadyPresent]]></code>
-      <code><![CDATA[testCreateHalEntityInjectsExistingEntityWithSelfRelationalLinkIfNotPresent]]></code>
-      <code><![CDATA[testCreateReturnsProblemResultOnCreationException]]></code>
-      <code><![CDATA[testCreateTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testCreateUsesHalEntityReturnedByResource]]></code>
-      <code><![CDATA[testDeleteAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testDeleteCollectionBackwardsCompatibleWithNoData]]></code>
-      <code><![CDATA[testDeleteListAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testDeleteListTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testDeleteTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testDispatchReturnsEarlyIfApiProblemReturnedFromListener]]></code>
-      <code><![CDATA[testErrorInMethodReturnsApiProblem]]></code>
-      <code><![CDATA[testExceptionDuringDeleteReturnsApiProblem]]></code>
-      <code><![CDATA[testExceptionInMethodReturnsApiProblem]]></code>
-      <code><![CDATA[testFalseFromDeleteCollectionReturnsProblemApiResult]]></code>
-      <code><![CDATA[testFalseFromDeleteEntityReturnsProblemApiResult]]></code>
-      <code><![CDATA[testGetAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testGetListAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testGetListAllowsReturningEntitiesInsteadOfCollections]]></code>
-      <code><![CDATA[testGetListTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testGetListUsesHalCollectionReturnedByResource]]></code>
-      <code><![CDATA[testGetResourceReturnsSameInstance]]></code>
-      <code><![CDATA[testGetResourceThrowsExceptionOnMissingResource]]></code>
-      <code><![CDATA[testGetTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testGetUsesHalEntityReturnedByResource]]></code>
-      <code><![CDATA[testHalCollectionReturnedIncludesRoutes]]></code>
-      <code><![CDATA[testHalCollectionUsesControllerCollectionName]]></code>
-      <code><![CDATA[testHeadReturnsEntityResponseWhenIdProvided]]></code>
-      <code><![CDATA[testHeadReturnsListResponseWhenNoIdProvided]]></code>
-      <code><![CDATA[testIdentifierNameHasSaneDefault]]></code>
-      <code><![CDATA[testInjectsContentValidationInputFilterFromMvcEventIntoResourceEvent]]></code>
-      <code><![CDATA[testInjectsIdentityFromMvcEventIntoResourceEvent]]></code>
-      <code><![CDATA[testInjectsRequestFromControllerIntoResourceEvent]]></code>
-      <code><![CDATA[testNonArrayToReplaceListReturnsApiProblem]]></code>
-      <code><![CDATA[testOnDispatchRaisesDomainExceptionOnMissingEntity]]></code>
-      <code><![CDATA[testOnDispatchRaisesDomainExceptionOnMissingRoute]]></code>
-      <code><![CDATA[testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForCollection]]></code>
-      <code><![CDATA[testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForEntity]]></code>
-      <code><![CDATA[testOptionsReturnsEmptyResponseWithAllowHeaderPopulatedForEntityWhenRouteIdentifierIsCustomized]]></code>
-      <code><![CDATA[testOptionsTriggersPreAndPostEventsForCollection]]></code>
-      <code><![CDATA[testOptionsTriggersPreAndPostEventsForEntity]]></code>
-      <code><![CDATA[testPassingIdentifierToConstructorAllowsListeningOnThatIdentifier]]></code>
-      <code><![CDATA[testPatchAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testPatchListAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testPatchListReturnsHalCollectionWithRoutesInjected]]></code>
-      <code><![CDATA[testPatchListReturnsProblemResultOnUpdateException]]></code>
-      <code><![CDATA[testPatchListTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testPatchListUsesHalCollectionReturnedByResource]]></code>
-      <code><![CDATA[testPatchReturnsHalEntityOnSuccess]]></code>
-      <code><![CDATA[testPatchReturnsProblemResultOnPatchException]]></code>
-      <code><![CDATA[testPatchTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testPatchUsesHalEntityReturnedByResource]]></code>
-      <code><![CDATA[testReplaceListAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testReplaceListReturnsHalCollectionWithRoutesInjected]]></code>
-      <code><![CDATA[testReplaceListReturnsProblemResultOnUpdateException]]></code>
-      <code><![CDATA[testReplaceListTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testReplaceListUsesHalCollectionReturnedByResource]]></code>
-      <code><![CDATA[testReturningEmptyResultFromGetReturnsProblemApiResult]]></code>
-      <code><![CDATA[testReturningEntityFromGetReturnsExpectedHalEntity]]></code>
-      <code><![CDATA[testReturnsErrorResponseWhenPageNonInteger]]></code>
-      <code><![CDATA[testReturnsErrorResponseWhenPageSizeBelowMin]]></code>
-      <code><![CDATA[testReturnsErrorResponseWhenPageSizeExceedsMax]]></code>
-      <code><![CDATA[testReturnsErrorResponseWhenPageSizeInNotPositive]]></code>
-      <code><![CDATA[testReturnsHalCollectionForPaginatedList]]></code>
-      <code><![CDATA[testReturnsHalCollectionForPaginatedListUsingPassedPageSizeParameter]]></code>
-      <code><![CDATA[testSuccessfulCreationWithEntityIdentifierSetsResponseContentLocationHeader]]></code>
-      <code><![CDATA[testSuccessfulCreationWithEntityIdentifierSetsResponseLocationHeader]]></code>
-      <code><![CDATA[testTrueFromDeleteCollectionReturnsResponseWithNoContent]]></code>
-      <code><![CDATA[testTrueFromDeleteEntityReturnsResponseWithNoContent]]></code>
-      <code><![CDATA[testUpdateAllowsReturningApiProblemFromResource]]></code>
-      <code><![CDATA[testUpdateReturnsHalEntityOnSuccess]]></code>
-      <code><![CDATA[testUpdateReturnsProblemResultOnUpdateException]]></code>
-      <code><![CDATA[testUpdateTriggersPreAndPostEvents]]></code>
-      <code><![CDATA[testUpdateUsesHalEntityReturnedByResource]]></code>
-      <code><![CDATA[testUsesConfiguredIdentifierNameToGetIdentifier]]></code>
-      <code><![CDATA[testValidMethodReturningHalOrApiValueCastsReturnToContentNegotiationViewModel]]></code>
-      <code><![CDATA[testValidMethodReturningHalOrApiValueIsCastToViewModel]]></code>
-    </MissingReturnType>
     <MixedArgument>
       <code><![CDATA[$httpMethods]]></code>
       <code><![CDATA[$httpMethods]]></code>

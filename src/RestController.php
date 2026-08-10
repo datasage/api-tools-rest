@@ -150,7 +150,7 @@ class RestController extends AbstractRestfulController
     /**
      * Set the allowed HTTP methods for collections
      */
-    public function setCollectionHttpMethods(array $methods)
+    public function setCollectionHttpMethods(array $methods): void
     {
         $this->collectionHttpMethods = $methods;
     }
@@ -160,7 +160,7 @@ class RestController extends AbstractRestfulController
      *
      * @param  string $name
      */
-    public function setCollectionName($name)
+    public function setCollectionName($name): void
     {
         $this->collectionName = (string) $name;
     }
@@ -170,7 +170,7 @@ class RestController extends AbstractRestfulController
      *
      * @param int $count
      */
-    public function setMinPageSize($count)
+    public function setMinPageSize($count): void
     {
         $this->minPageSize = (int) $count;
     }
@@ -190,7 +190,7 @@ class RestController extends AbstractRestfulController
      *
      * @param int $count
      */
-    public function setPageSize($count)
+    public function setPageSize($count): void
     {
         $this->pageSize = (int) $count;
     }
@@ -210,7 +210,7 @@ class RestController extends AbstractRestfulController
      *
      * @param int $count
      */
-    public function setMaxPageSize($count)
+    public function setMaxPageSize($count): void
     {
         $this->maxPageSize = (int) $count;
     }
@@ -230,7 +230,7 @@ class RestController extends AbstractRestfulController
      *
      * @param string $param
      */
-    public function setPageSizeParam($param)
+    public function setPageSizeParam($param): void
     {
         $this->pageSizeParam = (string) $param;
     }
@@ -250,7 +250,7 @@ class RestController extends AbstractRestfulController
     /**
      * Inject the resource with which this controller will communicate.
      */
-    public function setResource(ResourceInterface $resource)
+    public function setResource(ResourceInterface $resource): void
     {
         $this->resource = $resource;
     }
@@ -276,7 +276,7 @@ class RestController extends AbstractRestfulController
     /**
      * Set the allowed HTTP OPTIONS for a resource
      */
-    public function setEntityHttpMethods(array $methods)
+    public function setEntityHttpMethods(array $methods): void
     {
         $this->entityHttpMethods = $methods;
     }
@@ -286,7 +286,7 @@ class RestController extends AbstractRestfulController
      *
      * @param  string $route
      */
-    public function setRoute($route)
+    public function setRoute($route): void
     {
         $this->route = $route;
     }
@@ -835,7 +835,7 @@ class RestController extends AbstractRestfulController
     /**
      * Injects the resource with the identity composed in the event, if present
      */
-    protected function injectEventIdentityIntoResource()
+    protected function injectEventIdentityIntoResource(): void
     {
         if ($this->resource->getIdentity()) {
             return;
@@ -857,7 +857,7 @@ class RestController extends AbstractRestfulController
     /**
      * Injects the resource with the input filter composed in the event, if present
      */
-    protected function injectEventInputFilterIntoResource()
+    protected function injectEventInputFilterIntoResource(): void
     {
         if ($this->resource->getInputFilter()) {
             return;
@@ -876,7 +876,7 @@ class RestController extends AbstractRestfulController
         $this->resource->setInputFilter($inputFilter);
     }
 
-    protected function injectRequestIntoResourceEventParams()
+    protected function injectRequestIntoResourceEventParams(): void
     {
         $request = $this->getRequest();
         if (! $request) {
