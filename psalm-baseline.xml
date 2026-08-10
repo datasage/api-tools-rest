@@ -62,26 +62,17 @@
     <ClassMustBeFinal>
       <code><![CDATA[OptionsListenerFactory]]></code>
     </ClassMustBeFinal>
-    <DeprecatedInterface>
-      <code><![CDATA[OptionsListenerFactory]]></code>
-    </DeprecatedInterface>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
     </MixedArgument>
     <MixedAssignment>
       <code><![CDATA[$config]]></code>
     </MixedAssignment>
-    <ParamNameMismatch>
-      <code><![CDATA[$container]]></code>
-    </ParamNameMismatch>
   </file>
   <file src="src/Factory/RestControllerFactory.php">
     <ClassMustBeFinal>
       <code><![CDATA[RestControllerFactory]]></code>
     </ClassMustBeFinal>
-    <DeprecatedInterface>
-      <code><![CDATA[RestControllerFactory]]></code>
-    </DeprecatedInterface>
     <MissingReturnType>
       <code><![CDATA[setControllerOptions]]></code>
     </MissingReturnType>
@@ -92,8 +83,6 @@
       <code><![CDATA[$config['listener']]]></code>
       <code><![CDATA[$config['listener']]]></code>
       <code><![CDATA[$config['resource_identifiers']]]></code>
-      <code><![CDATA[$container]]></code>
-      <code><![CDATA[$container]]></code>
       <code><![CDATA[$container->get('EventManager')]]></code>
       <code><![CDATA[$controllerClass]]></code>
       <code><![CDATA[$events]]></code>
@@ -132,8 +121,6 @@
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$config]]></code>
-      <code><![CDATA[$container]]></code>
-      <code><![CDATA[$container]]></code>
       <code><![CDATA[$controllerClass]]></code>
       <code><![CDATA[$events]]></code>
       <code><![CDATA[$identifier]]></code>
@@ -153,10 +140,6 @@
     <MixedReturnStatement>
       <code><![CDATA[$this->lookupCache[$requestedName]]]></code>
     </MixedReturnStatement>
-    <ParamNameMismatch>
-      <code><![CDATA[$controllers]]></code>
-      <code><![CDATA[$controllers]]></code>
-    </ParamNameMismatch>
     <PossiblyInvalidMethodCall>
       <code><![CDATA[getRequest]]></code>
       <code><![CDATA[getResource]]></code>
@@ -178,8 +161,6 @@
     <UndefinedInterfaceMethod>
       <code><![CDATA[getInputs]]></code>
       <code><![CDATA[getRouteOptions]]></code>
-      <code><![CDATA[getServiceLocator]]></code>
-      <code><![CDATA[getServiceLocator]]></code>
       <code><![CDATA[hasRoute]]></code>
       <code><![CDATA[setCollectionClass]]></code>
       <code><![CDATA[setEntityClass]]></code>

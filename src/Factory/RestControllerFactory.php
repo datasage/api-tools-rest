@@ -9,10 +9,9 @@ use Laminas\ApiTools\Rest\Resource;
 use Laminas\ApiTools\Rest\RestController;
 use Laminas\EventManager\Event;
 use Laminas\EventManager\ListenerAggregateInterface;
-use Laminas\ServiceManager\AbstractFactoryInterface;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\Exception\ServiceNotFoundException;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\AbstractFactoryInterface;
 use Laminas\Stdlib\Parameters;
 use Override;
 use Psr\Container\ContainerInterface;
@@ -98,22 +97,6 @@ class RestControllerFactory implements AbstractFactoryInterface
     }
 
     /**
-     * Determine if we can create a service with name (v2).
-     *
-     * Provided for backwards compatibility; proxies to canCreate().
-     *
-     * @param string $name
-     * @param string $requestedName
-     * @return bool
-     */
-    #[Override]
-    public function canCreateServiceWithName(ServiceLocatorInterface $controllers, $name, $requestedName)
-    {
-        $container = $controllers->getServiceLocator() ?: $controllers;
-        return $this->canCreate($container, $requestedName);
-    }
-
-    /**
      * Create named controller instance
      *
      * @param string $requestedName
@@ -185,23 +168,6 @@ class RestControllerFactory implements AbstractFactoryInterface
         }
 
         return $controller;
-    }
-
-    /**
-     * Create named controller instance (v2).
-     *
-     * Provided for backwards compatibility; proxies to __invoke().
-     *
-     * @param string $name
-     * @param string $requestedName
-     * @return RestController
-     * @throws ServiceNotCreatedException If listener specified is not a ListenerAggregate.
-     */
-    #[Override]
-    public function createServiceWithName(ServiceLocatorInterface $controllers, $name, $requestedName)
-    {
-        $container = $controllers->getServiceLocator() ?: $controllers;
-        return $this($container, $requestedName);
     }
 
     /**
