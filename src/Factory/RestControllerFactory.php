@@ -173,7 +173,7 @@ class RestControllerFactory implements AbstractFactoryInterface
     /**
      * Loop through configuration to discover and set controller options.
      */
-    protected function setControllerOptions(array $config, RestController $controller)
+    protected function setControllerOptions(array $config, RestController $controller): void
     {
         foreach ($config as $option => $value) {
             switch ($option) {

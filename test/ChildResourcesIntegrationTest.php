@@ -69,7 +69,7 @@ class ChildResourcesIntegrationTest extends TestCase
         $this->setupRenderer();
     }
 
-    public function setupHelpers()
+    public function setupHelpers(): void
     {
         if (! $this->router) {
             $this->setupRouter();
@@ -203,7 +203,7 @@ class ChildResourcesIntegrationTest extends TestCase
         return $collection;
     }
 
-    public function setUpAlternateRouter()
+    public function setUpAlternateRouter(): void
     {
         $routes       = [
             'parent' => [
@@ -233,7 +233,7 @@ class ChildResourcesIntegrationTest extends TestCase
         $this->helpers->get('url')->setRouter($router);
     }
 
-    public function testChildResourceObjectIdentifierMappingViaControllerReturn()
+    public function testChildResourceObjectIdentifierMappingViaControllerReturn(): void
     {
         $this->setUpAlternateRouter();
 
@@ -275,7 +275,7 @@ class ChildResourcesIntegrationTest extends TestCase
         $this->assertEquals('luke', $params['child_id']);
     }
 
-    public function testChildResourceObjectIdentifierMappingInCollectionsViaControllerReturn()
+    public function testChildResourceObjectIdentifierMappingInCollectionsViaControllerReturn(): void
     {
         $this->setUpAlternateRouter();
 

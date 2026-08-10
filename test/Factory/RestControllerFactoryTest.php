@@ -59,14 +59,14 @@ class RestControllerFactoryTest extends TestCase
         ];
     }
 
-    public function testWillInstantiateListenerIfServiceNotFoundButClassExists()
+    public function testWillInstantiateListenerIfServiceNotFoundButClassExists(): void
     {
         $this->assertTrue($this->controllers->has('ApiController'));
         $controller = $this->controllers->get('ApiController');
         $this->assertInstanceOf(RestController::class, $controller);
     }
 
-    public function testWillInstantiateAlternateRestControllerWhenSpecified()
+    public function testWillInstantiateAlternateRestControllerWhenSpecified(): void
     {
         $config = $this->services->get('config');
         $config['api-tools-rest']['ApiController']['controller_class'] = TestAsset\CustomController::class;
@@ -76,7 +76,7 @@ class RestControllerFactoryTest extends TestCase
         $this->assertInstanceOf(TestAsset\CustomController::class, $controller);
     }
 
-    public function testDefaultControllerEventManagerIdentifiersAreAsExpected()
+    public function testDefaultControllerEventManagerIdentifiersAreAsExpected(): void
     {
         $controller = $this->controllers->get('ApiController');
         $events     = $controller->getEventManager();
@@ -87,7 +87,7 @@ class RestControllerFactoryTest extends TestCase
         $this->assertContains('ApiController', $identifiers);
     }
 
-    public function testControllerEventManagerIdentifiersAreAsSpecified()
+    public function testControllerEventManagerIdentifiersAreAsSpecified(): void
     {
         $config                                                  = $this->services->get('config');
         $config['api-tools-rest']['ApiController']['identifier'] = TestAsset\ExtraControllerListener::class;
@@ -103,7 +103,7 @@ class RestControllerFactoryTest extends TestCase
         $this->assertContains(TestAsset\ExtraControllerListener::class, $identifiers);
     }
 
-    public function testDefaultResourceEventManagerIdentifiersAreAsExpected()
+    public function testDefaultResourceEventManagerIdentifiersAreAsExpected(): void
     {
         $controller = $this->controllers->get('ApiController');
         $resource   = $controller->getResource();
@@ -119,7 +119,7 @@ class RestControllerFactoryTest extends TestCase
         $this->assertEquals($expected, array_values($identifiers));
     }
 
-    public function testResourceEventManagerIdentifiersAreAsSpecifiedString()
+    public function testResourceEventManagerIdentifiersAreAsSpecifiedString(): void
     {
         $config = $this->services->get('config');
         $config['api-tools-rest']['ApiController']['resource_identifiers'] = TestAsset\ExtraResourceListener::class;
@@ -141,7 +141,7 @@ class RestControllerFactoryTest extends TestCase
         $this->assertEquals($expected, array_values($identifiers));
     }
 
-    public function testResourceEventManagerIdentifiersAreAsSpecifiedArray()
+    public function testResourceEventManagerIdentifiersAreAsSpecifiedArray(): void
     {
         $config = $this->services->get('config');
         $config['api-tools-rest']['ApiController']['resource_identifiers'] = [

@@ -29,7 +29,7 @@ class RestParametersListener implements ListenerAggregateInterface
         $this->listeners[] = $events->attach(MvcEvent::EVENT_DISPATCH, [$this, 'onDispatch'], 100);
     }
 
-    public function attachShared(SharedEventManagerInterface $events)
+    public function attachShared(SharedEventManagerInterface $events): void
     {
         $listener = $events->attach(
             RestController::class,
@@ -45,7 +45,7 @@ class RestParametersListener implements ListenerAggregateInterface
         $this->sharedListeners[] = $listener;
     }
 
-    public function detachShared(SharedEventManagerInterface $events)
+    public function detachShared(SharedEventManagerInterface $events): void
     {
         $eventManagerVersion = method_exists($events, 'getEvents') ? 2 : 3;
         foreach ($this->sharedListeners as $index => $listener) {
@@ -67,7 +67,7 @@ class RestParametersListener implements ListenerAggregateInterface
     /**
      * Listen to the dispatch event
      */
-    public function onDispatch(MvcEvent $e)
+    public function onDispatch(MvcEvent $e): void
     {
         $controller = $e->getTarget();
         if (! $controller instanceof RestController) {

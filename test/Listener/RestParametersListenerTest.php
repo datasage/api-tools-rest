@@ -51,7 +51,7 @@ class RestParametersListenerTest extends TestCase
         $this->listener = new RestParametersListener();
     }
 
-    public function testIgnoresNonRestControllers()
+    public function testIgnoresNonRestControllers(): void
     {
         $controller = $this->createStub(AbstractRestfulController::class);
         $this->event->setTarget($controller);
@@ -60,19 +60,19 @@ class RestParametersListenerTest extends TestCase
         $this->assertNull($this->resource->getQueryParams());
     }
 
-    public function testInjectsRouteMatchOnDispatchOfRestController()
+    public function testInjectsRouteMatchOnDispatchOfRestController(): void
     {
         $this->listener->onDispatch($this->event);
         $this->assertSame($this->matches, $this->resource->getRouteMatch());
     }
 
-    public function testInjectsQueryParamsOnDispatchOfRestController()
+    public function testInjectsQueryParamsOnDispatchOfRestController(): void
     {
         $this->listener->onDispatch($this->event);
         $this->assertSame($this->query, $this->resource->getQueryParams());
     }
 
-    public function testAttachSharedAttachOneListenerOnEventDispatch()
+    public function testAttachSharedAttachOneListenerOnEventDispatch(): void
     {
         $sharedEventManager = new SharedEventManager();
         $this->listener->attachShared($sharedEventManager);
@@ -86,7 +86,7 @@ class RestParametersListenerTest extends TestCase
         $this->assertCount(1, $listeners);
     }
 
-    public function testDetachSharedDetachAttachedListener()
+    public function testDetachSharedDetachAttachedListener(): void
     {
         $sharedEventManager = new SharedEventManager();
         $this->listener->attachShared($sharedEventManager);

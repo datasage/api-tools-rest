@@ -26,7 +26,7 @@ class OptionsListenerTest extends TestCase
     use EventListenerIntrospectionTrait;
     use RouteMatchFactoryTrait;
 
-    public function testListenerRegistersAtExpectedPriority()
+    public function testListenerRegistersAtExpectedPriority(): void
     {
         $listener = new OptionsListener([]);
         $events   = new EventManager();
@@ -280,7 +280,7 @@ class OptionsListenerTest extends TestCase
      * @param string $method
      */
     #[DataProvider('validMethodsProvider')]
-    public function testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest($method, array $matchParams)
+    public function testListenerReturnsNullWhenMethodIsAllowedForCurrentRequest($method, array $matchParams): void
     {
         $listener = new OptionsListener($this->seedListenerConfig());
         $request  = new Request();
@@ -324,7 +324,7 @@ class OptionsListenerTest extends TestCase
      * @param string $method
      */
     #[DataProvider('invalidMethodsWithoutAllowProvider')]
-    public function testListenerReturnsNullIfNotAnHttpRequest($method, array $matchParams)
+    public function testListenerReturnsNullIfNotAnHttpRequest($method, array $matchParams): void
     {
         $listener = new OptionsListener($this->seedListenerConfig());
         $request  = new StdlibRequest();
@@ -341,7 +341,7 @@ class OptionsListenerTest extends TestCase
      * @param string $method
      */
     #[DataProvider('invalidMethodsMethodOnlyProvider')]
-    public function testListenerReturnsNullIfNoRouteMatches($method)
+    public function testListenerReturnsNullIfNoRouteMatches($method): void
     {
         $listener = new OptionsListener($this->seedListenerConfig());
         $request  = new Request();
@@ -353,7 +353,7 @@ class OptionsListenerTest extends TestCase
         $this->assertNull($listener->onRoute($mvcEvent));
     }
 
-    public function testListenerReturnsNullIfNoMatchingControllerInRouteMatches()
+    public function testListenerReturnsNullIfNoMatchingControllerInRouteMatches(): void
     {
         $listener = new OptionsListener($this->seedListenerConfig());
         $request  = new Request();
@@ -366,7 +366,7 @@ class OptionsListenerTest extends TestCase
         $this->assertNull($listener->onRoute($mvcEvent));
     }
 
-    public function testListenerReturnsNullIfMatchingControllerInRouteMatchesButNoConfigForController()
+    public function testListenerReturnsNullIfMatchingControllerInRouteMatchesButNoConfigForController(): void
     {
         $listener = new OptionsListener($this->seedListenerConfig());
         $request  = new Request('GET');
@@ -387,7 +387,7 @@ class OptionsListenerTest extends TestCase
         $method,
         array $matchParams,
         array $expectedAllow
-    ) {
+    ): void {
         $listener = new OptionsListener($this->seedListenerConfig());
         $request  = new Request();
         $request->setMethod($method);

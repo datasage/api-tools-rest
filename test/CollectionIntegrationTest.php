@@ -84,7 +84,7 @@ class CollectionIntegrationTest extends TestCase
         $this->setUpController();
     }
 
-    public function setUpHelpers()
+    public function setUpHelpers(): void
     {
         if ($this->helpers) {
             return;
@@ -118,14 +118,14 @@ class CollectionIntegrationTest extends TestCase
         }
     }
 
-    public function setUpRenderer()
+    public function setUpRenderer(): void
     {
         $this->setUpHelpers();
         $this->renderer = $renderer = new HalJsonRenderer(new ApiProblemRenderer());
         $renderer->setHelperPluginManager($this->helpers);
     }
 
-    public function setUpRouter()
+    public function setUpRouter(): void
     {
         if ($this->router) {
             return;
@@ -261,7 +261,7 @@ class CollectionIntegrationTest extends TestCase
         return $event;
     }
 
-    public function testCollectionLinksIncludeFullQueryString()
+    public function testCollectionLinksIncludeFullQueryString(): void
     {
         $this->controller->getEventManager()->attach('getList.post', function ($e) {
             $request = $e->getTarget()->getRequest();
@@ -370,7 +370,7 @@ class CollectionIntegrationTest extends TestCase
         return $services;
     }
 
-    public function testFactoryEnabledListenerCreatesQueryStringWhitelist()
+    public function testFactoryEnabledListenerCreatesQueryStringWhitelist(): void
     {
         $services   = $this->getServiceManager();
         $controller = $services->get('ControllerManager')->get('Api\RestController');
@@ -406,7 +406,7 @@ class CollectionIntegrationTest extends TestCase
         }
     }
 
-    public function testFactoryEnabledListenerInjectsWhitelistedQueryParams()
+    public function testFactoryEnabledListenerInjectsWhitelistedQueryParams(): void
     {
         $services   = $this->getServiceManager();
         $controller = $services->get('ControllerManager')->get('Api\RestController');
@@ -423,7 +423,7 @@ class CollectionIntegrationTest extends TestCase
         $this->assertFalse($params->offsetExists('bar'));
     }
 
-    public function testFactoryEnabledListenerMergeWhitelistedQueryParamsWithInputFilterKeys()
+    public function testFactoryEnabledListenerMergeWhitelistedQueryParamsWithInputFilterKeys(): void
     {
         $services   = $this->getServiceManager();
         $controller = $services->get('ControllerManager')->get('Api\RestController');
