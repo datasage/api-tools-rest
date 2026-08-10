@@ -38,7 +38,7 @@
         "laminas-api-tools/api-tools-hal": "^1.13",
         "laminas-api-tools/api-tools-mvc-auth": "^1.10",
         "laminas/laminas-eventmanager": "^3.15",
-        "laminas/laminas-http": "^2.23",
+        "laminas/laminas-http": "^2.23 || ^3.0",
         "laminas/laminas-inputfilter": "^2.34",
         "laminas/laminas-mvc": "^3.8",
         "laminas/laminas-paginator": "^2.21",
