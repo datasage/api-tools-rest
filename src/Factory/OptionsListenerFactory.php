@@ -5,8 +5,7 @@ declare(strict_types=1);
 namespace Laminas\ApiTools\Rest\Factory;
 
 use Laminas\ApiTools\Rest\Listener\OptionsListener;
-use Laminas\ServiceManager\FactoryInterface;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Override;
 use Psr\Container\ContainerInterface;
 
@@ -26,19 +25,6 @@ class OptionsListenerFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         return new OptionsListener($this->getConfig($container));
-    }
-
-    /**
-     * Create and return an OptionsListener instance (v2).
-     *
-     * Provided for backwards compatibility; proxies to __invoke().
-     *
-     * @return OptionsListener
-     */
-    #[Override]
-    public function createService(ServiceLocatorInterface $container)
-    {
-        return $this($container, OptionsListener::class);
     }
 
     /**

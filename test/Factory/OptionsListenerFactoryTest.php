@@ -49,7 +49,7 @@ class OptionsListenerFactoryTest extends TestCase
         $config = $this->seedConfigService();
         $this->services->setService('config', $config);
 
-        $listener = $this->factory->createService($this->services);
+        $listener = ($this->factory)($this->services, OptionsListener::class);
 
         $this->assertInstanceOf(OptionsListener::class, $listener);
 
