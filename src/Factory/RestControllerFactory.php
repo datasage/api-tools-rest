@@ -32,7 +32,7 @@ use function sprintf;
 class RestControllerFactory implements AbstractFactoryInterface
 {
     /**
-     * Cache of canCreateServiceWithName lookups
+     * Cache of canCreate lookups
      *
      * @var array
      */
